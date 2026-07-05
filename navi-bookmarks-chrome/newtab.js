@@ -1203,21 +1203,24 @@ const emojiList = [
 let currentIconType = 'emoji';
 let currentIconValue = '';
 
-function getFaviconUrl(url) {
+function getFaviconUrls(url) {
     try {
         var hostname = new URL(url).hostname;
         var parts = hostname.split('.');
         var rootDomain = parts.length > 2 ? parts.slice(-2).join('.') : hostname;
-        return 'https://www.google.com/s2/favicons?domain=' + rootDomain + '&sz=64';
+        return [
+            'https://www.google.com/s2/favicons?domain=' + rootDomain + '&sz=64',
+            'https://icon.horse/icon/' + rootDomain,
+            'https://favicon.im/' + rootDomain
+        ];
     } catch (e) {
-        return null;
+        return [];
     }
 }
 
-function fetchFaviconFromUrl(url) {
-    var faviconUrl = getFaviconUrl(url);
-    if (!faviconUrl) return;
-    fetch(faviconUrl).then(function(resp) {
+function tryFaviconUrls(urls, index, callback) {
+    if (index >= urls.length) { callback(null); return; }
+    fetch(urls[index]).then(function(resp) {
         if (!resp.ok) throw new Error('fetch failed');
         var ct = resp.headers.get('content-type') || '';
         if (!ct.includes('image/')) throw new Error('not image');
@@ -1230,10 +1233,22 @@ function fetchFaviconFromUrl(url) {
             reader.readAsDataURL(blob);
         });
     }).then(function(dataUrl) {
-        updateIconPreview(dataUrl);
-        showFaviconOptions(dataUrl);
+        callback(dataUrl);
     }).catch(function() {
-        updateIconPreview(null);
+        tryFaviconUrls(urls, index + 1, callback);
+    });
+}
+
+function fetchFaviconFromUrl(url) {
+    var urls = getFaviconUrls(url);
+    if (!urls.length) return;
+    tryFaviconUrls(urls, 0, function(dataUrl) {
+        if (dataUrl) {
+            updateIconPreview(dataUrl);
+            showFaviconOptions(dataUrl);
+        } else {
+            updateIconPreview(null);
+        }
     });
 }
 

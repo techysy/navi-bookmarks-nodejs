@@ -145,19 +145,22 @@ function showToast(msg) {
     setTimeout(function() { toast.remove(); }, 1600);
 }
 
-function getFaviconUrl(url) {
+function getFaviconUrls(url) {
     try {
         var hostname = new URL(url).hostname;
-        return 'https://www.google.com/s2/favicons?domain=' + hostname + '&sz=64';
+        return [
+            'https://www.google.com/s2/favicons?domain=' + hostname + '&sz=64',
+            'https://icon.horse/icon/' + hostname,
+            'https://favicon.im/' + hostname
+        ];
     } catch (e) {
-        return null;
+        return [];
     }
 }
 
-function fetchFavicon(url, callback) {
-    var faviconUrl = getFaviconUrl(url);
-    if (!faviconUrl) { callback(null); return; }
-    fetch(faviconUrl).then(function(resp) {
+function tryFaviconUrls(urls, index, callback) {
+    if (index >= urls.length) { callback(null); return; }
+    fetch(urls[index]).then(function(resp) {
         if (!resp.ok) throw new Error('fetch failed');
         var ct = resp.headers.get('content-type') || '';
         if (!ct.includes('image/')) throw new Error('not image');
@@ -172,8 +175,14 @@ function fetchFavicon(url, callback) {
     }).then(function(dataUrl) {
         callback(dataUrl);
     }).catch(function() {
-        callback(null);
+        tryFaviconUrls(urls, index + 1, callback);
     });
+}
+
+function fetchFavicon(url, callback) {
+    var urls = getFaviconUrls(url);
+    if (!urls.length) { callback(null); return; }
+    tryFaviconUrls(urls, 0, callback);
 }
 
 function updateIconPreview(imgUrl) {
