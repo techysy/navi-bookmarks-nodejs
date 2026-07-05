@@ -1217,15 +1217,22 @@ function getFaviconUrl(url) {
 function fetchFaviconFromUrl(url) {
     var faviconUrl = getFaviconUrl(url);
     if (!faviconUrl) return;
-    var img = new Image();
-    img.onload = function() {
-        updateIconPreview(faviconUrl);
-        showFaviconOptions(faviconUrl);
-    };
-    img.onerror = function() {
+    fetch(faviconUrl).then(function(resp) {
+        if (!resp.ok) throw new Error('fetch failed');
+        return resp.blob();
+    }).then(function(blob) {
+        return new Promise(function(resolve, reject) {
+            var reader = new FileReader();
+            reader.onloadend = function() { resolve(reader.result); };
+            reader.onerror = reject;
+            reader.readAsDataURL(blob);
+        });
+    }).then(function(dataUrl) {
+        updateIconPreview(dataUrl);
+        showFaviconOptions(dataUrl);
+    }).catch(function() {
         updateIconPreview(null);
-    };
-    img.src = faviconUrl;
+    });
 }
 
 function fetchWebsiteDescription(url) {

@@ -157,10 +157,21 @@ function getFaviconUrl(url) {
 function fetchFavicon(url, callback) {
     var faviconUrl = getFaviconUrl(url);
     if (!faviconUrl) { callback(null); return; }
-    var img = new Image();
-    img.onload = function() { callback(faviconUrl); };
-    img.onerror = function() { callback(null); };
-    img.src = faviconUrl;
+    fetch(faviconUrl).then(function(resp) {
+        if (!resp.ok) throw new Error('fetch failed');
+        return resp.blob();
+    }).then(function(blob) {
+        return new Promise(function(resolve, reject) {
+            var reader = new FileReader();
+            reader.onloadend = function() { resolve(reader.result); };
+            reader.onerror = reject;
+            reader.readAsDataURL(blob);
+        });
+    }).then(function(dataUrl) {
+        callback(dataUrl);
+    }).catch(function() {
+        callback(null);
+    });
 }
 
 function updateIconPreview(imgUrl) {
