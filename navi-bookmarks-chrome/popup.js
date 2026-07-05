@@ -145,44 +145,66 @@ function showToast(msg) {
     setTimeout(function() { toast.remove(); }, 1600);
 }
 
-function getFaviconUrls(url) {
-    try {
-        var hostname = new URL(url).hostname;
-        return [
-            'https://www.google.com/s2/favicons?domain=' + hostname + '&sz=64',
-            'https://icon.horse/icon/' + hostname,
-            'https://favicon.im/' + hostname
-        ];
-    } catch (e) {
-        return [];
-    }
+var faviconServiceUrls = [
+    'https://icon.horse/icon/',
+    'https://favicon.im/',
+    'https://www.google.com/s2/favicons?domain='
+];
+
+function imageToDataUrl(img) {
+    var c = document.createElement('canvas');
+    c.width = 64;
+    c.height = 64;
+    var ctx = c.getContext('2d');
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(0, 0, 64, 64);
+    ctx.drawImage(img, 0, 0, 64, 64);
+    return c.toDataURL('image/png');
 }
 
-function tryFaviconUrls(urls, index, callback) {
-    if (index >= urls.length) { callback(null); return; }
-    fetch(urls[index]).then(function(resp) {
-        if (!resp.ok) throw new Error('fetch failed');
-        var ct = resp.headers.get('content-type') || '';
-        if (!ct.includes('image/')) throw new Error('not image');
-        return resp.blob();
-    }).then(function(blob) {
-        return new Promise(function(resolve, reject) {
-            var reader = new FileReader();
-            reader.onloadend = function() { resolve(reader.result); };
-            reader.onerror = reject;
-            reader.readAsDataURL(blob);
-        });
-    }).then(function(dataUrl) {
-        callback(dataUrl);
-    }).catch(function() {
-        tryFaviconUrls(urls, index + 1, callback);
-    });
+function loadFaviconAsImage(url, callback) {
+    var img = new Image();
+    img.onload = function() {
+        try {
+            callback(null, imageToDataUrl(img));
+        } catch (e) {
+            callback(null, url);
+        }
+    };
+    img.onerror = function() {
+        callback('load failed');
+    };
+    img.src = url;
 }
 
 function fetchFavicon(url, callback) {
-    var urls = getFaviconUrls(url);
-    if (!urls.length) { callback(null); return; }
-    tryFaviconUrls(urls, 0, callback);
+    var rootDomain = getRootDomain(url);
+    if (!rootDomain) { callback(null); return; }
+    var tried = 0;
+    function tryNext() {
+        if (tried >= faviconServiceUrls.length) { callback(null); return; }
+        var service = faviconServiceUrls[tried];
+        var serviceUrl = service.includes('domain=') ? service + rootDomain + '&sz=64' : service + rootDomain;
+        tried++;
+        loadFaviconAsImage(serviceUrl, function(err, result) {
+            if (err) {
+                tryNext();
+            } else {
+                callback(result);
+            }
+        });
+    }
+    tryNext();
+}
+
+function getRootDomain(url) {
+    try {
+        var hostname = new URL(url).hostname;
+        var parts = hostname.split('.');
+        return parts.length > 2 ? parts.slice(-2).join('.') : hostname;
+    } catch (e) {
+        return null;
+    }
 }
 
 function updateIconPreview(imgUrl) {

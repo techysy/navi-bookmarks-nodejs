@@ -1203,53 +1203,71 @@ const emojiList = [
 let currentIconType = 'emoji';
 let currentIconValue = '';
 
-function getFaviconUrls(url) {
+var faviconServiceIndex = 0;
+var faviconServiceUrls = [
+    'https://icon.horse/icon/',
+    'https://favicon.im/',
+    'https://www.google.com/s2/favicons?domain='
+];
+
+function getRootDomain(url) {
     try {
         var hostname = new URL(url).hostname;
         var parts = hostname.split('.');
-        var rootDomain = parts.length > 2 ? parts.slice(-2).join('.') : hostname;
-        return [
-            'https://www.google.com/s2/favicons?domain=' + rootDomain + '&sz=64',
-            'https://icon.horse/icon/' + rootDomain,
-            'https://favicon.im/' + rootDomain
-        ];
+        return parts.length > 2 ? parts.slice(-2).join('.') : hostname;
     } catch (e) {
-        return [];
+        return null;
     }
 }
 
-function tryFaviconUrls(urls, index, callback) {
-    if (index >= urls.length) { callback(null); return; }
-    fetch(urls[index]).then(function(resp) {
-        if (!resp.ok) throw new Error('fetch failed');
-        var ct = resp.headers.get('content-type') || '';
-        if (!ct.includes('image/')) throw new Error('not image');
-        return resp.blob();
-    }).then(function(blob) {
-        return new Promise(function(resolve, reject) {
-            var reader = new FileReader();
-            reader.onloadend = function() { resolve(reader.result); };
-            reader.onerror = reject;
-            reader.readAsDataURL(blob);
-        });
-    }).then(function(dataUrl) {
-        callback(dataUrl);
-    }).catch(function() {
-        tryFaviconUrls(urls, index + 1, callback);
-    });
+function imageToDataUrl(img) {
+    var c = document.createElement('canvas');
+    c.width = 64;
+    c.height = 64;
+    var ctx = c.getContext('2d');
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(0, 0, 64, 64);
+    ctx.drawImage(img, 0, 0, 64, 64);
+    return c.toDataURL('image/png');
+}
+
+function loadFaviconAsImage(url, callback) {
+    var img = new Image();
+    img.onload = function() {
+        try {
+            callback(null, imageToDataUrl(img));
+        } catch (e) {
+            callback(null, url);
+        }
+    };
+    img.onerror = function() {
+        callback('load failed');
+    };
+    img.src = url;
 }
 
 function fetchFaviconFromUrl(url) {
-    var urls = getFaviconUrls(url);
-    if (!urls.length) return;
-    tryFaviconUrls(urls, 0, function(dataUrl) {
-        if (dataUrl) {
-            updateIconPreview(dataUrl);
-            showFaviconOptions(dataUrl);
-        } else {
+    var rootDomain = getRootDomain(url);
+    if (!rootDomain) return;
+    var tried = 0;
+    function tryNext() {
+        if (tried >= faviconServiceUrls.length) {
             updateIconPreview(null);
+            return;
         }
-    });
+        var service = faviconServiceUrls[tried];
+        var serviceUrl = service.includes('domain=') ? service + rootDomain + '&sz=64' : service + rootDomain;
+        tried++;
+        loadFaviconAsImage(serviceUrl, function(err, result) {
+            if (err) {
+                tryNext();
+            } else {
+                updateIconPreview(result);
+                showFaviconOptions(result);
+            }
+        });
+    }
+    tryNext();
 }
 
 function fetchWebsiteDescription(url) {

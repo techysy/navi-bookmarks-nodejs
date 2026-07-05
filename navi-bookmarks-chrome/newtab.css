@@ -482,6 +482,7 @@ header p {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    background: #fff;
 }
 
 .card-click-area {
@@ -489,6 +490,8 @@ header p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 100%;
+    min-width: 0;
 }
 
 .bookmark-card h3 {
@@ -498,12 +501,15 @@ header p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 .bookmark-card p {
     font-size: 0.65rem;
     color: #888;
-    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin-bottom: 5px;
 }
 
@@ -1237,6 +1243,7 @@ header p {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background: #fff;
 }
 
 .icon-preview-label {
