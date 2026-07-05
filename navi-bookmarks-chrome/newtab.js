@@ -1219,6 +1219,8 @@ function fetchFaviconFromUrl(url) {
     if (!faviconUrl) return;
     fetch(faviconUrl).then(function(resp) {
         if (!resp.ok) throw new Error('fetch failed');
+        var ct = resp.headers.get('content-type') || '';
+        if (!ct.includes('image/')) throw new Error('not image');
         return resp.blob();
     }).then(function(blob) {
         return new Promise(function(resolve, reject) {
@@ -1284,7 +1286,14 @@ function showFaviconOptions(faviconUrl) {
     list.style.display = 'block';
     var item = document.createElement('div');
     item.className = 'favicon-option';
-    item.innerHTML = '<img src="' + faviconUrl + '" width="32" height="32"><span>' + i18n('iconFavicon') + '</span>';
+    var img = document.createElement('img');
+    img.width = 32;
+    img.height = 32;
+    img.src = faviconUrl;
+    var span = document.createElement('span');
+    span.textContent = i18n('iconFavicon');
+    item.appendChild(img);
+    item.appendChild(span);
     item.addEventListener('click', function() {
         updateIconPreview(faviconUrl);
         list.style.display = 'none';

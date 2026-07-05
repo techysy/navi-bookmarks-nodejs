@@ -159,6 +159,8 @@ function fetchFavicon(url, callback) {
     if (!faviconUrl) { callback(null); return; }
     fetch(faviconUrl).then(function(resp) {
         if (!resp.ok) throw new Error('fetch failed');
+        var ct = resp.headers.get('content-type') || '';
+        if (!ct.includes('image/')) throw new Error('not image');
         return resp.blob();
     }).then(function(blob) {
         return new Promise(function(resolve, reject) {
