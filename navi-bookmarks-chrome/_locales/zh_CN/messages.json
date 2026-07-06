@@ -109,5 +109,7 @@
   "hintUrlEnter": { "message": "💡 输入网址后回车，自动获取相关信息" },
   "btnAdded": { "message": "已添加" },
   "btnUpdateCategory": { "message": "更新分类" },
-  "alertCategoryUpdated": { "message": "✓ 分类已更新为 $1" }
+  "alertCategoryUpdated": { "message": "✓ 分类已更新为 $1" },
+  "alertBookmarkMoved": { "message": "✓ 已移动到 $1" },
+  "hintDragToCategory": { "message": "💡 拖动书签到分类标签可快速移动分类" }
 }

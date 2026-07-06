@@ -218,6 +218,18 @@ function showAlert(message) {
     });
 }
 
+function showToast(message) {
+    var toast = document.createElement('div');
+    toast.className = 'toast-notification';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('show'); });
+    setTimeout(function() {
+        toast.classList.remove('show');
+        setTimeout(function() { toast.remove(); }, 300);
+    }, 1500);
+}
+
 function showConfirm(message, danger) {
     return new Promise(function(resolve) {
         var overlay = createBubbleOverlay();
@@ -578,6 +590,7 @@ function setupBookmarkEvents() {
         card.classList.add('dragging');
         e.dataTransfer.effectAllowed = 'move';
         e.dataTransfer.setData('text/plain', card.dataset.id);
+        document.getElementById('categoryFilter').classList.add('drag-active');
     });
 
     content.addEventListener('dragend', function(e) {
@@ -586,6 +599,10 @@ function setupBookmarkEvents() {
         }
         document.querySelectorAll('.bookmark-card').forEach(function(card) {
             card.classList.remove('drag-over');
+        });
+        document.getElementById('categoryFilter').classList.remove('drag-active');
+        document.querySelectorAll('.category-tag').forEach(function(tag) {
+            tag.classList.remove('drag-over');
         });
         draggedItem = null;
     });
@@ -1190,6 +1207,44 @@ function setupCategoryScroll() {
     bookmarkContent.addEventListener('wheel', handleWheel);
 }
 
+function setupCategoryFilterDragDrop() {
+    var filter = document.getElementById('categoryFilter');
+
+    filter.addEventListener('dragover', function(e) {
+        if (!draggedItem) return;
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+        filter.querySelectorAll('.category-tag').forEach(function(tag) {
+            tag.classList.remove('drag-over');
+        });
+        var tag = e.target.closest('.category-tag');
+        if (tag) tag.classList.add('drag-over');
+    });
+
+    filter.addEventListener('dragleave', function(e) {
+        var tag = e.target.closest('.category-tag');
+        if (tag) tag.classList.remove('drag-over');
+    });
+
+    filter.addEventListener('drop', function(e) {
+        if (!draggedItem) return;
+        e.preventDefault();
+        var tag = e.target.closest('.category-tag');
+        if (!tag) return;
+        tag.classList.remove('drag-over');
+
+        var draggedId = parseInt(draggedItem.dataset.id);
+        var targetCategory = tag.dataset.category;
+        var bookmark = bookmarks.find(function(b) { return b.id === draggedId; });
+        if (!bookmark || bookmark.category === targetCategory) return;
+
+        bookmark.category = targetCategory;
+        saveBookmarks();
+        showToast(i18n('alertBookmarkMoved', [categoryLabel(targetCategory)]));
+        renderBookmarks();
+    });
+}
+
 const defaultEmojiIcons = ['🌟', '⭐', '🔥', '💎', '🎯', '🎨', '🚀', '💡', '⚡', '🌈', '🎪', '🎭', '🎬', '📱', '💻', '🔧', '📦', '🎓', '📖', '🎵'];
 
 const emojiList = [
@@ -1570,6 +1625,7 @@ async function init() {
     updateCategories();
     renderBookmarks();
     setupCategoryScroll();
+    setupCategoryFilterDragDrop();
     setupStaticEvents();
     setupBookmarkEvents();
     setupCategoryModalEvents();

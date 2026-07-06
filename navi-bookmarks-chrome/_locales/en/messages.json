@@ -109,5 +109,7 @@
   "hintUrlEnter": { "message": "💡 Press Enter after entering URL to auto-fetch related info" },
   "btnAdded": { "message": "Added" },
   "btnUpdateCategory": { "message": "Update Category" },
-  "alertCategoryUpdated": { "message": "✓ Category updated to $1" }
+  "alertCategoryUpdated": { "message": "✓ Category updated to $1" },
+  "alertBookmarkMoved": { "message": "✓ Moved to $1" },
+  "hintDragToCategory": { "message": "💡 Drag bookmarks onto category tags to move them" }
 }
