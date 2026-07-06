@@ -17,10 +17,10 @@
   },
   "permissions": ["storage", "tabs"],
   "host_permissions": [
-    "https://www.google.com/*",
-    "https://www.google.com.hk/*",
     "https://icon.horse/*",
-    "https://favicon.im/*"
+    "https://favicon.im/*",
+    "https://www.google.com/*",
+    "https://www.google.com.hk/*"
   ],
   "icons": {
     "16": "icons/icon16.png",
