@@ -109,5 +109,7 @@
   "hintUrlEnter": { "message": "💡 輸入網址後按Enter，自動取得相關資訊" },
   "btnAdded": { "message": "已新增" },
   "btnUpdateCategory": { "message": "更新分類" },
-  "alertCategoryUpdated": { "message": "✓ 分類已更新為 $1" }
+  "alertCategoryUpdated": { "message": "✓ 分類已更新為 $1" },
+  "settingOpenWithCurrentTab": { "message": "當前頁面開啟" },
+  "settingDefaultSearchEngine": { "message": "預設搜尋引擎" }
 }

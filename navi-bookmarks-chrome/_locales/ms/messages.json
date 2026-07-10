@@ -109,5 +109,7 @@
   "hintUrlEnter": { "message": "💡 Tekan Enter selepas memasuki URL untuk mendapatkan maklumat berkaitan secara automatik" },
   "btnAdded": { "message": "Ditambah" },
   "btnUpdateCategory": { "message": "Kemas Kini Kategori" },
-  "alertCategoryUpdated": { "message": "✓ Kategori dikemas kini kepada $1" }
+  "alertCategoryUpdated": { "message": "✓ Kategori dikemas kini kepada $1" },
+  "settingOpenWithCurrentTab": { "message": "Buka dalam tab semasa" },
+  "settingDefaultSearchEngine": { "message": "Enjin Carian Lalai" }
 }

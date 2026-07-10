@@ -111,5 +111,7 @@
   "btnUpdateCategory": { "message": "Update Category" },
   "alertCategoryUpdated": { "message": "✓ Category updated to $1" },
   "alertBookmarkMoved": { "message": "✓ Moved to $1" },
-  "hintDragToCategory": { "message": "💡 Drag bookmarks onto category tags to move them" }
+  "hintDragToCategory": { "message": "💡 Drag bookmarks onto category tags to move them" },
+  "settingOpenWithCurrentTab": { "message": "Open in current tab" },
+  "settingDefaultSearchEngine": { "message": "Default Search Engine" }
 }

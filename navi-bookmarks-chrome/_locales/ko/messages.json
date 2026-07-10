@@ -109,5 +109,7 @@
   "hintUrlEnter": { "message": "💡 URL 입력 후 Enter를 누르면 관련 정보를 자동으로 가져옵니다" },
   "btnAdded": { "message": "추가됨" },
   "btnUpdateCategory": { "message": "카테고리 업데이트" },
-  "alertCategoryUpdated": { "message": "✓ 카테고리가 $1(으)로 업데이트되었습니다" }
+  "alertCategoryUpdated": { "message": "✓ 카테고리가 $1(으)로 업데이트되었습니다" },
+  "settingOpenWithCurrentTab": { "message": "현재 탭에서 열기" },
+  "settingDefaultSearchEngine": { "message": "기본 검색 엔진" }
 }

@@ -22,14 +22,7 @@
                     <span class="search-engine-name" id="currentEngineName"></span>
                 </div>
                 <div class="search-dropdown" id="searchEngineDropdown">
-                    <div class="search-dropdown-item selected" data-engine="bookmarks">
-                        <span class="engine-icon">⭐</span>
-                        <div class="engine-info">
-                            <div class="name" data-i18n="bookmarkSearch">书签搜索</div>
-                            <div class="url" data-i18n="bookmarkSearchDesc">搜索您的书签</div>
-                        </div>
-                    </div>
-                    <div class="search-dropdown-item" data-engine="google">
+                    <div class="search-dropdown-item selected" data-engine="google">
                         <span class="engine-icon">🔍</span>
                         <div class="engine-info">
                             <div class="name">Google</div>
@@ -163,6 +156,26 @@
                     <span class="fab-menu-icon">🎨</span>
                     <span data-i18n="changeBackground">更换背景</span>
                 </button>
+                <div class="fab-menu-divider"></div>
+                <div class="fab-menu-item fab-toggle-row">
+                    <span class="fab-menu-icon">📌</span>
+                    <span data-i18n="settingOpenWithCurrentTab">当前页面打开</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="openWithCurrentTabToggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="fab-menu-divider"></div>
+                <div class="fab-menu-item fab-lang-row">
+                    <span class="fab-menu-icon">🔍</span>
+                    <span data-i18n="settingDefaultSearchEngine">默认搜索引擎</span>
+                    <select id="defaultEngineSelect" class="lang-select">
+                        <option value="google">Google</option>
+                        <option value="baidu" data-i18n="baidu">百度</option>
+                        <option value="bing" data-i18n="bing">必应</option>
+                        <option value="duckduckgo">DuckDuckGo</option>
+                    </select>
+                </div>
                 <div class="fab-menu-divider"></div>
                 <div class="fab-menu-item fab-lang-row">
                     <span class="fab-menu-icon">🌐</span>

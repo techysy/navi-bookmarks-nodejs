@@ -2,6 +2,8 @@ const STORAGE_KEY = 'bookmarks';
 const CATEGORY_STORAGE_KEY = 'categoryOrder';
 const BG_STORAGE_KEY = 'backgroundStyle';
 const LANG_STORAGE_KEY = 'languagePreference';
+const OPEN_CURRENT_TAB_KEY = 'openWithCurrentTab';
+const DEFAULT_ENGINE_KEY = 'defaultSearchEngine';
 
 const CONFIG = {
     enableImportExport: true
@@ -180,10 +182,9 @@ let categories = ['全部', ...defaultCategories];
 let bookmarks = [];
 let currentCategory = '常用';
 let draggedItem = null;
-let currentSearchEngine = 'bookmarks';
+let currentSearchEngine = 'google';
 
 const searchEngines = {
-    bookmarks: { nameKey: 'bookmarks', icon: '⭐', url: '' },
     google: { name: 'Google', icon: '🔍', url: 'https://www.google.com/search?q=' },
     baidu: { nameKey: 'baidu', icon: '🔍', url: 'https://www.baidu.com/s?wd=' },
     bing: { nameKey: 'bing', icon: '🅱️', url: 'https://www.bing.com/search?q=' },
@@ -297,8 +298,19 @@ function showPrompt(message, defaultValue) {
 }
 
 function openBookmark(url) {
-    if (typeof chrome !== 'undefined' && chrome.tabs) {
-        chrome.tabs.create({ url: url });
+    if (typeof chrome !== 'undefined' && chrome.storage) {
+        chrome.storage.local.get(OPEN_CURRENT_TAB_KEY, function(result) {
+            var openInCurrent = !!result[OPEN_CURRENT_TAB_KEY];
+            if (openInCurrent) {
+                window.location.href = url;
+            } else {
+                if (typeof chrome !== 'undefined' && chrome.tabs) {
+                    chrome.tabs.create({ url: url });
+                } else {
+                    window.open(url, '_blank');
+                }
+            }
+        });
     } else {
         window.open(url, '_blank');
     }
@@ -380,6 +392,7 @@ function toggleSearchEngineDropdown() {
 }
 
 function selectSearchEngine(engine) {
+    if (engine === 'bookmarks') engine = 'google';
     currentSearchEngine = engine;
     const engineInfo = searchEngines[engine];
     document.getElementById('currentEngineIcon').textContent = engineInfo.icon;
@@ -387,8 +400,11 @@ function selectSearchEngine(engine) {
     document.querySelectorAll('.search-dropdown-item').forEach(item => {
         item.classList.remove('selected');
     });
-    document.querySelector('[data-engine="' + engine + '"]').classList.add('selected');
+    var targetItem = document.querySelector('[data-engine="' + engine + '"]');
+    if (targetItem) targetItem.classList.add('selected');
     document.getElementById('searchEngineDropdown').classList.remove('active');
+    var defaultSelect = document.getElementById('defaultEngineSelect');
+    if (defaultSelect) defaultSelect.value = engine;
     const input = document.getElementById('searchInput');
     if (input.value.trim()) {
         performSearch(input.value.trim());
@@ -441,18 +457,11 @@ function performEnterSearch() {
     const input = document.getElementById('searchInput');
     const query = input.value.trim();
     if (query) {
-        if (currentSearchEngine === 'bookmarks') {
-            const results = searchBookmarks(query);
-            if (results.length > 0) {
-                openBookmark(results[0].url);
-            } else {
-                const firstEngine = Object.keys(searchEngines).find(function(key) { return key !== 'bookmarks'; });
-                if (firstEngine) {
-                    window.open(searchEngines[firstEngine].url + encodeURIComponent(query), '_blank');
-                }
-            }
+        const results = searchBookmarks(query);
+        if (results.length > 0) {
+            openBookmark(results[0].url);
         } else {
-            window.open(searchEngines[currentSearchEngine].url + encodeURIComponent(query), '_blank');
+            openBookmark(searchEngines[currentSearchEngine].url + encodeURIComponent(query));
         }
         document.getElementById('searchResults').innerHTML = '';
         input.value = '';
@@ -1045,16 +1054,20 @@ function saveBackgroundPreference(style) {
     }
 }
 
+function showBody() {
+    document.body.style.opacity = '1';
+}
+
 function loadBackgroundImage() {
     if (currentBgStyle && currentBgStyle.startsWith('custom:')) {
         var dataUrl = currentBgStyle.substring(7);
         document.body.style.background = 'url(' + dataUrl + ') center/cover fixed';
-        document.body.classList.remove('loaded');
+        showBody();
         return;
     }
     if (currentBgStyle && currentBgStyle.startsWith('linear-gradient')) {
         document.body.style.background = currentBgStyle;
-        document.body.classList.remove('loaded');
+        showBody();
         return;
     }
     if (currentBgStyle === 'Zoigê.JPG' || !currentBgStyle) {
@@ -1062,17 +1075,17 @@ function loadBackgroundImage() {
         var img = new Image();
         img.onload = function() {
             document.body.style.background = 'url(' + imgUrl + ') center/cover fixed';
-            document.body.classList.remove('loaded');
+            showBody();
         };
         img.onerror = function() {
             document.body.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-            document.body.classList.remove('loaded');
+            showBody();
         };
         img.src = imgUrl;
         return;
     }
     document.body.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-    document.body.classList.remove('loaded');
+    showBody();
 }
 
 function showBgPicker() {
@@ -1150,7 +1163,7 @@ function showBgPicker() {
             var dataUrl = ev.target.result;
             saveBackgroundPreference('custom:' + dataUrl);
             document.body.style.background = 'url(' + dataUrl + ') center/cover fixed';
-            document.body.classList.remove('loaded');
+            showBody();
             document.getElementById('bgPickerOverlay').remove();
         };
         reader.readAsDataURL(file);
@@ -1482,7 +1495,7 @@ function setupStaticEvents() {
     document.getElementById('searchInput').addEventListener('keyup', function(e) {
         if (e.key === 'Enter') return;
         const query = e.target.value.trim();
-        if (query && currentSearchEngine === 'bookmarks') {
+        if (query) {
             performSearch(query);
         } else {
             document.getElementById('searchResults').innerHTML = '';
@@ -1505,7 +1518,7 @@ function setupStaticEvents() {
         const action = target.dataset.action;
         if (action === 'search-engine') {
             const url = searchEngines[target.dataset.engine].url + encodeURIComponent(target.dataset.query);
-            window.open(url, '_blank');
+            openBookmark(url);
             document.getElementById('searchResults').innerHTML = '';
             document.getElementById('searchInput').value = '';
         } else if (action === 'open-bookmark') {
@@ -1610,6 +1623,53 @@ function setupStaticEvents() {
     document.getElementById('importFile').addEventListener('change', handleImportFile);
 }
 
+function initOpenCurrentTabToggle() {
+    var toggle = document.getElementById('openWithCurrentTabToggle');
+    if (typeof chrome !== 'undefined' && chrome.storage) {
+        chrome.storage.local.get(OPEN_CURRENT_TAB_KEY, function(result) {
+            toggle.checked = !!result[OPEN_CURRENT_TAB_KEY];
+        });
+    } else {
+        toggle.checked = localStorage.getItem(OPEN_CURRENT_TAB_KEY) === 'true';
+    }
+    toggle.addEventListener('change', function() {
+        var val = toggle.checked;
+        if (typeof chrome !== 'undefined' && chrome.storage) {
+            chrome.storage.local.set({ [OPEN_CURRENT_TAB_KEY]: val });
+        } else {
+            localStorage.setItem(OPEN_CURRENT_TAB_KEY, val);
+        }
+    });
+}
+
+function initDefaultSearchEngine() {
+    var select = document.getElementById('defaultEngineSelect');
+    if (typeof chrome !== 'undefined' && chrome.storage) {
+        chrome.storage.local.get(DEFAULT_ENGINE_KEY, function(result) {
+            if (result[DEFAULT_ENGINE_KEY]) {
+                currentSearchEngine = result[DEFAULT_ENGINE_KEY];
+                selectSearchEngine(currentSearchEngine);
+            }
+        });
+    } else {
+        var saved = localStorage.getItem(DEFAULT_ENGINE_KEY);
+        if (saved) {
+            currentSearchEngine = saved;
+            selectSearchEngine(currentSearchEngine);
+        }
+    }
+    select.addEventListener('change', function() {
+        var val = select.value;
+        currentSearchEngine = val;
+        selectSearchEngine(val);
+        if (typeof chrome !== 'undefined' && chrome.storage) {
+            chrome.storage.local.set({ [DEFAULT_ENGINE_KEY]: val });
+        } else {
+            localStorage.setItem(DEFAULT_ENGINE_KEY, val);
+        }
+    });
+}
+
 async function init() {
     await loadLangPacks();
     await loadLanguagePreference();
@@ -1631,6 +1691,8 @@ async function init() {
     setupCategoryModalEvents();
     setupIconPicker();
     loadBackgroundImage();
+    initOpenCurrentTabToggle();
+    initDefaultSearchEngine();
     await checkPendingAddTab();
 }
 

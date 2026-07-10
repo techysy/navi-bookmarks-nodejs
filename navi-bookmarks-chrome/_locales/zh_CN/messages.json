@@ -111,5 +111,7 @@
   "btnUpdateCategory": { "message": "更新分类" },
   "alertCategoryUpdated": { "message": "✓ 分类已更新为 $1" },
   "alertBookmarkMoved": { "message": "✓ 已移动到 $1" },
-  "hintDragToCategory": { "message": "💡 拖动书签到分类标签可快速移动分类" }
+  "hintDragToCategory": { "message": "💡 拖动书签到分类标签可快速移动分类" },
+  "settingOpenWithCurrentTab": { "message": "当前页打开" },
+  "settingDefaultSearchEngine": { "message": "默认搜索引擎" }
 }

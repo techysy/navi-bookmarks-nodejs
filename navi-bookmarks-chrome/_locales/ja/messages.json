@@ -109,5 +109,7 @@
   "hintUrlEnter": { "message": "💡 URLを入力後にEnterを押すと、関連情報を自動取得します" },
   "btnAdded": { "message": "追加済み" },
   "btnUpdateCategory": { "message": "カテゴリを更新" },
-  "alertCategoryUpdated": { "message": "✓ カテゴリを $1 に更新しました" }
+  "alertCategoryUpdated": { "message": "✓ カテゴリを $1 に更新しました" },
+  "settingOpenWithCurrentTab": { "message": "現在のタブで開く" },
+  "settingDefaultSearchEngine": { "message": "デフォルト検索エンジン" }
 }

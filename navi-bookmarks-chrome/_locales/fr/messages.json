@@ -109,5 +109,7 @@
   "hintUrlEnter": { "message": "💡 Appuyez sur Entrée après avoir saisi l'URL pour récupérer les informations" },
   "btnAdded": { "message": "Ajouté" },
   "btnUpdateCategory": { "message": "Mettre à jour la catégorie" },
-  "alertCategoryUpdated": { "message": "✓ Catégorie mise à jour en $1" }
+  "alertCategoryUpdated": { "message": "✓ Catégorie mise à jour en $1" },
+  "settingOpenWithCurrentTab": { "message": "Ouvrir dans l'onglet actuel" },
+  "settingDefaultSearchEngine": { "message": "Moteur de recherche par défaut" }
 }

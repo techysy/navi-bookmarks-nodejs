@@ -109,5 +109,7 @@
   "hintUrlEnter": { "message": "💡 Nhấn Enter sau khi nhập URL để tự động lấy thông tin liên quan" },
   "btnAdded": { "message": "Đã thêm" },
   "btnUpdateCategory": { "message": "Cập nhật danh mục" },
-  "alertCategoryUpdated": { "message": "✓ Đã cập nhật danh mục thành $1" }
+  "alertCategoryUpdated": { "message": "✓ Đã cập nhật danh mục thành $1" },
+  "settingOpenWithCurrentTab": { "message": "Mở trong tab hiện tại" },
+  "settingDefaultSearchEngine": { "message": "Tr tìm mặc định" }
 }

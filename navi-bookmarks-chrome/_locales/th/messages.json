@@ -109,5 +109,7 @@
   "hintUrlEnter": { "message": "💡 กด Enter หลังป้อน URL เพื่อดึงข้อมูลที่เกี่ยวข้องอัตโนมัติ" },
   "btnAdded": { "message": "เพิ่มแล้ว" },
   "btnUpdateCategory": { "message": "อัปเดตหมวดหมู่" },
-  "alertCategoryUpdated": { "message": "✓ อัปเดตหมวดหมู่เป็น $1 แล้ว" }
+  "alertCategoryUpdated": { "message": "✓ อัปเดตหมวดหมู่เป็น $1 แล้ว" },
+  "settingOpenWithCurrentTab": { "message": "เปิดในแท็บปัจจุบัน" },
+  "settingDefaultSearchEngine": { "message": "เครื่องมือค้นหาเริ่มต้น" }
 }
