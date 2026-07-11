@@ -1,10 +1,14 @@
-# 📚 个人书签导航 - Chrome 插件
+# 📚 个人书签导航 - Chrome 插件 / Navi Bookmarks
 
-一个现代化的 Chrome 浏览器新标签页书签导航插件，专为个人设计，支持快速访问常用网站、搜索功能和分类管理。
+> 一个现代化的 Chrome 浏览器新标签页书签导航插件 / A modern Chrome new tab bookmark navigation extension
 
-> **当前版本**：v1.3.0（Chrome 插件版），旧项目（Web 版本）最终版本为 v0.9.9。
+**当前版本 / Current Version**: v1.3.0
 
-## ✨ 功能特点
+---
+
+## ✨ 功能特点 / Features
+
+### 中文
 
 - **🔍 智能搜索**：支持实时搜索书签，集成多种搜索引擎（Google、百度、必应、DuckDuckGo）
 - **📁 分类管理**：支持创建、编辑、删除分类，可拖拽调整顺序
@@ -13,143 +17,113 @@
 - **💾 数据持久化**：使用 Chrome Storage 本地存储
 - **🎨 背景切换**：内置多种渐变背景 + 若尔盖大草原，支持上传自定义背景
 - **📥 导入导出**：支持书签数据的 JSON 导入导出，文件名自动带日期时间
-- **🌐 多语言**：支持 🇨🇳 简体中文、🇹🇼 繁體中文、🇺🇸 English、🇯🇵 日本語、🇰🇷 한국어、🇩🇪 Deutsch、🇫🇷 Français、🇻🇳 Tiếng Việt、🇹🇭 ภาษาไทย、🇲🇾 Bahasa Melayu，设置菜单可手动切换或跟随系统语言
-- **🖼️ 图标本地化**：网站图标（Favicon）自动下载并转为 Base64 本地存储，离线状态下书签图标正常显示
-- **🖱️ 滚轮切换**：鼠标悬停在分类或书签区域时，滚轮滑动可快速切换分类
+- **🌐 多语言**：支持 10 种语言，可手动切换或跟随系统语言
+- **🖼️ 图标本地化**：网站图标自动下载并转为 Base64 本地存储，离线也可正常显示
+- **🖱️ 滚轮切换**：悬停分类或书签区域时，滚轮滑动快速切换分类
 
-## 🛠️ 技术栈
+### English
 
-- **前端**: HTML5 + CSS3 + JavaScript (Vanilla)
-- **存储**: Chrome Storage API
-- **规范**: Manifest V3
-
-## 📦 安装
-
-### 前置要求
-
-- **Chrome 浏览器**：版本 88+（支持 Manifest V3）
-- 无需安装任何依赖
-
-### 安装步骤
-
-#### 方式一：安装发布包（推荐）
-
-1. 下载最新版 `navi-bookmarks-chrome-v1.3.0.zip` 并解压
-2. 打开 Chrome 浏览器，访问 `chrome://extensions/`
-3. 开启右上角 **"开发者模式"**
-4. 点击 **"加载已解压的扩展程序"**
-5. 选择解压后的 `navi-bookmarks-chrome` 文件夹
-6. 打开新标签页即可看到书签导航页面
-
-#### 方式二：从源码安装（开发者）
-
-1. 克隆本仓库
-2. 打开 Chrome 浏览器，访问 `chrome://extensions/`
-3. 开启右上角 **"开发者模式"**
-4. 点击 **"加载已解压的扩展程序"**
-5. 选择 `navi-bookmarks-chrome` 文件夹
-6. 打开新标签页即可看到书签导航页面
-
-## 🎯 功能说明
-
-### 添加书签
-
-1. 点击右上角「+ 添加书签」按钮
-2. 填写网站名称、URL、描述（可选）
-3. 选择分类或创建新分类
-4. 点击保存
-
-### 搜索功能
-
-1. 在搜索框中输入关键词
-2. 支持搜索书签名称、URL、描述、分类
-3. 可手动切换搜索引擎（书签搜索、Google、百度、必应、DuckDuckGo）
-
-### 管理分类
-
-1. 点击右上角「📁 编辑分类」按钮
-2. 可添加、重命名、删除分类
-3. 拖拽分类调整显示顺序
-
-### 更换背景
-
-1. 点击右下角 ⚙️ 按钮
-2. 选择「🎨 更换背景」
-3. 选择预设主题或上传自定义背景图片
-4. 背景自动保存，下次打开自动应用
-
-> **💡 3K 高清背景**：仓库根目录提供 `Zoigê - 3k.JPG`（3K 分辨率，约 1.7MB），为若尔盖大草原原片。如需更高清的背景体验，可将该文件替换 `navi-bookmarks-chrome/Zoigê.JPG`，或通过上传自定义背景功能直接使用。
-
-### 导入导出
-
-1. 点击右下角 ⚙️ 按钮
-2. **导出书签**：点击「📤 导出书签」下载 JSON 文件
-3. **导入书签**：点击「📥 导入书签」选择 JSON 文件
-
-### 拖拽排序
-
-1. 按住书签卡片拖动到目标位置
-2. 松开鼠标完成排序
-
-### 语言切换
-
-1. 点击右下角 ⚙️ 按钮
-2. 在语言下拉菜单中选择所需语言
-3. 支持 🇨🇳 **简体中文**、🇹🇼 **繁體中文**、🇺🇸 **English**、🇯🇵 **日本語**、🇰🇷 **한국어**、🇩🇪 **Deutsch**、🇫🇷 **Français**、🇻🇳 **Tiếng Việt**、🇹🇭 **ภาษาไทย**、🇲🇾 **Bahasa Melayu**
-4. 选择「跟随系统」将自动匹配浏览器语言
-
-## 📁 项目结构
-
-```
-navi-bookmarks-chrome/
-├── manifest.json               # 插件配置文件
-├── newtab.html                 # 新标签页入口
-├── newtab.js                   # JavaScript 逻辑
-├── newtab.css                  # 样式文件
-├── _locales/                   # 国际化语言包
-│   ├── en/messages.json        # 英文
-│   └── zh_CN/messages.json     # 中文
-├── Zoigê.JPG                   # 若尔盖大草原背景图（高清 ~680KB）
-├── Zoigê - mini.JPG            # 若尔盖缩略图（用于背景选择器预览）
-├── icons/                      # 插件图标
-│   ├── icon16.png
-│   ├── icon48.png
-│   └── icon128.png
-├── old/                        # 旧版 Web 项目文件
-├── Zoigê - 3k.JPG              # 若尔盖大草原 3K 超高分辨率原图
-├── README.md
-├── CHANGELOG.md
-└── .gitignore
-```
-
-## 🔧 配置
-
-### 默认分类
-
-在 `newtab.js` 中修改 `defaultCategories` 数组：
-
-```javascript
-let defaultCategories = ['常用', '开发工具', '搜索引擎', '学习资源', '社区论坛', '其他'];
-```
-
-### 导入导出功能开关
-
-在 `newtab.js` 中修改 `CONFIG` 对象：
-
-```javascript
-const CONFIG = {
-    enableImportExport: true  // 设置为 false 可禁用导入导出功能
-};
-```
-
-## 📄 许可证
-
-MIT License
-
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request！
+- **🔍 Smart Search** — Real-time bookmark search with multiple search engines (Google, Baidu, Bing, DuckDuckGo)
+- **📁 Category Management** — Create, edit, delete categories with drag-and-drop reordering
+- **🎨 Glassmorphism UI** — Modern frosted glass design, unified bubble popup style, multiple background themes
+- **📱 Responsive Design** — Works seamlessly on both desktop and mobile
+- **💾 Persistent Storage** — Uses Chrome Storage API for local data persistence
+- **🎨 Background Themes** — Built-in gradients + Ruoergai Grassland, supports custom background upload
+- **📥 Import / Export** — JSON import/export with auto date-time filename
+- **🌐 Multi-language** — Supports 10 languages, manual switch or follow system language
+- **🖼️ Local Favicon** — Website icons auto-downloaded and stored as Base64, works offline
+- **🖱️ Scroll Switch** — Hover over categories and scroll to quickly switch
 
 ---
 
-**Made with ❤️ for 运维人员**
+## 🛠️ 技术栈 / Tech Stack
+
+| 中文 | English |
+|:----|:--------|
+| 前端 HTML5 + CSS3 + JavaScript (Vanilla) | Frontend: HTML5 + CSS3 + JavaScript (Vanilla) |
+| 存储 Chrome Storage API | Storage: Chrome Storage API |
+| 规范 Manifest V3 | Spec: Manifest V3 |
+
+---
+
+## 📦 安装 / Installation
+
+### 中文
+
+1. 下载最新版 ZIP 并解压
+2. 打开 Chrome → `chrome://extensions/`
+3. 开启右上角 **开发者模式**
+4. 点击 **加载已解压的扩展程序**
+5. 选择 `navi-bookmarks-chrome` 文件夹
+6. 打开新标签页即可使用
+
+### English
+
+1. Download the latest ZIP and extract it
+2. Open Chrome → `chrome://extensions/`
+3. Enable **Developer mode**
+4. Click **Load unpacked**
+5. Select the `navi-bookmarks-chrome` folder
+6. Open a new tab
+
+---
+
+## 🎯 使用说明 / Usage
+
+### 添加书签 / Add Bookmark
+
+点击右上角「+ 添加书签」→ 填写名称和 URL → 选择分类 → 保存
+Click **+ Add Bookmark** → enter name & URL → select category → save
+
+### 搜索 / Search
+
+输入关键词实时搜索，可切换搜索引擎（书签/Google/百度/必应/DuckDuckGo）
+Type keywords to search, switch search engines (Bookmarks/Google/Baidu/Bing/DuckDuckGo)
+
+### 背景切换 / Change Background
+
+点击右下角 ⚙️ → 选择预设主题或上传自定义图片
+Click ⚙️ (bottom right) → pick a preset or upload a custom image
+
+### 导入导出 / Import & Export
+
+点击 ⚙️ → 导出/导入 JSON 文件
+Click ⚙️ → Export/Import JSON file
+
+### 语言切换 / Language
+
+点击 ⚙️ → 下拉选择语言 / 跟随系统
+Click ⚙️ → select language from dropdown / Follow System
+
+---
+
+## 📁 项目结构 / Project Structure
+
+```
+navi-bookmarks-chrome/
+├── manifest.json          # 插件配置 / Extension manifest
+├── newtab.html            # 新标签页 / New tab page
+├── newtab.js              # 主逻辑 / Main logic
+├── newtab.css             # 样式 / Styles
+├── _locales/              # 语言包 / i18n packs
+├── Zoigê.JPG              # 若尔盖背景 / Grassland background
+├── icons/                 # 插件图标 / Icons
+└── old/                   # 旧版文件 / Legacy files
+```
+
+---
+
+## 🔧 配置 / Configuration
+
+修改 `newtab.js` 中的 `defaultCategories` 数组可调整默认分类。
+Edit `defaultCategories` in `newtab.js` to customize default categories.
+
+---
+
+## 📄 许可证 / License
+
+MIT License
+
+---
+
+**Made with ❤️**
