@@ -47,6 +47,7 @@
   "addCardDesc": { "message": "คลิกเพื่อเพิ่มที่คั่นหน้าใหม่" },
   "noResults": { "message": "ไม่พบที่คั่นหน้าที่ตรงกัน" },
   "searchInEngines": { "message": "ค้นหาในเครื่องมือค้นหา" },
+  "searchSuggestions": { "message": "คำแนะนำการค้นหา" },
   "baiduSearch": { "message": "ค้นหาผ่านไป่ตู้" },
   "bingSearch": { "message": "ค้นหาผ่าน Bing" },
   "confirmDeleteBookmark": { "message": "คุณแน่ใจหรือไม่ว่าจะลบที่คั่นหน้านี้?" },

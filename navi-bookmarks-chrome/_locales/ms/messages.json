@@ -47,6 +47,7 @@
   "addCardDesc": { "message": "Klik untuk menambah tanda buku baru" },
   "noResults": { "message": "Tiada tanda buku yang sepadan ditemui" },
   "searchInEngines": { "message": "Cari dalam enjin carian" },
+  "searchSuggestions": { "message": "Cadangan Carian" },
   "baiduSearch": { "message": "Carian Baidu" },
   "bingSearch": { "message": "Carian Bing" },
   "confirmDeleteBookmark": { "message": "Adakah anda pasti mahu memadam tanda buku ini?" },

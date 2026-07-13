@@ -47,6 +47,7 @@
   "addCardDesc": { "message": "クリックして新しいブックマークを追加" },
   "noResults": { "message": "一致するブックマークが見つかりません" },
   "searchInEngines": { "message": "検索エンジンで検索" },
+  "searchSuggestions": { "message": "検索候補" },
   "baiduSearch": { "message": "百度検索" },
   "bingSearch": { "message": "Bing検索" },
   "confirmDeleteBookmark": { "message": "このブックマークを削除してもよろしいですか？" },

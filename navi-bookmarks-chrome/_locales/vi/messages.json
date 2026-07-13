@@ -47,6 +47,7 @@
   "addCardDesc": { "message": "Nhấp để thêm dấu trang mới" },
   "noResults": { "message": "Không tìm thấy dấu trang phù hợp" },
   "searchInEngines": { "message": "Tìm kiếm trên công cụ tìm kiếm" },
+  "searchSuggestions": { "message": "Gợi ý tìm kiếm" },
   "baiduSearch": { "message": "Tìm kiếm Baidu" },
   "bingSearch": { "message": "Tìm kiếm Bing" },
   "confirmDeleteBookmark": { "message": "Bạn có chắc muốn xóa dấu trang này?" },

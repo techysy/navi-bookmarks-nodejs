@@ -47,6 +47,7 @@
   "addCardDesc": { "message": "Click to add a new bookmark" },
   "noResults": { "message": "No matching bookmarks found" },
   "searchInEngines": { "message": "Search in search engines" },
+  "searchSuggestions": { "message": "Search Suggestions" },
   "baiduSearch": { "message": "Baidu Search" },
   "bingSearch": { "message": "Bing Search" },
   "confirmDeleteBookmark": { "message": "Are you sure you want to delete this bookmark?" },

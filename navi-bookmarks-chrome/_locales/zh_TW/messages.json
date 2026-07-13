@@ -47,6 +47,7 @@
   "addCardDesc": { "message": "點擊新增書籤" },
   "noResults": { "message": "找不到相符的書籤" },
   "searchInEngines": { "message": "在搜尋引擎中搜尋" },
+  "searchSuggestions": { "message": "搜尋建議" },
   "baiduSearch": { "message": "百度搜尋" },
   "bingSearch": { "message": "Bing搜尋" },
   "confirmDeleteBookmark": { "message": "確定要刪除此書籤嗎？" },

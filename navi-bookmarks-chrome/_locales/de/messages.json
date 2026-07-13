@@ -47,6 +47,7 @@
   "addCardDesc": { "message": "Klicken Sie, um ein neues Lesezeichen hinzuzufügen" },
   "noResults": { "message": "Keine übereinstimmenden Lesezeichen gefunden" },
   "searchInEngines": { "message": "In Suchmaschinen suchen" },
+  "searchSuggestions": { "message": "Suchvorschläge" },
   "baiduSearch": { "message": "Baidu-Suche" },
   "bingSearch": { "message": "Bing-Suche" },
   "confirmDeleteBookmark": { "message": "Sind Sie sicher, dass Sie dieses Lesezeichen löschen möchten?" },

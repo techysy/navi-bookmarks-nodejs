@@ -47,6 +47,7 @@
   "addCardDesc": { "message": "Cliquez pour ajouter un nouveau favori" },
   "noResults": { "message": "Aucun favori trouvé" },
   "searchInEngines": { "message": "Rechercher dans les moteurs de recherche" },
+  "searchSuggestions": { "message": "Suggestions de recherche" },
   "baiduSearch": { "message": "Recherche Baidu" },
   "bingSearch": { "message": "Recherche Bing" },
   "confirmDeleteBookmark": { "message": "Êtes-vous sûr de vouloir supprimer ce favori ?" },

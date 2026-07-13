@@ -421,26 +421,44 @@ function searchBookmarks(query) {
     );
 }
 
+function fetchSearchSuggestions(query, callback) {
+    var engine = currentSearchEngine;
+    var url = '';
+    if (engine === 'google') {
+        url = 'https://suggestqueries.google.com/complete/search?client=firefox&q=' + encodeURIComponent(query);
+    } else if (engine === 'baidu') {
+        url = 'https://suggestion.baidu.com/su?wd=' + encodeURIComponent(query) + '&action=opensearch';
+    } else if (engine === 'bing') {
+        url = 'https://api.bing.com/osjson.aspx?query=' + encodeURIComponent(query);
+    } else if (engine === 'duckduckgo') {
+        url = 'https://duckduckgo.com/ac/?q=' + encodeURIComponent(query) + '&type=list';
+    }
+    if (!url) return callback([]);
+    fetch(url)
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+            var suggestions = [];
+            if (engine === 'google' && Array.isArray(data[1])) {
+                suggestions = data[1];
+            } else if (engine === 'baidu' && Array.isArray(data[1])) {
+                suggestions = data[1];
+            } else if (engine === 'bing' && Array.isArray(data[1])) {
+                suggestions = data[1];
+            } else if (engine === 'duckduckgo' && Array.isArray(data[1])) {
+                suggestions = data[1];
+            }
+            callback(suggestions.slice(0, 5));
+        })
+        .catch(function() { callback([]); });
+}
+
 function performSearch(query) {
     const results = searchBookmarks(query);
     const resultsContainer = document.getElementById('searchResults');
 
-    if (results.length === 0) {
-        resultsContainer.innerHTML =
-            '<div class="search-no-results">' + i18n('noResults') + '</div>' +
-            '<div class="search-suggestions">' +
-            '<div class="suggestion-title">' + i18n('searchInEngines') + '</div>' +
-            '<div class="suggestion-item" data-action="search-engine" data-engine="bing" data-query="' + query + '">' +
-            '<span class="search-icon">🅱️</span>' +
-            '<span class="text">' + i18n('bingSearch') + ' "' + query + '"</span>' +
-            '</div>' +
-            '<div class="suggestion-item" data-action="search-engine" data-engine="baidu" data-query="' + query + '">' +
-            '<span class="search-icon">🔍</span>' +
-            '<span class="text">' + i18n('baiduSearch') + ' "' + query + '"</span>' +
-            '</div>' +
-            '</div>';
-    } else {
-        resultsContainer.innerHTML = results.map(function(bookmark) {
+    var html = '';
+    if (results.length > 0) {
+        html += results.map(function(bookmark) {
             return '<div class="search-result-item" data-action="open-bookmark" data-url="' + bookmark.url + '">' +
                 '<div class="icon">' + bookmark.icon + '</div>' +
                 '<div class="info">' +
@@ -451,6 +469,21 @@ function performSearch(query) {
                 '</div>';
         }).join('');
     }
+
+    resultsContainer.innerHTML = html;
+
+    fetchSearchSuggestions(query, function(suggestions) {
+        if (suggestions.length === 0) return;
+        var sugHtml = '<div class="search-suggestions">' +
+            '<div class="suggestion-title">' + i18n('searchSuggestions') + '</div>' +
+            suggestions.map(function(s) {
+                return '<div class="suggestion-item" data-action="search-suggestion" data-query="' + s.replace(/"/g, '&quot;') + '">' +
+                    '<span class="search-icon">🔍</span>' +
+                    '<span class="text">' + s + '</span>' +
+                    '</div>';
+            }).join('') + '</div>';
+        resultsContainer.innerHTML += sugHtml;
+    });
 }
 
 function performEnterSearch() {
@@ -1518,6 +1551,11 @@ function setupStaticEvents() {
         const action = target.dataset.action;
         if (action === 'search-engine') {
             const url = searchEngines[target.dataset.engine].url + encodeURIComponent(target.dataset.query);
+            openBookmark(url);
+            document.getElementById('searchResults').innerHTML = '';
+            document.getElementById('searchInput').value = '';
+        } else if (action === 'search-suggestion') {
+            const url = searchEngines[currentSearchEngine].url + encodeURIComponent(target.dataset.query);
             openBookmark(url);
             document.getElementById('searchResults').innerHTML = '';
             document.getElementById('searchInput').value = '';

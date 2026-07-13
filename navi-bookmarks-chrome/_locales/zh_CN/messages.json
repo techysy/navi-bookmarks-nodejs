@@ -47,6 +47,7 @@
   "addCardDesc": { "message": "点击添加新书签" },
   "noResults": { "message": "未找到匹配的书签" },
   "searchInEngines": { "message": "在搜索引擎中搜索" },
+  "searchSuggestions": { "message": "搜索建议" },
   "baiduSearch": { "message": "百度搜索" },
   "bingSearch": { "message": "必应搜索" },
   "confirmDeleteBookmark": { "message": "确定要删除这个书签吗？" },
