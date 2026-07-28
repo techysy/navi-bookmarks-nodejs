@@ -1052,6 +1052,17 @@ async function handleImportFile(e) {
                 order: bookmarks.length + index, description: item.description || ''
             });
         });
+        if (importMode === '2') {
+            const actualCategories = [...new Set(bookmarks.map(function(b) { return b.category; }))];
+            defaultCategories = actualCategories.filter(function(cat) { return cat !== '其他'; });
+            defaultCategories.sort();
+            if (actualCategories.includes('其他')) defaultCategories.push('其他');
+            if (typeof chrome !== 'undefined' && chrome.storage) {
+                chrome.storage.local.set({ [CATEGORY_STORAGE_KEY]: defaultCategories });
+            } else {
+                localStorage.setItem(CATEGORY_STORAGE_KEY, JSON.stringify(defaultCategories));
+            }
+        }
         saveBookmarks();
         updateCategories();
         renderBookmarks();
