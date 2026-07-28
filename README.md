@@ -2,7 +2,7 @@
 
 > 一个现代化的 Chrome 浏览器新标签页书签导航插件 / A modern Chrome new tab bookmark navigation extension
 
-**当前版本 / Current Version**: v1.3.0
+**当前版本 / Current Version**: v1.3.1
 
 ---
 
