@@ -10,6 +10,7 @@
   "bookmarkSearchDesc": { "message": "Durchsuchen Sie Ihre Lesezeichen" },
   "baidu": { "message": "Baidu" },
   "bing": { "message": "Bing" },
+  "xiaohongshu": { "message": "Xiaohongshu" },
   "modalAddBookmark": { "message": "Lesezeichen hinzufügen" },
   "modalEditBookmark": { "message": "Lesezeichen bearbeiten" },
   "labelWebsiteName": { "message": "Webseitenname" },

@@ -10,6 +10,7 @@
   "bookmarkSearchDesc": { "message": "ค้นหาที่คั่นหน้าของคุณ" },
   "baidu": { "message": "ไป่ตู้" },
   "bing": { "message": "Bing" },
+  "xiaohongshu": { "message": " Xiaohongshu" },
   "modalAddBookmark": { "message": "เพิ่มที่คั่นหน้า" },
   "modalEditBookmark": { "message": "แก้ไขที่คั่นหน้า" },
   "labelWebsiteName": { "message": "ชื่อเว็บไซต์" },

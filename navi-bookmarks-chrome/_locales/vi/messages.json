@@ -10,6 +10,7 @@
   "bookmarkSearchDesc": { "message": "Tìm kiếm dấu trang của bạn" },
   "baidu": { "message": "Baidu" },
   "bing": { "message": "Bing" },
+  "xiaohongshu": { "message": "Xiaohongshu" },
   "modalAddBookmark": { "message": "Thêm Dấu trang" },
   "modalEditBookmark": { "message": "Sửa Dấu trang" },
   "labelWebsiteName": { "message": "Tên trang web" },

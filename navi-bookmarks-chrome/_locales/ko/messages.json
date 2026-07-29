@@ -10,6 +10,7 @@
   "bookmarkSearchDesc": { "message": "북마크 검색" },
   "baidu": { "message": "바이두" },
   "bing": { "message": "Bing" },
+  "xiaohongshu": { "message": "샤오홍수" },
   "modalAddBookmark": { "message": "북마크 추가" },
   "modalEditBookmark": { "message": "북마크 편집" },
   "labelWebsiteName": { "message": "사이트 이름" },

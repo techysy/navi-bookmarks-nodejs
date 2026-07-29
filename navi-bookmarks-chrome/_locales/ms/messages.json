@@ -10,6 +10,7 @@
   "bookmarkSearchDesc": { "message": "Cari tanda buku anda" },
   "baidu": { "message": "Baidu" },
   "bing": { "message": "Bing" },
+  "xiaohongshu": { "message": "Xiaohongshu" },
   "modalAddBookmark": { "message": "Tambah Tanda Buku" },
   "modalEditBookmark": { "message": "Edit Tanda Buku" },
   "labelWebsiteName": { "message": "Nama Laman Web" },

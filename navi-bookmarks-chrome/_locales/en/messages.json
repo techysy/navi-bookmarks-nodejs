@@ -10,6 +10,7 @@
   "bookmarkSearchDesc": { "message": "Search your bookmarks" },
   "baidu": { "message": "Baidu" },
   "bing": { "message": "Bing" },
+  "xiaohongshu": { "message": "Xiaohongshu" },
   "modalAddBookmark": { "message": "Add Bookmark" },
   "modalEditBookmark": { "message": "Edit Bookmark" },
   "labelWebsiteName": { "message": "Website Name" },

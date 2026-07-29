@@ -188,7 +188,8 @@ const searchEngines = {
     google: { name: 'Google', icon: '🔍', url: 'https://www.google.com/search?q=' },
     baidu: { nameKey: 'baidu', icon: '🔍', url: 'https://www.baidu.com/s?wd=' },
     bing: { nameKey: 'bing', icon: '🅱️', url: 'https://www.bing.com/search?q=' },
-    duckduckgo: { name: 'DuckDuckGo', icon: '🦆', url: 'https://duckduckgo.com/?q=' }
+    duckduckgo: { name: 'DuckDuckGo', icon: '🦆', url: 'https://duckduckgo.com/?q=' },
+    xiaohongshu: { nameKey: 'xiaohongshu', icon: '📕', url: 'https://www.xiaohongshu.com/search_result_ai?keyword=' }
 };
 
 function createBubbleOverlay() {
@@ -490,12 +491,7 @@ function performEnterSearch() {
     const input = document.getElementById('searchInput');
     const query = input.value.trim();
     if (query) {
-        const results = searchBookmarks(query);
-        if (results.length > 0) {
-            openBookmark(results[0].url);
-        } else {
-            openBookmark(searchEngines[currentSearchEngine].url + encodeURIComponent(query));
-        }
+        openBookmark(searchEngines[currentSearchEngine].url + encodeURIComponent(query));
         document.getElementById('searchResults').innerHTML = '';
         input.value = '';
     }

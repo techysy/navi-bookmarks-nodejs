@@ -10,6 +10,7 @@
   "bookmarkSearchDesc": { "message": "ブックマークを検索" },
   "baidu": { "message": "百度" },
   "bing": { "message": "Bing" },
+  "xiaohongshu": { "message": "小紅書" },
   "modalAddBookmark": { "message": "ブックマーク追加" },
   "modalEditBookmark": { "message": "ブックマーク編集" },
   "labelWebsiteName": { "message": "サイト名" },
