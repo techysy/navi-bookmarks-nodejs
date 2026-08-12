@@ -192,6 +192,16 @@ const searchEngines = {
     xiaohongshu: { nameKey: 'xiaohongshu', icon: '📕', url: 'https://www.xiaohongshu.com/search_result_ai?keyword=' }
 };
 
+function escapeHtml(text) {
+    if (text == null) return '';
+    return String(text)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
+
 function createBubbleOverlay() {
     var overlay = document.createElement('div');
     overlay.className = 'bubble-overlay';
@@ -205,9 +215,9 @@ function showAlert(message) {
         var bubble = document.createElement('div');
         bubble.className = 'bubble';
         bubble.innerHTML =
-            '<div class="bubble-message">' + message + '</div>' +
+            '<div class="bubble-message">' + escapeHtml(message) + '</div>' +
             '<div class="bubble-btn-group">' +
-            '<button class="bubble-btn bubble-btn-ok">' + i18n('btnOk') + '</button>' +
+            '<button class="bubble-btn bubble-btn-ok">' + escapeHtml(i18n('btnOk')) + '</button>' +
             '</div>';
         overlay.appendChild(bubble);
         bubble.querySelector('.bubble-btn-ok').addEventListener('click', function() {
@@ -239,10 +249,10 @@ function showConfirm(message, danger) {
         bubble.className = 'bubble';
         var confirmClass = danger ? 'bubble-btn bubble-btn-danger' : 'bubble-btn bubble-btn-confirm';
         bubble.innerHTML =
-            '<div class="bubble-message">' + message + '</div>' +
+            '<div class="bubble-message">' + escapeHtml(message) + '</div>' +
             '<div class="bubble-btn-group">' +
-            '<button class="bubble-btn bubble-btn-cancel">' + i18n('btnCancel') + '</button>' +
-            '<button class="' + confirmClass + '">' + i18n('btnConfirm') + '</button>' +
+            '<button class="bubble-btn bubble-btn-cancel">' + escapeHtml(i18n('btnCancel')) + '</button>' +
+            '<button class="' + escapeHtml(confirmClass) + '">' + escapeHtml(i18n('btnConfirm')) + '</button>' +
             '</div>';
         overlay.appendChild(bubble);
         bubble.querySelector('.bubble-btn-cancel').addEventListener('click', function() {
@@ -265,11 +275,11 @@ function showPrompt(message, defaultValue) {
         var bubble = document.createElement('div');
         bubble.className = 'bubble';
         bubble.innerHTML =
-            '<div class="bubble-message">' + message + '</div>' +
-            '<input class="bubble-input" type="text" value="' + (defaultValue || '') + '">' +
+            '<div class="bubble-message">' + escapeHtml(message) + '</div>' +
+            '<input class="bubble-input" type="text" value="' + escapeHtml(defaultValue || '') + '">' +
             '<div class="bubble-btn-group">' +
-            '<button class="bubble-btn bubble-btn-cancel">' + i18n('btnCancel') + '</button>' +
-            '<button class="bubble-btn bubble-btn-confirm">' + i18n('btnConfirm') + '</button>' +
+            '<button class="bubble-btn bubble-btn-cancel">' + escapeHtml(i18n('btnCancel')) + '</button>' +
+            '<button class="bubble-btn bubble-btn-confirm">' + escapeHtml(i18n('btnConfirm')) + '</button>' +
             '</div>';
         overlay.appendChild(bubble);
         var input = bubble.querySelector('.bubble-input');
@@ -299,6 +309,10 @@ function showPrompt(message, defaultValue) {
 }
 
 function openBookmark(url) {
+    if (!isAllowedUrl(url)) {
+        showAlert(i18n('alertInvalidUrl') || 'URL not allowed');
+        return;
+    }
     if (typeof chrome !== 'undefined' && chrome.storage) {
         chrome.storage.local.get(OPEN_CURRENT_TAB_KEY, function(result) {
             var openInCurrent = !!result[OPEN_CURRENT_TAB_KEY];
@@ -317,7 +331,24 @@ function openBookmark(url) {
     }
 }
 
+function isAllowedUrl(url) {
+    if (!url || typeof url !== 'string') return false;
+    return /^https?:\/\//i.test(url);
+}
+
+function normalizeUrl(url) {
+    if (!url || typeof url !== 'string') return '';
+    url = url.trim();
+    if (!url) return '';
+    if (/^(javascript|data|vbscript|file|about):/i.test(url)) return '';
+    if (!/^https?:\/\//i.test(url)) {
+        url = 'https://' + url;
+    }
+    return url;
+}
+
 function truncateUrl(url) {
+    if (!url) return '';
     const maxLength = 20;
     if (url.length <= maxLength) return url;
     return url.substring(0, maxLength) + '...';
@@ -460,13 +491,13 @@ function performSearch(query) {
     var html = '';
     if (results.length > 0) {
         html += results.map(function(bookmark) {
-            return '<div class="search-result-item" data-action="open-bookmark" data-url="' + bookmark.url + '">' +
-                '<div class="icon">' + bookmark.icon + '</div>' +
+            return '<div class="search-result-item" data-action="open-bookmark" data-url="' + escapeHtml(bookmark.url) + '">' +
+                '<div class="icon">' + escapeHtml(bookmark.icon) + '</div>' +
                 '<div class="info">' +
-                '<div class="name">' + getBookmarkName(bookmark) + '</div>' +
-                '<div class="url">' + truncateUrl(bookmark.url) + '</div>' +
+                '<div class="name">' + escapeHtml(getBookmarkName(bookmark)) + '</div>' +
+                '<div class="url">' + escapeHtml(truncateUrl(bookmark.url)) + '</div>' +
                 '</div>' +
-                '<span class="category">' + bookmark.category + '</span>' +
+                '<span class="category">' + escapeHtml(bookmark.category) + '</span>' +
                 '</div>';
         }).join('');
     }
@@ -476,11 +507,11 @@ function performSearch(query) {
     fetchSearchSuggestions(query, function(suggestions) {
         if (suggestions.length === 0) return;
         var sugHtml = '<div class="search-suggestions">' +
-            '<div class="suggestion-title">' + i18n('searchSuggestions') + '</div>' +
+            '<div class="suggestion-title">' + escapeHtml(i18n('searchSuggestions')) + '</div>' +
             suggestions.map(function(s) {
-                return '<div class="suggestion-item" data-action="search-suggestion" data-query="' + s.replace(/"/g, '&quot;') + '">' +
+                return '<div class="suggestion-item" data-action="search-suggestion" data-query="' + escapeHtml(s) + '">' +
                     '<span class="search-icon">🔍</span>' +
-                    '<span class="text">' + s + '</span>' +
+                    '<span class="text">' + escapeHtml(s) + '</span>' +
                     '</div>';
             }).join('') + '</div>';
         resultsContainer.innerHTML += sugHtml;
@@ -573,26 +604,26 @@ function renderBookmarks() {
     content.innerHTML = displayCategories.map(function(category) {
         const items = grouped[category] || [];
         return '<div class="bookmark-section">' +
-            '<div class="section-header"><h2>' + categoryLabel(category) + '</h2><span class="count">' + items.length + '</span></div>' +
+            '<div class="section-header"><h2>' + escapeHtml(categoryLabel(category)) + '</h2><span class="count">' + items.length + '</span></div>' +
             '<div class="bookmark-grid">' +
             (items.length > 0 ? items.map(function(bookmark) {
                 var iconHtml = renderBookmarkIcon(bookmark);
                 return '<div class="bookmark-card" draggable="true" data-id="' + bookmark.id + '">' +
-                    '<div class="card-click-area" data-action="open-bookmark" data-url="' + bookmark.url + '">' +
+                    '<div class="card-click-area" data-action="open-bookmark" data-url="' + escapeHtml(bookmark.url) + '">' +
                     '<div class="icon">' + iconHtml + '</div>' +
-                    '<h3>' + getBookmarkName(bookmark) + '</h3>' +
+                    '<h3>' + escapeHtml(getBookmarkName(bookmark)) + '</h3>' +
                     '</div>' +
-                    '<p>' + truncateUrl(bookmark.url) + '</p>' +
-                    (bookmark.description ? '<p class="description" data-action="edit" data-id="' + bookmark.id + '" title="' + i18n('btnEdit') + '">' + bookmark.description + '</p>' : '') +
-                    '<span class="category-badge">' + categoryLabel(bookmark.category) + '</span>' +
+                    '<p>' + escapeHtml(truncateUrl(bookmark.url)) + '</p>' +
+                    (bookmark.description ? '<p class="description" data-action="edit" data-id="' + bookmark.id + '" title="' + escapeHtml(i18n('btnEdit')) + '">' + escapeHtml(bookmark.description) + '</p>' : '') +
+                    '<span class="category-badge">' + escapeHtml(categoryLabel(bookmark.category)) + '</span>' +
                     '<div class="actions">' +
-                    '<button class="edit-btn" data-action="edit" data-id="' + bookmark.id + '">' + i18n('btnEdit') + '</button>' +
-                    '<button class="delete-btn" data-action="delete" data-id="' + bookmark.id + '">' + i18n('btnDelete') + '</button>' +
+                    '<button class="edit-btn" data-action="edit" data-id="' + bookmark.id + '">' + escapeHtml(i18n('btnEdit')) + '</button>' +
+                    '<button class="delete-btn" data-action="delete" data-id="' + bookmark.id + '">' + escapeHtml(i18n('btnDelete')) + '</button>' +
                     '</div>' +
                     '</div>';
             }).join('') :
-            '<div class="bookmark-card add-card" data-action="add-with-category" data-category="' + category + '">' +
-            '<div class="add-icon">+</div><h3>' + i18n('addCardTitle') + '</h3><p>' + i18n('addCardDesc') + '</p></div>') +
+            '<div class="bookmark-card add-card" data-action="add-with-category" data-category="' + escapeHtml(category) + '">' +
+            '<div class="add-icon">+</div><h3>' + escapeHtml(i18n('addCardTitle')) + '</h3><p>' + escapeHtml(i18n('addCardDesc')) + '</p></div>') +
             '</div></div>';
     }).join('');
 }
@@ -784,8 +815,10 @@ function saveBookmark() {
         showAlert(i18n('alertFillComplete'));
         return;
     }
-    if (!url.startsWith('http://') && !url.startsWith('https://')) {
-        url = 'http://' + url;
+    url = normalizeUrl(url);
+    if (!url) {
+        showAlert(i18n('alertInvalidUrl') || 'Invalid URL');
+        return;
     }
     if (category === '__new__') {
         const newCategory = document.getElementById('newCategoryInput').value.trim();
@@ -1366,7 +1399,9 @@ function fetchFaviconFromUrl(url) {
         var service = faviconServiceUrls[tried];
         var serviceUrl = service.includes('domain=') ? service + rootDomain + '&sz=64' : service + rootDomain;
         tried++;
+        var timeoutId = setTimeout(function() { tryNext(); }, 5000);
         loadFaviconAsImage(serviceUrl, function(err, result) {
+            clearTimeout(timeoutId);
             if (err) {
                 tryNext();
             } else {

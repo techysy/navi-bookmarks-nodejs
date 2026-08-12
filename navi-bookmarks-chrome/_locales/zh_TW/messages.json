@@ -1,117 +1,356 @@
 {
-  "appName": { "message": "書籤導航" },
-  "appDescription": { "message": "個人書籤導航新標籤頁 - 快速存取您喜愛的網站" },
-  "headerTitle": { "message": "📚 書籤導航" },
-  "headerSubtitle": { "message": "快速存取您喜愛的網站" },
-  "searchPlaceholder": { "message": "搜尋書籤或使用搜尋引擎..." },
-  "addBookmark": { "message": "+ 新增書籤" },
-  "editCategory": { "message": "📁 編輯分類" },
-  "bookmarkSearch": { "message": "書籤搜尋" },
-  "bookmarkSearchDesc": { "message": "搜尋您的書籤" },
-  "baidu": { "message": "百度" },
-  "bing": { "message": "Bing" },
-  "xiaohongshu": { "message": "小紅書" },
-  "modalAddBookmark": { "message": "新增書籤" },
-  "modalEditBookmark": { "message": "編輯書籤" },
-  "labelWebsiteName": { "message": "網站名稱" },
-  "placeholderWebsiteName": { "message": "輸入網站名稱" },
-  "labelWebsiteUrl": { "message": "網站網址" },
-  "placeholderWebsiteUrl": { "message": "輸入網站URL或IP位址（可省略http://）" },
-  "labelDescription": { "message": "描述（選填）" },
-  "placeholderDescription": { "message": "輸入網站描述或備註資訊" },
-  "labelCategory": { "message": "分類" },
-  "labelNewCategory": { "message": "新分類名稱" },
-  "placeholderNewCategory": { "message": "輸入新分類名稱" },
-  "btnCancel": { "message": "取消" },
-  "btnSave": { "message": "儲存" },
-  "btnClose": { "message": "關閉" },
-  "btnOk": { "message": "確定" },
-  "btnConfirm": { "message": "確認" },
-  "btnEdit": { "message": "編輯" },
-  "btnDelete": { "message": "刪除" },
-  "btnRename": { "message": "重新命名" },
-  "btnDefault": { "message": "預設" },
-  "btnAddCategory": { "message": "新增分類" },
-  "btnAddNewCategory": { "message": "+ 新增分類" },
-  "hintDragCategory": { "message": "💡 拖曳分類可以調整順序" },
-  "modalEditCategory": { "message": "📁 編輯分類" },
-  "addNewCategory": { "message": "新增分類" },
-  "placeholderEnterCategoryName": { "message": "輸入新分類名稱" },
-  "exportBookmarks": { "message": "匯出書籤" },
-  "importBookmarks": { "message": "匯入書籤" },
-  "changeBackground": { "message": "更換背景" },
-  "chooseBackground": { "message": "🎨 選擇背景" },
-  "uploadCustomBackground": { "message": "📁 上傳自訂背景" },
-  "emptyStateTitle": { "message": "暫無書籤" },
-  "emptyStateDesc": { "message": "點擊上方按鈕新增您的第一個書籤" },
-  "addCardTitle": { "message": "新增書籤" },
-  "addCardDesc": { "message": "點擊新增書籤" },
-  "noResults": { "message": "找不到相符的書籤" },
-  "searchInEngines": { "message": "在搜尋引擎中搜尋" },
-  "searchSuggestions": { "message": "搜尋建議" },
-  "baiduSearch": { "message": "百度搜尋" },
-  "bingSearch": { "message": "Bing搜尋" },
-  "confirmDeleteBookmark": { "message": "確定要刪除此書籤嗎？" },
-  "confirmUnsavedChanges": { "message": "您有未儲存的變更，確定要退出嗎？" },
-  "confirmDeleteCategory": { "message": "確定要刪除分類「$1」嗎？該分類下的所有書籤將被移到「其他」分類。" },
-  "alertFillComplete": { "message": "請填寫完整資訊" },
-  "alertEnterCategoryName": { "message": "請輸入分類名稱" },
-  "alertCategoryExists": { "message": "該分類已存在" },
-  "alertEnterNewCategoryName": { "message": "請輸入新分類名稱" },
-  "promptNewCategoryName": { "message": "請輸入新的分類名稱：" },
-  "alertInvalidFormat": { "message": "無效的書籤資料格式" },
-  "alertImportEmpty": { "message": "匯入的書籤資料為空" },
-  "promptImportMode": { "message": "偵測到 $1 個書籤，選擇匯入方式：\n1 - 附加到現有書籤\n2 - 取代所有書籤" },
-  "alertImportCancelled": { "message": "取消匯入" },
-  "alertImportSuccess": { "message": "成功匯入 $1 個書籤！" },
-  "labelNewCategories": { "message": "新增分類：" },
-  "alertImportFailed": { "message": "匯入失敗：無效的JSON檔案" },
-  "bookmarksCount": { "message": "$1 個書籤" },
-  "bgPresetPurpleBlue": { "message": "紫藍漸變" },
-  "bgPresetSunset": { "message": "日落橙" },
-  "bgPresetDeepSea": { "message": "深海藍" },
-  "bgPresetForest": { "message": "森林綠" },
-  "bgPresetNightPurple": { "message": "暗夜紫" },
-  "bgPresetAurora": { "message": "極光" },
-  "bgPresetZoige": { "message": "若爾蓋" },
-  "catFrequent": { "message": "常用" },
-  "catDevTools": { "message": "開發工具" },
-  "catSearchEngines": { "message": "搜尋引擎" },
-  "catLearning": { "message": "學習資源" },
-  "catCommunity": { "message": "社群論壇" },
-  "catOther": { "message": "其他" },
-  "catAll": { "message": "全部" },
-  "myWeibo": { "message": "我的微博" },
-  "myGithub": { "message": "我的GitHub" },
-  "juejin": { "message": "掘金" },
-  "bookmarks": { "message": "書籤" },
-  "language": { "message": "語言" },
-  "langSystem": { "message": "跟隨系統" },
-  "langZhCN": { "message": "🇨🇳 简体中文" },
-  "langZhTW": { "message": "🇹🇼 繁體中文" },
-  "langEn": { "message": "🇺🇸 English" },
-  "langJa": { "message": "🇯🇵 日本語" },
-  "langKo": { "message": "🇰🇷 한국어" },
-  "langDe": { "message": "🇩🇪 Deutsch" },
-  "langFr": { "message": "🇫🇷 Français" },
-  "langVi": { "message": "🇻🇳 Tiếng Việt" },
-  "langTh": { "message": "🇹🇭 ภาษาไทย" },
-  "langMs": { "message": "🇲🇾 Bahasa Melayu" },
-  "settingsTitle": { "message": "設定" },
-  "addCurrentPage": { "message": "新增目前頁面" },
-  "alertNoTab": { "message": "無法取得目前標籤頁資訊" },
-  "openBookmarkNav": { "message": "開啟書籤導航" },
-  "popupTitle": { "message": "書籤導航 - 新增目前頁面" },
-  "labelSelectIcon": { "message": "選擇圖示" },
-  "iconPreviewLabel": { "message": "目前圖示" },
-  "btnFetchFavicon": { "message": "🌐 取得網站圖示" },
-  "btnResetIcon": { "message": "🔄 重設為預設" },
-  "iconFavicon": { "message": "網站圖示" },
-  "alertEnterUrlFirst": { "message": "請先輸入網址" },
-  "hintUrlEnter": { "message": "💡 輸入網址後按Enter，自動取得相關資訊" },
-  "btnAdded": { "message": "已新增" },
-  "btnUpdateCategory": { "message": "更新分類" },
-  "alertCategoryUpdated": { "message": "✓ 分類已更新為 $1" },
-  "settingOpenWithCurrentTab": { "message": "當前頁面開啟" },
-  "settingDefaultSearchEngine": { "message": "預設搜尋引擎" }
+  "appName": {
+    "message": "書籤導航"
+  },
+  "appDescription": {
+    "message": "個人書籤導航新標籤頁 - 快速存取您喜愛的網站"
+  },
+  "headerTitle": {
+    "message": "📚 書籤導航"
+  },
+  "headerSubtitle": {
+    "message": "快速存取您喜愛的網站"
+  },
+  "searchPlaceholder": {
+    "message": "搜尋書籤或使用搜尋引擎..."
+  },
+  "addBookmark": {
+    "message": "+ 新增書籤"
+  },
+  "editCategory": {
+    "message": "📁 編輯分類"
+  },
+  "bookmarkSearch": {
+    "message": "書籤搜尋"
+  },
+  "bookmarkSearchDesc": {
+    "message": "搜尋您的書籤"
+  },
+  "baidu": {
+    "message": "百度"
+  },
+  "bing": {
+    "message": "Bing"
+  },
+  "xiaohongshu": {
+    "message": "小紅書"
+  },
+  "modalAddBookmark": {
+    "message": "新增書籤"
+  },
+  "modalEditBookmark": {
+    "message": "編輯書籤"
+  },
+  "labelWebsiteName": {
+    "message": "網站名稱"
+  },
+  "placeholderWebsiteName": {
+    "message": "輸入網站名稱"
+  },
+  "labelWebsiteUrl": {
+    "message": "網站網址"
+  },
+  "placeholderWebsiteUrl": {
+    "message": "輸入網站URL或IP位址（可省略http://）"
+  },
+  "labelDescription": {
+    "message": "描述（選填）"
+  },
+  "placeholderDescription": {
+    "message": "輸入網站描述或備註資訊"
+  },
+  "labelCategory": {
+    "message": "分類"
+  },
+  "labelNewCategory": {
+    "message": "新分類名稱"
+  },
+  "placeholderNewCategory": {
+    "message": "輸入新分類名稱"
+  },
+  "btnCancel": {
+    "message": "取消"
+  },
+  "btnSave": {
+    "message": "儲存"
+  },
+  "btnClose": {
+    "message": "關閉"
+  },
+  "btnOk": {
+    "message": "確定"
+  },
+  "btnConfirm": {
+    "message": "確認"
+  },
+  "btnEdit": {
+    "message": "編輯"
+  },
+  "btnDelete": {
+    "message": "刪除"
+  },
+  "btnRename": {
+    "message": "重新命名"
+  },
+  "btnDefault": {
+    "message": "預設"
+  },
+  "btnAddCategory": {
+    "message": "新增分類"
+  },
+  "btnAddNewCategory": {
+    "message": "+ 新增分類"
+  },
+  "hintDragCategory": {
+    "message": "💡 拖曳分類可以調整順序"
+  },
+  "modalEditCategory": {
+    "message": "📁 編輯分類"
+  },
+  "addNewCategory": {
+    "message": "新增分類"
+  },
+  "placeholderEnterCategoryName": {
+    "message": "輸入新分類名稱"
+  },
+  "exportBookmarks": {
+    "message": "匯出書籤"
+  },
+  "importBookmarks": {
+    "message": "匯入書籤"
+  },
+  "changeBackground": {
+    "message": "更換背景"
+  },
+  "chooseBackground": {
+    "message": "🎨 選擇背景"
+  },
+  "uploadCustomBackground": {
+    "message": "📁 上傳自訂背景"
+  },
+  "emptyStateTitle": {
+    "message": "暫無書籤"
+  },
+  "emptyStateDesc": {
+    "message": "點擊上方按鈕新增您的第一個書籤"
+  },
+  "addCardTitle": {
+    "message": "新增書籤"
+  },
+  "addCardDesc": {
+    "message": "點擊新增書籤"
+  },
+  "noResults": {
+    "message": "找不到相符的書籤"
+  },
+  "searchInEngines": {
+    "message": "在搜尋引擎中搜尋"
+  },
+  "searchSuggestions": {
+    "message": "搜尋建議"
+  },
+  "baiduSearch": {
+    "message": "百度搜尋"
+  },
+  "bingSearch": {
+    "message": "Bing搜尋"
+  },
+  "confirmDeleteBookmark": {
+    "message": "確定要刪除此書籤嗎？"
+  },
+  "confirmUnsavedChanges": {
+    "message": "您有未儲存的變更，確定要退出嗎？"
+  },
+  "confirmDeleteCategory": {
+    "message": "確定要刪除分類「$1」嗎？該分類下的所有書籤將被移到「其他」分類。"
+  },
+  "alertFillComplete": {
+    "message": "請填寫完整資訊"
+  },
+  "alertEnterCategoryName": {
+    "message": "請輸入分類名稱"
+  },
+  "alertCategoryExists": {
+    "message": "該分類已存在"
+  },
+  "alertEnterNewCategoryName": {
+    "message": "請輸入新分類名稱"
+  },
+  "promptNewCategoryName": {
+    "message": "請輸入新的分類名稱："
+  },
+  "alertInvalidFormat": {
+    "message": "無效的書籤資料格式"
+  },
+  "alertImportEmpty": {
+    "message": "匯入的書籤資料為空"
+  },
+  "promptImportMode": {
+    "message": "偵測到 $1 個書籤，選擇匯入方式：\n1 - 附加到現有書籤\n2 - 取代所有書籤"
+  },
+  "alertImportCancelled": {
+    "message": "取消匯入"
+  },
+  "alertImportSuccess": {
+    "message": "成功匯入 $1 個書籤！"
+  },
+  "labelNewCategories": {
+    "message": "新增分類："
+  },
+  "alertImportFailed": {
+    "message": "匯入失敗：無效的JSON檔案"
+  },
+  "bookmarksCount": {
+    "message": "$1 個書籤"
+  },
+  "bgPresetPurpleBlue": {
+    "message": "紫藍漸變"
+  },
+  "bgPresetSunset": {
+    "message": "日落橙"
+  },
+  "bgPresetDeepSea": {
+    "message": "深海藍"
+  },
+  "bgPresetForest": {
+    "message": "森林綠"
+  },
+  "bgPresetNightPurple": {
+    "message": "暗夜紫"
+  },
+  "bgPresetAurora": {
+    "message": "極光"
+  },
+  "bgPresetZoige": {
+    "message": "若爾蓋"
+  },
+  "catFrequent": {
+    "message": "常用"
+  },
+  "catDevTools": {
+    "message": "開發工具"
+  },
+  "catSearchEngines": {
+    "message": "搜尋引擎"
+  },
+  "catLearning": {
+    "message": "學習資源"
+  },
+  "catCommunity": {
+    "message": "社群論壇"
+  },
+  "catOther": {
+    "message": "其他"
+  },
+  "catAll": {
+    "message": "全部"
+  },
+  "myWeibo": {
+    "message": "我的微博"
+  },
+  "myGithub": {
+    "message": "我的GitHub"
+  },
+  "juejin": {
+    "message": "掘金"
+  },
+  "bookmarks": {
+    "message": "書籤"
+  },
+  "language": {
+    "message": "語言"
+  },
+  "langSystem": {
+    "message": "跟隨系統"
+  },
+  "langZhCN": {
+    "message": "🇨🇳 简体中文"
+  },
+  "langZhTW": {
+    "message": "🇹🇼 繁體中文"
+  },
+  "langEn": {
+    "message": "🇺🇸 English"
+  },
+  "langJa": {
+    "message": "🇯🇵 日本語"
+  },
+  "langKo": {
+    "message": "🇰🇷 한국어"
+  },
+  "langDe": {
+    "message": "🇩🇪 Deutsch"
+  },
+  "langFr": {
+    "message": "🇫🇷 Français"
+  },
+  "langVi": {
+    "message": "🇻🇳 Tiếng Việt"
+  },
+  "langTh": {
+    "message": "🇹🇭 ภาษาไทย"
+  },
+  "langMs": {
+    "message": "🇲🇾 Bahasa Melayu"
+  },
+  "settingsTitle": {
+    "message": "設定"
+  },
+  "addCurrentPage": {
+    "message": "新增目前頁面"
+  },
+  "alertNoTab": {
+    "message": "無法取得目前標籤頁資訊"
+  },
+  "openBookmarkNav": {
+    "message": "開啟書籤導航"
+  },
+  "popupTitle": {
+    "message": "書籤導航 - 新增目前頁面"
+  },
+  "labelSelectIcon": {
+    "message": "選擇圖示"
+  },
+  "iconPreviewLabel": {
+    "message": "目前圖示"
+  },
+  "btnFetchFavicon": {
+    "message": "🌐 取得網站圖示"
+  },
+  "btnResetIcon": {
+    "message": "🔄 重設為預設"
+  },
+  "iconFavicon": {
+    "message": "網站圖示"
+  },
+  "alertEnterUrlFirst": {
+    "message": "請先輸入網址"
+  },
+  "hintUrlEnter": {
+    "message": "💡 輸入網址後按Enter，自動取得相關資訊"
+  },
+  "btnAdded": {
+    "message": "已新增"
+  },
+  "btnUpdateCategory": {
+    "message": "更新分類"
+  },
+  "alertCategoryUpdated": {
+    "message": "✓ 分類已更新為 $1"
+  },
+  "settingOpenWithCurrentTab": {
+    "message": "當前頁面開啟"
+  },
+  "settingDefaultSearchEngine": {
+    "message": "預設搜尋引擎"
+  },
+  "hintDragToCategory": {
+    "message": "💡 拖動書籤到分類標籤可快速移動分類"
+  },
+  "alertBookmarkMoved": {
+    "message": "✓ 已移動到 $1"
+  },
+  "alertInvalidUrl": {
+    "message": "無效的 URL"
+  }
 }

@@ -137,6 +137,16 @@ function saveBookmarks(bookmarks) {
     }
 }
 
+function escapeHtml(text) {
+    if (text == null) return '';
+    return String(text)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
+
 function showToast(msg) {
     var toast = document.createElement('div');
     toast.className = 'toast';
@@ -186,7 +196,9 @@ function fetchFavicon(url, callback) {
         var service = faviconServiceUrls[tried];
         var serviceUrl = service.includes('domain=') ? service + rootDomain + '&sz=64' : service + rootDomain;
         tried++;
+        var timeoutId = setTimeout(function() { tryNext(); }, 5000);
         loadFaviconAsImage(serviceUrl, function(err, result) {
+            clearTimeout(timeoutId);
             if (err) {
                 tryNext();
             } else {
@@ -247,11 +259,11 @@ async function init() {
 
     var categories = await loadCategories();
     categorySelect.innerHTML = categories
-        .map(function(c) { return '<option value="' + c + '">' + categoryLabel(c) + '</option>'; })
+        .map(function(c) { return '<option value="' + escapeHtml(c) + '">' + escapeHtml(categoryLabel(c)) + '</option>'; })
         .join('');
 
     if (!tab || !tab.url || tab.url.startsWith('chrome://') || tab.url.startsWith('chrome-extension://')) {
-        titleEl.textContent = i18n('alertNoTab') || '无法获取当前标签页';
+        titleEl.textContent = i18n('alertNoTab') || '无法获取当前标签页信息';
         urlEl.textContent = '';
         addBtn.classList.add('popup-disabled');
         addBtn.disabled = true;
@@ -308,16 +320,21 @@ async function init() {
     addBtn.addEventListener('click', async function() {
         if (addBtn.disabled) return;
         var category = categorySelect.value;
+        var safeUrl = tab.url;
+        if (!/^https?:\/\//i.test(safeUrl)) {
+            showToast(i18n('alertInvalidUrl') || 'Invalid URL');
+            return;
+        }
 
         if (isAdded) {
             bookmarks = bookmarks.map(function(b) {
-                if (b.url === tab.url) {
+                if (b.url === safeUrl) {
                     return Object.assign({}, b, { category: category });
                 }
                 return b;
             });
             saveBookmarks(bookmarks);
-            showToast(i18n('alertCategoryUpdated') ? i18n('alertCategoryUpdated').replace('$1', category) : '✓ 分类已更新为 ' + category);
+            showToast(i18n('alertCategoryUpdated') ? i18n('alertCategoryUpdated').replace('$1', escapeHtml(category)) : '✓ 分类已更新为 ' + escapeHtml(category));
             setTimeout(function() { window.close(); }, 800);
             return;
         }
@@ -329,7 +346,7 @@ async function init() {
         bookmarks.push({
             id: maxId + 1,
             name: tab.title || '',
-            url: tab.url,
+            url: safeUrl,
             icon: bookmarkIcon,
             iconType: currentIconType,
             iconValue: currentIconValue,

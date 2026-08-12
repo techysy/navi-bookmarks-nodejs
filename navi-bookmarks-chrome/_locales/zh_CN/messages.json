@@ -1,119 +1,356 @@
 {
-  "appName": { "message": "个人书签导航" },
-  "appDescription": { "message": "个人书签导航新标签页 - 快速访问您喜爱的网站" },
-  "headerTitle": { "message": "📚 书签导航" },
-  "headerSubtitle": { "message": "快速访问您喜爱的网站" },
-  "searchPlaceholder": { "message": "搜索书签或使用搜索引擎..." },
-  "addBookmark": { "message": "+ 添加书签" },
-  "editCategory": { "message": "📁 编辑分类" },
-  "bookmarkSearch": { "message": "书签搜索" },
-  "bookmarkSearchDesc": { "message": "搜索您的书签" },
-  "baidu": { "message": "百度" },
-  "bing": { "message": "必应" },
-  "xiaohongshu": { "message": "小红书" },
-  "modalAddBookmark": { "message": "添加书签" },
-  "modalEditBookmark": { "message": "编辑书签" },
-  "labelWebsiteName": { "message": "网站名称" },
-  "placeholderWebsiteName": { "message": "输入网站名称" },
-  "labelWebsiteUrl": { "message": "网站地址" },
-  "placeholderWebsiteUrl": { "message": "输入网站URL或IP地址（可省略http://）" },
-  "labelDescription": { "message": "描述（可选）" },
-  "placeholderDescription": { "message": "输入网站描述或备注信息" },
-  "labelCategory": { "message": "分类" },
-  "labelNewCategory": { "message": "新分类名称" },
-  "placeholderNewCategory": { "message": "输入新分类名称" },
-  "btnCancel": { "message": "取消" },
-  "btnSave": { "message": "保存" },
-  "btnClose": { "message": "关闭" },
-  "btnOk": { "message": "确定" },
-  "btnConfirm": { "message": "确定" },
-  "btnEdit": { "message": "编辑" },
-  "btnDelete": { "message": "删除" },
-  "btnRename": { "message": "重命名" },
-  "btnDefault": { "message": "默认" },
-  "btnAddCategory": { "message": "添加分类" },
-  "btnAddNewCategory": { "message": "+ 添加新分类" },
-  "hintDragCategory": { "message": "💡 拖动分类可以调整顺序" },
-  "modalEditCategory": { "message": "📁 编辑分类" },
-  "addNewCategory": { "message": "添加新分类" },
-  "placeholderEnterCategoryName": { "message": "输入新分类名称" },
-  "exportBookmarks": { "message": "导出书签" },
-  "importBookmarks": { "message": "导入书签" },
-  "changeBackground": { "message": "更换背景" },
-  "chooseBackground": { "message": "🎨 选择背景" },
-  "uploadCustomBackground": { "message": "📁 上传自定义背景" },
-  "emptyStateTitle": { "message": "暂无书签" },
-  "emptyStateDesc": { "message": "点击上方按钮添加您的第一个书签" },
-  "addCardTitle": { "message": "添加书签" },
-  "addCardDesc": { "message": "点击添加新书签" },
-  "noResults": { "message": "未找到匹配的书签" },
-  "searchInEngines": { "message": "在搜索引擎中搜索" },
-  "searchSuggestions": { "message": "搜索建议" },
-  "baiduSearch": { "message": "百度搜索" },
-  "bingSearch": { "message": "必应搜索" },
-  "confirmDeleteBookmark": { "message": "确定要删除这个书签吗？" },
-  "confirmUnsavedChanges": { "message": "您有未保存的更改，确定要退出吗？" },
-  "confirmDeleteCategory": { "message": "确定要删除分类 \"$1\" 吗？该分类下的所有书签将被移到\"其他\"分类。" },
-  "alertFillComplete": { "message": "请填写完整信息" },
-  "alertEnterCategoryName": { "message": "请输入分类名称" },
-  "alertCategoryExists": { "message": "该分类已存在" },
-  "alertEnterNewCategoryName": { "message": "请输入新分类名称" },
-  "promptNewCategoryName": { "message": "请输入新的分类名称:" },
-  "alertInvalidFormat": { "message": "无效的书签数据格式" },
-  "alertImportEmpty": { "message": "导入的书签数据为空" },
-  "promptImportMode": { "message": "检测到 $1 个书签，选择导入方式：\n1 - 追加到现有书签\n2 - 替换所有书签" },
-  "alertImportCancelled": { "message": "取消导入" },
-  "alertImportSuccess": { "message": "成功导入 $1 个书签！" },
-  "labelNewCategories": { "message": "新增分类：" },
-  "alertImportFailed": { "message": "导入失败：无效的JSON文件" },
-  "bookmarksCount": { "message": "$1个书签" },
-  "bgPresetPurpleBlue": { "message": "紫蓝渐变" },
-  "bgPresetSunset": { "message": "日落橙" },
-  "bgPresetDeepSea": { "message": "深海蓝" },
-  "bgPresetForest": { "message": "森林绿" },
-  "bgPresetNightPurple": { "message": "暗夜紫" },
-  "bgPresetAurora": { "message": "极光" },
-  "bgPresetZoige": { "message": "若尔盖" },
-  "catFrequent": { "message": "常用" },
-  "catDevTools": { "message": "开发工具" },
-  "catSearchEngines": { "message": "搜索引擎" },
-  "catLearning": { "message": "学习资源" },
-  "catCommunity": { "message": "社区论坛" },
-  "catOther": { "message": "其他" },
-  "catAll": { "message": "全部" },
-  "myWeibo": { "message": "我的微博" },
-  "myGithub": { "message": "我的GitHub" },
-  "juejin": { "message": "掘金" },
-  "bookmarks": { "message": "书签" },
-  "language": { "message": "语言" },
-  "langSystem": { "message": "跟随系统" },
-  "langZhCN": { "message": "🇨🇳 中文" },
-  "langZhTW": { "message": "🇹🇼 繁體中文" },
-  "langEn": { "message": "🇺🇸 English" },
-  "langJa": { "message": "🇯🇵 日本語" },
-  "langKo": { "message": "🇰🇷 한국어" },
-  "langVi": { "message": "🇻🇳 Tiếng Việt" },
-  "langTh": { "message": "🇹🇭 ภาษาไทย" },
-  "langMs": { "message": "🇲🇾 Bahasa Melayu" },
-  "langDe": { "message": "🇩🇪 Deutsch" },
-  "langFr": { "message": "🇫🇷 Français" },
-  "settingsTitle": { "message": "设置" },
-  "addCurrentPage": { "message": "添加当前页" },
-  "alertNoTab": { "message": "无法获取当前标签页信息" },
-  "openBookmarkNav": { "message": "打开书签导航" },
-  "popupTitle": { "message": "书签导航 - 添加当前页" },
-  "labelSelectIcon": { "message": "选择图标" },
-  "iconPreviewLabel": { "message": "当前图标" },
-  "btnFetchFavicon": { "message": "🌐 获取网站图标" },
-  "btnResetIcon": { "message": "🔄 重置为默认" },
-  "iconFavicon": { "message": "网站图标" },
-  "alertEnterUrlFirst": { "message": "请先输入网址" },
-  "hintUrlEnter": { "message": "💡 输入网址后回车，自动获取相关信息" },
-  "btnAdded": { "message": "已添加" },
-  "btnUpdateCategory": { "message": "更新分类" },
-  "alertCategoryUpdated": { "message": "✓ 分类已更新为 $1" },
-  "alertBookmarkMoved": { "message": "✓ 已移动到 $1" },
-  "hintDragToCategory": { "message": "💡 拖动书签到分类标签可快速移动分类" },
-  "settingOpenWithCurrentTab": { "message": "当前页打开" },
-  "settingDefaultSearchEngine": { "message": "默认搜索引擎" }
+  "appName": {
+    "message": "个人书签导航"
+  },
+  "appDescription": {
+    "message": "个人书签导航新标签页 - 快速访问您喜爱的网站"
+  },
+  "headerTitle": {
+    "message": "📚 书签导航"
+  },
+  "headerSubtitle": {
+    "message": "快速访问您喜爱的网站"
+  },
+  "searchPlaceholder": {
+    "message": "搜索书签或使用搜索引擎..."
+  },
+  "addBookmark": {
+    "message": "+ 添加书签"
+  },
+  "editCategory": {
+    "message": "📁 编辑分类"
+  },
+  "bookmarkSearch": {
+    "message": "书签搜索"
+  },
+  "bookmarkSearchDesc": {
+    "message": "搜索您的书签"
+  },
+  "baidu": {
+    "message": "百度"
+  },
+  "bing": {
+    "message": "必应"
+  },
+  "xiaohongshu": {
+    "message": "小红书"
+  },
+  "modalAddBookmark": {
+    "message": "添加书签"
+  },
+  "modalEditBookmark": {
+    "message": "编辑书签"
+  },
+  "labelWebsiteName": {
+    "message": "网站名称"
+  },
+  "placeholderWebsiteName": {
+    "message": "输入网站名称"
+  },
+  "labelWebsiteUrl": {
+    "message": "网站地址"
+  },
+  "placeholderWebsiteUrl": {
+    "message": "输入网站URL或IP地址（可省略http://）"
+  },
+  "labelDescription": {
+    "message": "描述（可选）"
+  },
+  "placeholderDescription": {
+    "message": "输入网站描述或备注信息"
+  },
+  "labelCategory": {
+    "message": "分类"
+  },
+  "labelNewCategory": {
+    "message": "新分类名称"
+  },
+  "placeholderNewCategory": {
+    "message": "输入新分类名称"
+  },
+  "btnCancel": {
+    "message": "取消"
+  },
+  "btnSave": {
+    "message": "保存"
+  },
+  "btnClose": {
+    "message": "关闭"
+  },
+  "btnOk": {
+    "message": "确定"
+  },
+  "btnConfirm": {
+    "message": "确定"
+  },
+  "btnEdit": {
+    "message": "编辑"
+  },
+  "btnDelete": {
+    "message": "删除"
+  },
+  "btnRename": {
+    "message": "重命名"
+  },
+  "btnDefault": {
+    "message": "默认"
+  },
+  "btnAddCategory": {
+    "message": "添加分类"
+  },
+  "btnAddNewCategory": {
+    "message": "+ 添加新分类"
+  },
+  "hintDragCategory": {
+    "message": "💡 拖动分类可以调整顺序"
+  },
+  "modalEditCategory": {
+    "message": "📁 编辑分类"
+  },
+  "addNewCategory": {
+    "message": "添加新分类"
+  },
+  "placeholderEnterCategoryName": {
+    "message": "输入新分类名称"
+  },
+  "exportBookmarks": {
+    "message": "导出书签"
+  },
+  "importBookmarks": {
+    "message": "导入书签"
+  },
+  "changeBackground": {
+    "message": "更换背景"
+  },
+  "chooseBackground": {
+    "message": "🎨 选择背景"
+  },
+  "uploadCustomBackground": {
+    "message": "📁 上传自定义背景"
+  },
+  "emptyStateTitle": {
+    "message": "暂无书签"
+  },
+  "emptyStateDesc": {
+    "message": "点击上方按钮添加您的第一个书签"
+  },
+  "addCardTitle": {
+    "message": "添加书签"
+  },
+  "addCardDesc": {
+    "message": "点击添加新书签"
+  },
+  "noResults": {
+    "message": "未找到匹配的书签"
+  },
+  "searchInEngines": {
+    "message": "在搜索引擎中搜索"
+  },
+  "searchSuggestions": {
+    "message": "搜索建议"
+  },
+  "baiduSearch": {
+    "message": "百度搜索"
+  },
+  "bingSearch": {
+    "message": "必应搜索"
+  },
+  "confirmDeleteBookmark": {
+    "message": "确定要删除这个书签吗？"
+  },
+  "confirmUnsavedChanges": {
+    "message": "您有未保存的更改，确定要退出吗？"
+  },
+  "confirmDeleteCategory": {
+    "message": "确定要删除分类 \"$1\" 吗？该分类下的所有书签将被移到\"其他\"分类。"
+  },
+  "alertFillComplete": {
+    "message": "请填写完整信息"
+  },
+  "alertEnterCategoryName": {
+    "message": "请输入分类名称"
+  },
+  "alertCategoryExists": {
+    "message": "该分类已存在"
+  },
+  "alertEnterNewCategoryName": {
+    "message": "请输入新分类名称"
+  },
+  "promptNewCategoryName": {
+    "message": "请输入新的分类名称:"
+  },
+  "alertInvalidFormat": {
+    "message": "无效的书签数据格式"
+  },
+  "alertImportEmpty": {
+    "message": "导入的书签数据为空"
+  },
+  "promptImportMode": {
+    "message": "检测到 $1 个书签，选择导入方式：\n1 - 追加到现有书签\n2 - 替换所有书签"
+  },
+  "alertImportCancelled": {
+    "message": "取消导入"
+  },
+  "alertImportSuccess": {
+    "message": "成功导入 $1 个书签！"
+  },
+  "labelNewCategories": {
+    "message": "新增分类："
+  },
+  "alertImportFailed": {
+    "message": "导入失败：无效的JSON文件"
+  },
+  "bookmarksCount": {
+    "message": "$1个书签"
+  },
+  "bgPresetPurpleBlue": {
+    "message": "紫蓝渐变"
+  },
+  "bgPresetSunset": {
+    "message": "日落橙"
+  },
+  "bgPresetDeepSea": {
+    "message": "深海蓝"
+  },
+  "bgPresetForest": {
+    "message": "森林绿"
+  },
+  "bgPresetNightPurple": {
+    "message": "暗夜紫"
+  },
+  "bgPresetAurora": {
+    "message": "极光"
+  },
+  "bgPresetZoige": {
+    "message": "若尔盖"
+  },
+  "catFrequent": {
+    "message": "常用"
+  },
+  "catDevTools": {
+    "message": "开发工具"
+  },
+  "catSearchEngines": {
+    "message": "搜索引擎"
+  },
+  "catLearning": {
+    "message": "学习资源"
+  },
+  "catCommunity": {
+    "message": "社区论坛"
+  },
+  "catOther": {
+    "message": "其他"
+  },
+  "catAll": {
+    "message": "全部"
+  },
+  "myWeibo": {
+    "message": "我的微博"
+  },
+  "myGithub": {
+    "message": "我的GitHub"
+  },
+  "juejin": {
+    "message": "掘金"
+  },
+  "bookmarks": {
+    "message": "书签"
+  },
+  "language": {
+    "message": "语言"
+  },
+  "langSystem": {
+    "message": "跟随系统"
+  },
+  "langZhCN": {
+    "message": "🇨🇳 中文"
+  },
+  "langZhTW": {
+    "message": "🇹🇼 繁體中文"
+  },
+  "langEn": {
+    "message": "🇺🇸 English"
+  },
+  "langJa": {
+    "message": "🇯🇵 日本語"
+  },
+  "langKo": {
+    "message": "🇰🇷 한국어"
+  },
+  "langVi": {
+    "message": "🇻🇳 Tiếng Việt"
+  },
+  "langTh": {
+    "message": "🇹🇭 ภาษาไทย"
+  },
+  "langMs": {
+    "message": "🇲🇾 Bahasa Melayu"
+  },
+  "langDe": {
+    "message": "🇩🇪 Deutsch"
+  },
+  "langFr": {
+    "message": "🇫🇷 Français"
+  },
+  "settingsTitle": {
+    "message": "设置"
+  },
+  "addCurrentPage": {
+    "message": "添加当前页"
+  },
+  "alertNoTab": {
+    "message": "无法获取当前标签页信息"
+  },
+  "openBookmarkNav": {
+    "message": "打开书签导航"
+  },
+  "popupTitle": {
+    "message": "书签导航 - 添加当前页"
+  },
+  "labelSelectIcon": {
+    "message": "选择图标"
+  },
+  "iconPreviewLabel": {
+    "message": "当前图标"
+  },
+  "btnFetchFavicon": {
+    "message": "🌐 获取网站图标"
+  },
+  "btnResetIcon": {
+    "message": "🔄 重置为默认"
+  },
+  "iconFavicon": {
+    "message": "网站图标"
+  },
+  "alertEnterUrlFirst": {
+    "message": "请先输入网址"
+  },
+  "hintUrlEnter": {
+    "message": "💡 输入网址后回车，自动获取相关信息"
+  },
+  "btnAdded": {
+    "message": "已添加"
+  },
+  "btnUpdateCategory": {
+    "message": "更新分类"
+  },
+  "alertCategoryUpdated": {
+    "message": "✓ 分类已更新为 $1"
+  },
+  "alertBookmarkMoved": {
+    "message": "✓ 已移动到 $1"
+  },
+  "hintDragToCategory": {
+    "message": "💡 拖动书签到分类标签可快速移动分类"
+  },
+  "settingOpenWithCurrentTab": {
+    "message": "当前页打开"
+  },
+  "settingDefaultSearchEngine": {
+    "message": "默认搜索引擎"
+  },
+  "alertInvalidUrl": {
+    "message": "无效的 URL"
+  }
 }

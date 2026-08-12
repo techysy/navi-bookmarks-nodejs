@@ -1,165 +1,168 @@
-# 📝 更新日志
+# Changelog / 更新日志
 
-所有重要的项目变更都记录在此文件中。
+All notable changes to this project will be documented in this file.
 
-> **版本说明**：旧项目（Web 版本）最终版本为 v0.9.9，此后项目重构为 Chrome 浏览器插件，版本号从 v1.0.0 重新计起。
+本文件记录项目的所有重大变更。
 
-## [v1.3.1] - 2026-07-28
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/spec/v2.0.0.html).
 
-### 修复
+> **Note / 说明**: The legacy web version ended at v0.9.9. The Chrome extension version starts fresh at v1.0.0.
+> 旧版 Web 项目最终版本为 v0.9.9，Chrome 插件版本从 v1.0.0 重新计算。
 
-- 🐛 替换模式导入书签时分类目录未强制刷新，导致存在多个历史残留分类
-- 🐛 替换模式导入后重建 `defaultCategories`，仅保留当前书签实际使用的分类
+## [Unreleased]
+
+### Added / 新增
+
+- ✅ Automated build and release pipeline via GitHub Actions.
+- ✅ i18n key consistency validation script.
+- ✅ `CONTRIBUTING.md`, `PRIVACY_POLICY.md`, and `STORE_LISTING.md`.
+- ✅ Shared utility module `common.js`.
+
+### Changed / 改进
+
+- 🔧 Standardized `CHANGELOG.md` to Keep a Changelog format.
+
+### Fixed / 修复
+
+- 🐛 XSS vulnerabilities in bookmark rendering and modal dialogs.
+- 🐛 URL protocol validation to block `javascript:`, `data:`, and other unsafe schemes.
+
+## [1.3.1] - 2026-07-28
+
+### Fixed / 修复
+
+- 🐛 Fixed issue where importing bookmarks in replace mode did not refresh categories correctly, causing duplicate historical categories.
+- 🐛 Rebuilt `defaultCategories` after replace-mode import to keep only categories actually used by current bookmarks.
+
+## [1.3.0] - 2026-07-05
+
+### Added / 新增
+
+- ✅ Local persistent storage for website favicons.
+- ✅ Automatic favicon download and Base64 conversion for offline display.
+
+### Changed / 改进
+
+- ✅ Favicons are no longer fetched on every render, improving page load speed.
+- ✅ Reduced request frequency to Google Favicon API to avoid rate limiting.
+
+## [1.2.0] - 2026-06-30
+
+### Added / 新增
+
+- ✅ Full translations for Japanese, Korean, Vietnamese, Thai, Malay, German, French, and Traditional Chinese.
+- ✅ Language selector now shows flag emojis.
+- ✅ System language auto-detection for all 10 supported languages.
+
+### Changed / 改进
+
+- ✅ Language list sorted by region (CJK → Europe/America → Southeast Asia).
+
+## [1.1.0] - 2026-06-29
+
+### Added / 新增
+
+- ✅ Toolbar popup: add current page as bookmark directly from the extension icon.
+- ✅ Popup supports category selection and one-click save.
+- ✅ Popup displays current page title and URL.
+- ✅ "Open Bookmark Navigation" shortcut button in popup.
+- ✅ Added `action` configuration and `tabs` permission to `manifest.json`.
+
+### Changed / 改进
+
+- ✅ Settings menu UI improvements (header, icon alignment, dividers, language selector).
+- ✅ Overall layout refinements (tighter spacing, unified glassmorphism effects).
+- ✅ Button hover animations improved.
+
+## [1.0.2] - 2026-06-29
+
+### Added / 新增
+
+- ✅ Internationalization (i18n) support with Chinese/English switching.
+- ✅ Added `_locales/en` and `_locales/zh_CN` language packs.
+- ✅ HTML `data-i18n` / `data-i18n-placeholder` attributes for automatic translation.
+- ✅ All UI text in JS uses `chrome.i18n.getMessage()`.
+- ✅ Language switcher in settings (System / Chinese / English).
+- ✅ Language preference persisted across sessions.
+
+### Changed / 改进
+
+- ✅ Category names support language switching while keeping data compatible.
+- ✅ Search engine names and background preset names support multiple languages.
+- ✅ `manifest.json` uses `__MSG_appName__` for internationalization.
+
+## [1.0.1] - 2026-06-29
+
+### Changed / 改进
+
+- ✅ Replaced all native `confirm`/`alert`/`prompt` with custom bubble dialogs.
+- ✅ Unified bubble-style popups for add/edit bookmark, edit category, and change background.
+- ✅ Export filename auto-appends date-time (`bookmarks_YYMMDD_HHmm.json`).
+- ✅ Popup animation refined (fade-in 0.1s, pop 0.125s).
+- ✅ Glassmorphism overlay lightened (opacity 0.15, blur 1px).
+
+## [1.0.0] - 2026-06-28
+
+### Added / 新增
+
+- ✅ Rebuilt as a Chrome extension (Manifest V3).
+- ✅ New tab page override via `chrome_url_overrides`.
+- ✅ Chrome Storage local data persistence.
+- ✅ Multiple background theme presets.
+- ✅ Zoigê grassland background image.
+- ✅ Custom background upload.
+- ✅ Background selector thumbnails.
+- ✅ Extension icons.
+
+### Changed / 改进
+
+- ✅ Simplified button styles (40px circular buttons).
+- ✅ Click area limited to icon and name.
+- ✅ Drag sorting uses native HTML5 Drag API.
+- ✅ Removed all inline event handlers (CSP compliant).
+- ✅ All event bindings use `addEventListener`.
+
+### Removed / 移除
+
+- 🗑️ Removed Node.js server dependency (`server.js`).
+- 🗑️ Removed PowerShell startup script (`start.ps1`).
+- 🗑️ Removed LAN access feature.
+- 🗑️ Moved legacy web files to `old/` directory.
+
+## [0.9.9] - 2026-06-17
+
+> **Note / 说明**: This was the final version of the legacy web project. It was then rebuilt as a Chrome extension.
+> 这是旧版 Web 项目的最后一个版本，之后重构为 Chrome 插件。
+
+### Added / 新增
+
+- ✅ Bookmark navigation main page (HTML5 + CSS3 + JavaScript).
+- ✅ Node.js server with LAN access support.
+- ✅ Smart search with multiple search engines.
+- ✅ Category management (create, edit, delete, drag sort).
+- ✅ Glassmorphism UI design.
+- ✅ Responsive design for desktop and mobile.
+- ✅ Data persistence (local storage + server sync).
+- ✅ Default "Frequent" category.
+- ✅ Import/export with append/replace modes.
+- ✅ PowerShell interactive startup script.
+
+### Fixed / 修复
+
+- 🐛 Fixed script stop service function (`$pid` variable conflict).
+- 🐛 Fixed auto-creation of unknown categories during import.
+- 🐛 Fixed scroll wheel affecting normal page scrolling.
+- 🐛 Fixed search engine Enter key binding.
+- 🐛 Auto fallback to external search engine when bookmark search has no results.
 
 ---
 
-## [v1.3.0] - 2026-07-05
+## Legend / 图例
 
-### 新增
-
-- ✅ 网站图标（Favicon）本地持久化存储
-- ✅ 新增网站图标自动下载并转为 Base64 存入本地存储
-- ✅ 离线状态下书签图标正常显示（不再依赖 Google Favicon API）
-
-### 改进
-
-- ✅ 书签图标不再每次渲染都远程请求，提升页面加载速度
-- ✅ 减少对 Google Favicon API 的请求频率，避免触发限流
-
----
-
-## [v1.2.0] - 2026-06-30
-
-### 新增
-
-- ✅ 日語（日本語）完整翻譯支援
-- ✅ 韓語（한국어）完整翻譯支援
-- ✅ 越南語（Tiếng Việt）完整翻譯支援
-- ✅ 泰語（ภาษาไทย）完整翻譯支援
-- ✅ 馬來語（Bahasa Melayu）完整翻譯支援
-- ✅ 德語（Deutsch）完整翻譯支援
-- ✅ 法語（Français）完整翻譯支援
-- ✅ 繁體中文（繁體中文）完整翻譯支援
-- ✅ 語言選擇器新增對應國旗 Emoji 顯示
-- ✅ 系統語言自動偵測支援全部 10 種語言
-
-### 改進
-
-- ✅ 語言列表按區域排序（中日韓 → 歐美 → 東南亞）
-
----
-
-## [v1.1.0] - 2026-06-29
-
-### 新增
-
-- ✅ 插件图标 Popup：点击工具栏图标可直接添加当前页为书签
-- ✅ Popup 内支持选择分类，一键保存无需跳转
-- ✅ Popup 显示当前页标题和 URL 信息
-- ✅ 新增「打开书签导航」快捷按钮
-- ✅ manifest.json 新增 `action` 配置和 `tabs` 权限
-
-### 改进
-
-- ✅ 设置菜单 UI 优化（标题头、图标对齐、分隔线、语言选择器）
-- ✅ 页面整体布局微调（间距收紧、毛玻璃效果统一）
-- ✅ 按钮 hover 动效优化
-
----
-
-## [v1.0.2] - 2026-06-29
-
-### 新增
-
-- ✅ 国际化（i18n）支持，支持中文和英文切换
-- ✅ 新增 `_locales/en` 和 `_locales/zh_CN` 语言包
-- ✅ HTML 添加 `data-i18n` / `data-i18n-placeholder` 属性自动翻译
-- ✅ JS 内所有 UI 文本使用 `chrome.i18n.getMessage()` 动态获取
-- ✅ 设置菜单新增语言切换选项（跟随系统 / 中文 / English）
-- ✅ 语言偏好持久化存储，刷新后保持
-
-### 改进
-
-- ✅ 分类名称显示支持语言切换（内部数据保持兼容）
-- ✅ 搜索引擎名称、背景预设名称支持多语言
-- ✅ manifest.json 使用 `__MSG_appName__` 国际化
-
----
-
-## [v1.0.1] - 2026-06-29
-
-### 改进
-
-- ✅ 替换所有原生 confirm/alert/prompt 为自定义气泡弹窗（毛玻璃遮罩 + 弹出动画）
-- ✅ 添加书签、编辑分类、编辑书签、更换背景弹窗效果统一为气泡风格
-- ✅ 导出书签文件名自动附加日期时间（格式：bookmarks_YYMMDD_HHmm.json）
-- ✅ 弹窗动画优化（淡入 0.1s，弹出 0.125s）
-- ✅ 毛玻璃遮罩效果减淡（透明度 0.15，模糊 1px）
-
----
-
-## [v1.0.0] - 2026-06-28
-
-### 新增
-
-- ✅ 改造为 Chrome 浏览器插件（Manifest V3）
-- ✅ 新标签页替换功能（chrome_url_overrides）
-- ✅ Chrome Storage 本地数据持久化
-- ✅ 多种背景主题预设（紫蓝渐变、日落橙、深海蓝、森林绿、暗夜紫、极光）
-- ✅ 若尔盖大草原背景图（Zoigê.JPG）
-- ✅ 自定义背景上传功能
-- ✅ 背景选择器缩略图预览
-- ✅ 插件图标（🔖书签形状）
-
-### 改进
-
-- ✅ 按钮样式精简化（40px 圆形按钮）
-- ✅ 点击跳转区域限制为图标和名称
-- ✅ 拖拽排序恢复原生 HTML5 Drag API
-- ✅ 移除所有内联事件处理器（符合 CSP 安全策略）
-- ✅ 事件绑定全部使用 addEventListener
-
-### 移除
-
-- ✅ 移除 Node.js 服务器依赖（server.js）
-- ✅ 移除 PowerShell 启动脚本（start.ps1）
-- ✅ 移除局域网访问功能
-- ✅ 旧版 Web 项目文件移至 `old/` 目录
-
----
-
-## [v0.9.9] - 2026-06-17
-
-> 此为旧项目（Web 版本）最后一个版本，此后项目重构为 Chrome 浏览器插件。
-
-### 新增
-
-- ✅ 书签导航主页面（HTML5 + CSS3 + JavaScript）
-- ✅ Node.js 服务器（支持局域网访问）
-- ✅ 智能搜索功能（支持多种搜索引擎）
-- ✅ 分类管理（创建、编辑、删除、拖拽排序）
-- ✅ 毛玻璃UI设计
-- ✅ 响应式设计（适配桌面端和移动端）
-- ✅ 数据持久化（本地存储 + 服务器同步）
-- ✅ "常用"分类默认显示
-- ✅ 导入导出功能（支持追加/替换模式）
-- ✅ PowerShell 交互式启动脚本
-
-### 修复
-
-- ✅ 修复脚本停止服务功能（$pid 变量冲突问题）
-- ✅ 修复导入书签时未知分类自动创建
-- ✅ 修复滚轮滑动影响页面正常滚动
-- ✅ 修复搜索引擎搜索无法关联回车键的问题
-- ✅ 添加书签搜索无结果时自动回退到外部搜索引擎功能（默认Google）
-
----
-
-## 格式说明
-
-- ✅ **新增**: 新添加的功能
-- 🔧 **改进**: 对现有功能的改进
-- 🐛 **修复**: 修复的bug
-- 📝 **文档**: 文档更新
-- ⚙️ **配置**: 配置变更
-- 🗑️ **移除**: 移除的功能
+- ✅ **Added / 新增**: New features
+- 🔧 **Changed / 改进**: Improvements to existing features
+- 🐛 **Fixed / 修复**: Bug fixes
+- 🗑️ **Removed / 移除**: Removed features
+- 📝 **Documentation / 文档**: Documentation updates
+- ⚙️ **Configuration / 配置**: Configuration changes

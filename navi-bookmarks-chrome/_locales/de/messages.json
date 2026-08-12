@@ -1,117 +1,356 @@
 {
-  "appName": { "message": "Lesezeichen-Navigation" },
-  "appDescription": { "message": "Persönliche Lesezeichen-Navigation neuer Tab - Schneller Zugriff auf Ihre Lieblings-Websites" },
-  "headerTitle": { "message": "📚 Lesezeichen-Navigation" },
-  "headerSubtitle": { "message": "Schneller Zugriff auf Ihre Lieblings-Websites" },
-  "searchPlaceholder": { "message": "Lesezeichen durchsuchen oder Suchmaschine verwenden..." },
-  "addBookmark": { "message": "+ Lesezeichen hinzufügen" },
-  "editCategory": { "message": "📁 Kategorie bearbeiten" },
-  "bookmarkSearch": { "message": "Lesezeichen-Suche" },
-  "bookmarkSearchDesc": { "message": "Durchsuchen Sie Ihre Lesezeichen" },
-  "baidu": { "message": "Baidu" },
-  "bing": { "message": "Bing" },
-  "xiaohongshu": { "message": "Xiaohongshu" },
-  "modalAddBookmark": { "message": "Lesezeichen hinzufügen" },
-  "modalEditBookmark": { "message": "Lesezeichen bearbeiten" },
-  "labelWebsiteName": { "message": "Webseitenname" },
-  "placeholderWebsiteName": { "message": "Webseitenname eingeben" },
-  "labelWebsiteUrl": { "message": "Webseiten-URL" },
-  "placeholderWebsiteUrl": { "message": "URL oder IP-Adresse eingeben (http:// kann weggelassen werden)" },
-  "labelDescription": { "message": "Beschreibung (optional)" },
-  "placeholderDescription": { "message": "Beschreibung oder Notizen eingeben" },
-  "labelCategory": { "message": "Kategorie" },
-  "labelNewCategory": { "message": "Neuer Kategoriename" },
-  "placeholderNewCategory": { "message": "Neuen Kategorienamen eingeben" },
-  "btnCancel": { "message": "Abbrechen" },
-  "btnSave": { "message": "Speichern" },
-  "btnClose": { "message": "Schließen" },
-  "btnOk": { "message": "OK" },
-  "btnConfirm": { "message": "Bestätigen" },
-  "btnEdit": { "message": "Bearbeiten" },
-  "btnDelete": { "message": "Löschen" },
-  "btnRename": { "message": "Umbenennen" },
-  "btnDefault": { "message": "Standard" },
-  "btnAddCategory": { "message": "Kategorie hinzufügen" },
-  "btnAddNewCategory": { "message": "+ Neue Kategorie hinzufügen" },
-  "hintDragCategory": { "message": "💡 Kategorien ziehen, um die Reihenfolge zu ändern" },
-  "modalEditCategory": { "message": "📁 Kategorie bearbeiten" },
-  "addNewCategory": { "message": "Neue Kategorie hinzufügen" },
-  "placeholderEnterCategoryName": { "message": "Neuen Kategorienamen eingeben" },
-  "exportBookmarks": { "message": "Lesezeichen exportieren" },
-  "importBookmarks": { "message": "Lesezeichen importieren" },
-  "changeBackground": { "message": "Hintergrund ändern" },
-  "chooseBackground": { "message": "🎨 Hintergrund auswählen" },
-  "uploadCustomBackground": { "message": "📁 Benutzerdefinierten Hintergrund hochladen" },
-  "emptyStateTitle": { "message": "Keine Lesezeichen vorhanden" },
-  "emptyStateDesc": { "message": "Klicken Sie oben auf die Schaltfläche, um Ihr erstes Lesezeichen hinzuzufügen" },
-  "addCardTitle": { "message": "Lesezeichen hinzufügen" },
-  "addCardDesc": { "message": "Klicken Sie, um ein neues Lesezeichen hinzuzufügen" },
-  "noResults": { "message": "Keine übereinstimmenden Lesezeichen gefunden" },
-  "searchInEngines": { "message": "In Suchmaschinen suchen" },
-  "searchSuggestions": { "message": "Suchvorschläge" },
-  "baiduSearch": { "message": "Baidu-Suche" },
-  "bingSearch": { "message": "Bing-Suche" },
-  "confirmDeleteBookmark": { "message": "Sind Sie sicher, dass Sie dieses Lesezeichen löschen möchten?" },
-  "confirmUnsavedChanges": { "message": "Sie haben ungespeicherte Änderungen. Sind Sie sicher, dass Sie beenden möchten?" },
-  "confirmDeleteCategory": { "message": "Sind Sie sicher, dass Sie die Kategorie \"$1\" löschen möchten? Alle Lesezeichen in dieser Kategorie werden in \"Sonstiges\" verschoben." },
-  "alertFillComplete": { "message": "Bitte füllen Sie alle erforderlichen Felder aus" },
-  "alertEnterCategoryName": { "message": "Bitte geben Sie einen Kategorienamen ein" },
-  "alertCategoryExists": { "message": "Diese Kategorie existiert bereits" },
-  "alertEnterNewCategoryName": { "message": "Bitte geben Sie einen neuen Kategorienamen ein" },
-  "promptNewCategoryName": { "message": "Bitte geben Sie den neuen Kategorienamen ein:" },
-  "alertInvalidFormat": { "message": "Ungültiges Lesezeichen-Datenformat" },
-  "alertImportEmpty": { "message": "Importierte Lesezeichen-Daten sind leer" },
-  "promptImportMode": { "message": "$1 Lesezeichen erkannt. Wählen Sie die Importmethode:\n1 - An vorhandene Lesezeichen anhängen\n2 - Alle Lesezeichen ersetzen" },
-  "alertImportCancelled": { "message": "Import abgebrochen" },
-  "alertImportSuccess": { "message": "$1 Lesezeichen erfolgreich importiert!" },
-  "labelNewCategories": { "message": "Neue Kategorien:" },
-  "alertImportFailed": { "message": "Import fehlgeschlagen: Ungültige JSON-Datei" },
-  "bookmarksCount": { "message": "$1 Lesezeichen" },
-  "bgPresetPurpleBlue": { "message": "Lila Blau" },
-  "bgPresetSunset": { "message": "Sonnenuntergang Orange" },
-  "bgPresetDeepSea": { "message": "Tiefsee Blau" },
-  "bgPresetForest": { "message": "Wald Grün" },
-  "bgPresetNightPurple": { "message": "Nacht Lila" },
-  "bgPresetAurora": { "message": "Aurora" },
-  "bgPresetZoige": { "message": "Zoigê" },
-  "catFrequent": { "message": "Häufig" },
-  "catDevTools": { "message": "Entwicklungswerkzeuge" },
-  "catSearchEngines": { "message": "Suchmaschinen" },
-  "catLearning": { "message": "Lernen" },
-  "catCommunity": { "message": "Community" },
-  "catOther": { "message": "Sonstiges" },
-  "catAll": { "message": "Alle" },
-  "myWeibo": { "message": "Mein Weibo" },
-  "myGithub": { "message": "Mein GitHub" },
-  "juejin": { "message": "Juejin" },
-  "bookmarks": { "message": "Lesezeichen" },
-  "language": { "message": "Sprache" },
-  "langSystem": { "message": "System" },
-  "langZhCN": { "message": "🇨🇳 中文" },
-  "langZhTW": { "message": "🇹🇼 繁體中文" },
-  "langEn": { "message": "🇺🇸 English" },
-  "langJa": { "message": "🇯🇵 日本語" },
-  "langKo": { "message": "🇰🇷 한국어" },
-  "langVi": { "message": "🇻🇳 Tiếng Việt" },
-  "langTh": { "message": "🇹🇭 ภาษาไทย" },
-  "langMs": { "message": "🇲🇾 Bahasa Melayu" },
-  "langDe": { "message": "🇩🇪 Deutsch" },
-  "langFr": { "message": "🇫🇷 Français" },
-  "settingsTitle": { "message": "Einstellungen" },
-  "addCurrentPage": { "message": "Aktuelle Seite hinzufügen" },
-  "alertNoTab": { "message": "Aktuelle Tab-Informationen können nicht abgerufen werden" },
-  "openBookmarkNav": { "message": "Lesezeichen-Navigation öffnen" },
-  "popupTitle": { "message": "Lesezeichen-Navigation - Aktuelle Seite hinzufügen" },
-  "labelSelectIcon": { "message": "Symbol auswählen" },
-  "iconPreviewLabel": { "message": "Aktuelles Symbol" },
-  "btnFetchFavicon": { "message": "🌐 Website-Symbol abrufen" },
-  "btnResetIcon": { "message": "🔄 Auf Standard zurücksetzen" },
-  "iconFavicon": { "message": "Website-Symbol" },
-  "alertEnterUrlFirst": { "message": "Bitte zuerst eine URL eingeben" },
-  "hintUrlEnter": { "message": "💡 Drücken Sie Enter nach der URL-Eingabe, um relevante Informationen abzurufen" },
-  "btnAdded": { "message": "Hinzugefügt" },
-  "btnUpdateCategory": { "message": "Kategorie aktualisieren" },
-  "alertCategoryUpdated": { "message": "✓ Kategorie auf $1 aktualisiert" },
-  "settingOpenWithCurrentTab": { "message": "Im aktuellen Tab öffnen" },
-  "settingDefaultSearchEngine": { "message": "Standard-Suchmaschine" }
+  "appName": {
+    "message": "Lesezeichen-Navigation"
+  },
+  "appDescription": {
+    "message": "Persönliche Lesezeichen-Navigation neuer Tab - Schneller Zugriff auf Ihre Lieblings-Websites"
+  },
+  "headerTitle": {
+    "message": "📚 Lesezeichen-Navigation"
+  },
+  "headerSubtitle": {
+    "message": "Schneller Zugriff auf Ihre Lieblings-Websites"
+  },
+  "searchPlaceholder": {
+    "message": "Lesezeichen durchsuchen oder Suchmaschine verwenden..."
+  },
+  "addBookmark": {
+    "message": "+ Lesezeichen hinzufügen"
+  },
+  "editCategory": {
+    "message": "📁 Kategorie bearbeiten"
+  },
+  "bookmarkSearch": {
+    "message": "Lesezeichen-Suche"
+  },
+  "bookmarkSearchDesc": {
+    "message": "Durchsuchen Sie Ihre Lesezeichen"
+  },
+  "baidu": {
+    "message": "Baidu"
+  },
+  "bing": {
+    "message": "Bing"
+  },
+  "xiaohongshu": {
+    "message": "Xiaohongshu"
+  },
+  "modalAddBookmark": {
+    "message": "Lesezeichen hinzufügen"
+  },
+  "modalEditBookmark": {
+    "message": "Lesezeichen bearbeiten"
+  },
+  "labelWebsiteName": {
+    "message": "Webseitenname"
+  },
+  "placeholderWebsiteName": {
+    "message": "Webseitenname eingeben"
+  },
+  "labelWebsiteUrl": {
+    "message": "Webseiten-URL"
+  },
+  "placeholderWebsiteUrl": {
+    "message": "URL oder IP-Adresse eingeben (http:// kann weggelassen werden)"
+  },
+  "labelDescription": {
+    "message": "Beschreibung (optional)"
+  },
+  "placeholderDescription": {
+    "message": "Beschreibung oder Notizen eingeben"
+  },
+  "labelCategory": {
+    "message": "Kategorie"
+  },
+  "labelNewCategory": {
+    "message": "Neuer Kategoriename"
+  },
+  "placeholderNewCategory": {
+    "message": "Neuen Kategorienamen eingeben"
+  },
+  "btnCancel": {
+    "message": "Abbrechen"
+  },
+  "btnSave": {
+    "message": "Speichern"
+  },
+  "btnClose": {
+    "message": "Schließen"
+  },
+  "btnOk": {
+    "message": "OK"
+  },
+  "btnConfirm": {
+    "message": "Bestätigen"
+  },
+  "btnEdit": {
+    "message": "Bearbeiten"
+  },
+  "btnDelete": {
+    "message": "Löschen"
+  },
+  "btnRename": {
+    "message": "Umbenennen"
+  },
+  "btnDefault": {
+    "message": "Standard"
+  },
+  "btnAddCategory": {
+    "message": "Kategorie hinzufügen"
+  },
+  "btnAddNewCategory": {
+    "message": "+ Neue Kategorie hinzufügen"
+  },
+  "hintDragCategory": {
+    "message": "💡 Kategorien ziehen, um die Reihenfolge zu ändern"
+  },
+  "modalEditCategory": {
+    "message": "📁 Kategorie bearbeiten"
+  },
+  "addNewCategory": {
+    "message": "Neue Kategorie hinzufügen"
+  },
+  "placeholderEnterCategoryName": {
+    "message": "Neuen Kategorienamen eingeben"
+  },
+  "exportBookmarks": {
+    "message": "Lesezeichen exportieren"
+  },
+  "importBookmarks": {
+    "message": "Lesezeichen importieren"
+  },
+  "changeBackground": {
+    "message": "Hintergrund ändern"
+  },
+  "chooseBackground": {
+    "message": "🎨 Hintergrund auswählen"
+  },
+  "uploadCustomBackground": {
+    "message": "📁 Benutzerdefinierten Hintergrund hochladen"
+  },
+  "emptyStateTitle": {
+    "message": "Keine Lesezeichen vorhanden"
+  },
+  "emptyStateDesc": {
+    "message": "Klicken Sie oben auf die Schaltfläche, um Ihr erstes Lesezeichen hinzuzufügen"
+  },
+  "addCardTitle": {
+    "message": "Lesezeichen hinzufügen"
+  },
+  "addCardDesc": {
+    "message": "Klicken Sie, um ein neues Lesezeichen hinzuzufügen"
+  },
+  "noResults": {
+    "message": "Keine übereinstimmenden Lesezeichen gefunden"
+  },
+  "searchInEngines": {
+    "message": "In Suchmaschinen suchen"
+  },
+  "searchSuggestions": {
+    "message": "Suchvorschläge"
+  },
+  "baiduSearch": {
+    "message": "Baidu-Suche"
+  },
+  "bingSearch": {
+    "message": "Bing-Suche"
+  },
+  "confirmDeleteBookmark": {
+    "message": "Sind Sie sicher, dass Sie dieses Lesezeichen löschen möchten?"
+  },
+  "confirmUnsavedChanges": {
+    "message": "Sie haben ungespeicherte Änderungen. Sind Sie sicher, dass Sie beenden möchten?"
+  },
+  "confirmDeleteCategory": {
+    "message": "Sind Sie sicher, dass Sie die Kategorie \"$1\" löschen möchten? Alle Lesezeichen in dieser Kategorie werden in \"Sonstiges\" verschoben."
+  },
+  "alertFillComplete": {
+    "message": "Bitte füllen Sie alle erforderlichen Felder aus"
+  },
+  "alertEnterCategoryName": {
+    "message": "Bitte geben Sie einen Kategorienamen ein"
+  },
+  "alertCategoryExists": {
+    "message": "Diese Kategorie existiert bereits"
+  },
+  "alertEnterNewCategoryName": {
+    "message": "Bitte geben Sie einen neuen Kategorienamen ein"
+  },
+  "promptNewCategoryName": {
+    "message": "Bitte geben Sie den neuen Kategorienamen ein:"
+  },
+  "alertInvalidFormat": {
+    "message": "Ungültiges Lesezeichen-Datenformat"
+  },
+  "alertImportEmpty": {
+    "message": "Importierte Lesezeichen-Daten sind leer"
+  },
+  "promptImportMode": {
+    "message": "$1 Lesezeichen erkannt. Wählen Sie die Importmethode:\n1 - An vorhandene Lesezeichen anhängen\n2 - Alle Lesezeichen ersetzen"
+  },
+  "alertImportCancelled": {
+    "message": "Import abgebrochen"
+  },
+  "alertImportSuccess": {
+    "message": "$1 Lesezeichen erfolgreich importiert!"
+  },
+  "labelNewCategories": {
+    "message": "Neue Kategorien:"
+  },
+  "alertImportFailed": {
+    "message": "Import fehlgeschlagen: Ungültige JSON-Datei"
+  },
+  "bookmarksCount": {
+    "message": "$1 Lesezeichen"
+  },
+  "bgPresetPurpleBlue": {
+    "message": "Lila Blau"
+  },
+  "bgPresetSunset": {
+    "message": "Sonnenuntergang Orange"
+  },
+  "bgPresetDeepSea": {
+    "message": "Tiefsee Blau"
+  },
+  "bgPresetForest": {
+    "message": "Wald Grün"
+  },
+  "bgPresetNightPurple": {
+    "message": "Nacht Lila"
+  },
+  "bgPresetAurora": {
+    "message": "Aurora"
+  },
+  "bgPresetZoige": {
+    "message": "Zoigê"
+  },
+  "catFrequent": {
+    "message": "Häufig"
+  },
+  "catDevTools": {
+    "message": "Entwicklungswerkzeuge"
+  },
+  "catSearchEngines": {
+    "message": "Suchmaschinen"
+  },
+  "catLearning": {
+    "message": "Lernen"
+  },
+  "catCommunity": {
+    "message": "Community"
+  },
+  "catOther": {
+    "message": "Sonstiges"
+  },
+  "catAll": {
+    "message": "Alle"
+  },
+  "myWeibo": {
+    "message": "Mein Weibo"
+  },
+  "myGithub": {
+    "message": "Mein GitHub"
+  },
+  "juejin": {
+    "message": "Juejin"
+  },
+  "bookmarks": {
+    "message": "Lesezeichen"
+  },
+  "language": {
+    "message": "Sprache"
+  },
+  "langSystem": {
+    "message": "System"
+  },
+  "langZhCN": {
+    "message": "🇨🇳 中文"
+  },
+  "langZhTW": {
+    "message": "🇹🇼 繁體中文"
+  },
+  "langEn": {
+    "message": "🇺🇸 English"
+  },
+  "langJa": {
+    "message": "🇯🇵 日本語"
+  },
+  "langKo": {
+    "message": "🇰🇷 한국어"
+  },
+  "langVi": {
+    "message": "🇻🇳 Tiếng Việt"
+  },
+  "langTh": {
+    "message": "🇹🇭 ภาษาไทย"
+  },
+  "langMs": {
+    "message": "🇲🇾 Bahasa Melayu"
+  },
+  "langDe": {
+    "message": "🇩🇪 Deutsch"
+  },
+  "langFr": {
+    "message": "🇫🇷 Français"
+  },
+  "settingsTitle": {
+    "message": "Einstellungen"
+  },
+  "addCurrentPage": {
+    "message": "Aktuelle Seite hinzufügen"
+  },
+  "alertNoTab": {
+    "message": "Aktuelle Tab-Informationen können nicht abgerufen werden"
+  },
+  "openBookmarkNav": {
+    "message": "Lesezeichen-Navigation öffnen"
+  },
+  "popupTitle": {
+    "message": "Lesezeichen-Navigation - Aktuelle Seite hinzufügen"
+  },
+  "labelSelectIcon": {
+    "message": "Symbol auswählen"
+  },
+  "iconPreviewLabel": {
+    "message": "Aktuelles Symbol"
+  },
+  "btnFetchFavicon": {
+    "message": "🌐 Website-Symbol abrufen"
+  },
+  "btnResetIcon": {
+    "message": "🔄 Auf Standard zurücksetzen"
+  },
+  "iconFavicon": {
+    "message": "Website-Symbol"
+  },
+  "alertEnterUrlFirst": {
+    "message": "Bitte zuerst eine URL eingeben"
+  },
+  "hintUrlEnter": {
+    "message": "💡 Drücken Sie Enter nach der URL-Eingabe, um relevante Informationen abzurufen"
+  },
+  "btnAdded": {
+    "message": "Hinzugefügt"
+  },
+  "btnUpdateCategory": {
+    "message": "Kategorie aktualisieren"
+  },
+  "alertCategoryUpdated": {
+    "message": "✓ Kategorie auf $1 aktualisiert"
+  },
+  "settingOpenWithCurrentTab": {
+    "message": "Im aktuellen Tab öffnen"
+  },
+  "settingDefaultSearchEngine": {
+    "message": "Standard-Suchmaschine"
+  },
+  "hintDragToCategory": {
+    "message": "💡 Lesezeichen auf Kategorie ziehen, um zu verschieben"
+  },
+  "alertBookmarkMoved": {
+    "message": "✓ Nach $1 verschoben"
+  },
+  "alertInvalidUrl": {
+    "message": "Ungültige URL"
+  }
 }

@@ -1,117 +1,356 @@
 {
-  "appName": { "message": "Navigasi Tanda Buku" },
-  "appDescription": { "message": "Tab baru navigasi tanda buku peribadi - Akses laman web kegemaran dengan pantas" },
-  "headerTitle": { "message": "📚 Navigasi Tanda Buku" },
-  "headerSubtitle": { "message": "Akses laman web kegemaran dengan pantas" },
-  "searchPlaceholder": { "message": "Cari tanda buku atau gunakan enjin carian..." },
-  "addBookmark": { "message": "+ Tambah Tanda Buku" },
-  "editCategory": { "message": "📁 Edit Kategori" },
-  "bookmarkSearch": { "message": "Carian Tanda Buku" },
-  "bookmarkSearchDesc": { "message": "Cari tanda buku anda" },
-  "baidu": { "message": "Baidu" },
-  "bing": { "message": "Bing" },
-  "xiaohongshu": { "message": "Xiaohongshu" },
-  "modalAddBookmark": { "message": "Tambah Tanda Buku" },
-  "modalEditBookmark": { "message": "Edit Tanda Buku" },
-  "labelWebsiteName": { "message": "Nama Laman Web" },
-  "placeholderWebsiteName": { "message": "Masukkan nama laman web" },
-  "labelWebsiteUrl": { "message": "URL Laman Web" },
-  "placeholderWebsiteUrl": { "message": "Masukkan URL atau alamat IP (http:// boleh diabaikan)" },
-  "labelDescription": { "message": "Penerangan (pilihan)" },
-  "placeholderDescription": { "message": "Masukkan penerangan atau nota" },
-  "labelCategory": { "message": "Kategori" },
-  "labelNewCategory": { "message": "Nama Kategori Baru" },
-  "placeholderNewCategory": { "message": "Masukkan nama kategori baru" },
-  "btnCancel": { "message": "Batal" },
-  "btnSave": { "message": "Simpan" },
-  "btnClose": { "message": "Tutup" },
-  "btnOk": { "message": "OK" },
-  "btnConfirm": { "message": "Sahkan" },
-  "btnEdit": { "message": "Edit" },
-  "btnDelete": { "message": "Padam" },
-  "btnRename": { "message": "Tukar Nama" },
-  "btnDefault": { "message": "Lalai" },
-  "btnAddCategory": { "message": "Tambah Kategori" },
-  "btnAddNewCategory": { "message": "+ Tambah Kategori Baru" },
-  "hintDragCategory": { "message": "💡 Seret kategori untuk menyusun semula" },
-  "modalEditCategory": { "message": "📁 Edit Kategori" },
-  "addNewCategory": { "message": "Tambah Kategori Baru" },
-  "placeholderEnterCategoryName": { "message": "Masukkan nama kategori baru" },
-  "exportBookmarks": { "message": "Eksport Tanda Buku" },
-  "importBookmarks": { "message": "Import Tanda Buku" },
-  "changeBackground": { "message": "Tukar Latar Belakang" },
-  "chooseBackground": { "message": "🎨 Pilih Latar Belakang" },
-  "uploadCustomBackground": { "message": "📁 Muat Naik Latar Belakang Tersuai" },
-  "emptyStateTitle": { "message": "Belum Ada Tanda Buku" },
-  "emptyStateDesc": { "message": "Klik butang di atas untuk menambah tanda buku pertama" },
-  "addCardTitle": { "message": "Tambah Tanda Buku" },
-  "addCardDesc": { "message": "Klik untuk menambah tanda buku baru" },
-  "noResults": { "message": "Tiada tanda buku yang sepadan ditemui" },
-  "searchInEngines": { "message": "Cari dalam enjin carian" },
-  "searchSuggestions": { "message": "Cadangan Carian" },
-  "baiduSearch": { "message": "Carian Baidu" },
-  "bingSearch": { "message": "Carian Bing" },
-  "confirmDeleteBookmark": { "message": "Adakah anda pasti mahu memadam tanda buku ini?" },
-  "confirmUnsavedChanges": { "message": "Anda mempunyai perubahan yang belum disimpan. Adakah anda pasti mahu keluar?" },
-  "confirmDeleteCategory": { "message": "Adakah anda pasti mahu memadam kategori \"$1\"? Semua tanda buku dalam kategori ini akan dipindahkan ke \"Lain-lain\"." },
-  "alertFillComplete": { "message": "Sila isi semua maklumat yang diperlukan" },
-  "alertEnterCategoryName": { "message": "Sila masukkan nama kategori" },
-  "alertCategoryExists": { "message": "Kategori ini sudah wujud" },
-  "alertEnterNewCategoryName": { "message": "Sila masukkan nama kategori baru" },
-  "promptNewCategoryName": { "message": "Sila masukkan nama kategori baru:" },
-  "alertInvalidFormat": { "message": "Format data tanda buku tidak sah" },
-  "alertImportEmpty": { "message": "Data tanda buku yang diimport kosong" },
-  "promptImportMode": { "message": "Mengesan $1 tanda buku. Pilih kaedah import:\n1 - Tambah pada tanda buku sedia ada\n2 - Ganti semua tanda buku" },
-  "alertImportCancelled": { "message": "Import dibatalkan" },
-  "alertImportSuccess": { "message": "Berjaya mengimport $1 tanda buku!" },
-  "labelNewCategories": { "message": "Kategori baru:" },
-  "alertImportFailed": { "message": "Import gagal: Fail JSON tidak sah" },
-  "bookmarksCount": { "message": "$1 tanda buku" },
-  "bgPresetPurpleBlue": { "message": "Biru Ungu" },
-  "bgPresetSunset": { "message": "Oren Senja" },
-  "bgPresetDeepSea": { "message": "Biru Laut Dalam" },
-  "bgPresetForest": { "message": "Hijau Hutan" },
-  "bgPresetNightPurple": { "message": "Ungu Malam" },
-  "bgPresetAurora": { "message": "Aurora" },
-  "bgPresetZoige": { "message": "Zoigê" },
-  "catFrequent": { "message": "Kerap" },
-  "catDevTools": { "message": "Alat Pembangun" },
-  "catSearchEngines": { "message": "Enjin Carian" },
-  "catLearning": { "message": "Pembelajaran" },
-  "catCommunity": { "message": "Komuniti" },
-  "catOther": { "message": "Lain-lain" },
-  "catAll": { "message": "Semua" },
-  "myWeibo": { "message": "Weibo Saya" },
-  "myGithub": { "message": "GitHub Saya" },
-  "juejin": { "message": "Juejin" },
-  "bookmarks": { "message": "Tanda Buku" },
-  "language": { "message": "Bahasa" },
-  "langSystem": { "message": "Sistem" },
-  "langZhCN": { "message": "🇨🇳 中文" },
-  "langZhTW": { "message": "🇹🇼 繁體中文" },
-  "langEn": { "message": "🇺🇸 English" },
-  "langJa": { "message": "🇯🇵 日本語" },
-  "langKo": { "message": "🇰🇷 한국어" },
-  "langVi": { "message": "🇻🇳 Tiếng Việt" },
-  "langTh": { "message": "🇹🇭 ภาษาไทย" },
-  "langMs": { "message": "🇲🇾 Bahasa Melayu" },
-  "langDe": { "message": "🇩🇪 Deutsch" },
-  "langFr": { "message": "🇫🇷 Français" },
-  "settingsTitle": { "message": "Tetapan" },
-  "addCurrentPage": { "message": "Tambah Halaman Semasa" },
-  "alertNoTab": { "message": "Tidak dapat mendapatkan maklumat tab semasa" },
-  "openBookmarkNav": { "message": "Buka Navigasi Tanda Buku" },
-  "popupTitle": { "message": "Navigasi Tanda Buku - Tambah Halaman Semasa" },
-  "labelSelectIcon": { "message": "Pilih Ikon" },
-  "iconPreviewLabel": { "message": "Ikon Semasa" },
-  "btnFetchFavicon": { "message": "🌐 Dapatkan Ikon Laman Web" },
-  "btnResetIcon": { "message": "🔄 Tetapkan Semula ke Lalai" },
-  "iconFavicon": { "message": "Ikon Laman Web" },
-  "alertEnterUrlFirst": { "message": "Sila masukkan URL terlebih dahulu" },
-  "hintUrlEnter": { "message": "💡 Tekan Enter selepas memasuki URL untuk mendapatkan maklumat berkaitan secara automatik" },
-  "btnAdded": { "message": "Ditambah" },
-  "btnUpdateCategory": { "message": "Kemas Kini Kategori" },
-  "alertCategoryUpdated": { "message": "✓ Kategori dikemas kini kepada $1" },
-  "settingOpenWithCurrentTab": { "message": "Buka dalam tab semasa" },
-  "settingDefaultSearchEngine": { "message": "Enjin Carian Lalai" }
+  "appName": {
+    "message": "Navigasi Tanda Buku"
+  },
+  "appDescription": {
+    "message": "Tab baru navigasi tanda buku peribadi - Akses laman web kegemaran dengan pantas"
+  },
+  "headerTitle": {
+    "message": "📚 Navigasi Tanda Buku"
+  },
+  "headerSubtitle": {
+    "message": "Akses laman web kegemaran dengan pantas"
+  },
+  "searchPlaceholder": {
+    "message": "Cari tanda buku atau gunakan enjin carian..."
+  },
+  "addBookmark": {
+    "message": "+ Tambah Tanda Buku"
+  },
+  "editCategory": {
+    "message": "📁 Edit Kategori"
+  },
+  "bookmarkSearch": {
+    "message": "Carian Tanda Buku"
+  },
+  "bookmarkSearchDesc": {
+    "message": "Cari tanda buku anda"
+  },
+  "baidu": {
+    "message": "Baidu"
+  },
+  "bing": {
+    "message": "Bing"
+  },
+  "xiaohongshu": {
+    "message": "Xiaohongshu"
+  },
+  "modalAddBookmark": {
+    "message": "Tambah Tanda Buku"
+  },
+  "modalEditBookmark": {
+    "message": "Edit Tanda Buku"
+  },
+  "labelWebsiteName": {
+    "message": "Nama Laman Web"
+  },
+  "placeholderWebsiteName": {
+    "message": "Masukkan nama laman web"
+  },
+  "labelWebsiteUrl": {
+    "message": "URL Laman Web"
+  },
+  "placeholderWebsiteUrl": {
+    "message": "Masukkan URL atau alamat IP (http:// boleh diabaikan)"
+  },
+  "labelDescription": {
+    "message": "Penerangan (pilihan)"
+  },
+  "placeholderDescription": {
+    "message": "Masukkan penerangan atau nota"
+  },
+  "labelCategory": {
+    "message": "Kategori"
+  },
+  "labelNewCategory": {
+    "message": "Nama Kategori Baru"
+  },
+  "placeholderNewCategory": {
+    "message": "Masukkan nama kategori baru"
+  },
+  "btnCancel": {
+    "message": "Batal"
+  },
+  "btnSave": {
+    "message": "Simpan"
+  },
+  "btnClose": {
+    "message": "Tutup"
+  },
+  "btnOk": {
+    "message": "OK"
+  },
+  "btnConfirm": {
+    "message": "Sahkan"
+  },
+  "btnEdit": {
+    "message": "Edit"
+  },
+  "btnDelete": {
+    "message": "Padam"
+  },
+  "btnRename": {
+    "message": "Tukar Nama"
+  },
+  "btnDefault": {
+    "message": "Lalai"
+  },
+  "btnAddCategory": {
+    "message": "Tambah Kategori"
+  },
+  "btnAddNewCategory": {
+    "message": "+ Tambah Kategori Baru"
+  },
+  "hintDragCategory": {
+    "message": "💡 Seret kategori untuk menyusun semula"
+  },
+  "modalEditCategory": {
+    "message": "📁 Edit Kategori"
+  },
+  "addNewCategory": {
+    "message": "Tambah Kategori Baru"
+  },
+  "placeholderEnterCategoryName": {
+    "message": "Masukkan nama kategori baru"
+  },
+  "exportBookmarks": {
+    "message": "Eksport Tanda Buku"
+  },
+  "importBookmarks": {
+    "message": "Import Tanda Buku"
+  },
+  "changeBackground": {
+    "message": "Tukar Latar Belakang"
+  },
+  "chooseBackground": {
+    "message": "🎨 Pilih Latar Belakang"
+  },
+  "uploadCustomBackground": {
+    "message": "📁 Muat Naik Latar Belakang Tersuai"
+  },
+  "emptyStateTitle": {
+    "message": "Belum Ada Tanda Buku"
+  },
+  "emptyStateDesc": {
+    "message": "Klik butang di atas untuk menambah tanda buku pertama"
+  },
+  "addCardTitle": {
+    "message": "Tambah Tanda Buku"
+  },
+  "addCardDesc": {
+    "message": "Klik untuk menambah tanda buku baru"
+  },
+  "noResults": {
+    "message": "Tiada tanda buku yang sepadan ditemui"
+  },
+  "searchInEngines": {
+    "message": "Cari dalam enjin carian"
+  },
+  "searchSuggestions": {
+    "message": "Cadangan Carian"
+  },
+  "baiduSearch": {
+    "message": "Carian Baidu"
+  },
+  "bingSearch": {
+    "message": "Carian Bing"
+  },
+  "confirmDeleteBookmark": {
+    "message": "Adakah anda pasti mahu memadam tanda buku ini?"
+  },
+  "confirmUnsavedChanges": {
+    "message": "Anda mempunyai perubahan yang belum disimpan. Adakah anda pasti mahu keluar?"
+  },
+  "confirmDeleteCategory": {
+    "message": "Adakah anda pasti mahu memadam kategori \"$1\"? Semua tanda buku dalam kategori ini akan dipindahkan ke \"Lain-lain\"."
+  },
+  "alertFillComplete": {
+    "message": "Sila isi semua maklumat yang diperlukan"
+  },
+  "alertEnterCategoryName": {
+    "message": "Sila masukkan nama kategori"
+  },
+  "alertCategoryExists": {
+    "message": "Kategori ini sudah wujud"
+  },
+  "alertEnterNewCategoryName": {
+    "message": "Sila masukkan nama kategori baru"
+  },
+  "promptNewCategoryName": {
+    "message": "Sila masukkan nama kategori baru:"
+  },
+  "alertInvalidFormat": {
+    "message": "Format data tanda buku tidak sah"
+  },
+  "alertImportEmpty": {
+    "message": "Data tanda buku yang diimport kosong"
+  },
+  "promptImportMode": {
+    "message": "Mengesan $1 tanda buku. Pilih kaedah import:\n1 - Tambah pada tanda buku sedia ada\n2 - Ganti semua tanda buku"
+  },
+  "alertImportCancelled": {
+    "message": "Import dibatalkan"
+  },
+  "alertImportSuccess": {
+    "message": "Berjaya mengimport $1 tanda buku!"
+  },
+  "labelNewCategories": {
+    "message": "Kategori baru:"
+  },
+  "alertImportFailed": {
+    "message": "Import gagal: Fail JSON tidak sah"
+  },
+  "bookmarksCount": {
+    "message": "$1 tanda buku"
+  },
+  "bgPresetPurpleBlue": {
+    "message": "Biru Ungu"
+  },
+  "bgPresetSunset": {
+    "message": "Oren Senja"
+  },
+  "bgPresetDeepSea": {
+    "message": "Biru Laut Dalam"
+  },
+  "bgPresetForest": {
+    "message": "Hijau Hutan"
+  },
+  "bgPresetNightPurple": {
+    "message": "Ungu Malam"
+  },
+  "bgPresetAurora": {
+    "message": "Aurora"
+  },
+  "bgPresetZoige": {
+    "message": "Zoigê"
+  },
+  "catFrequent": {
+    "message": "Kerap"
+  },
+  "catDevTools": {
+    "message": "Alat Pembangun"
+  },
+  "catSearchEngines": {
+    "message": "Enjin Carian"
+  },
+  "catLearning": {
+    "message": "Pembelajaran"
+  },
+  "catCommunity": {
+    "message": "Komuniti"
+  },
+  "catOther": {
+    "message": "Lain-lain"
+  },
+  "catAll": {
+    "message": "Semua"
+  },
+  "myWeibo": {
+    "message": "Weibo Saya"
+  },
+  "myGithub": {
+    "message": "GitHub Saya"
+  },
+  "juejin": {
+    "message": "Juejin"
+  },
+  "bookmarks": {
+    "message": "Tanda Buku"
+  },
+  "language": {
+    "message": "Bahasa"
+  },
+  "langSystem": {
+    "message": "Sistem"
+  },
+  "langZhCN": {
+    "message": "🇨🇳 中文"
+  },
+  "langZhTW": {
+    "message": "🇹🇼 繁體中文"
+  },
+  "langEn": {
+    "message": "🇺🇸 English"
+  },
+  "langJa": {
+    "message": "🇯🇵 日本語"
+  },
+  "langKo": {
+    "message": "🇰🇷 한국어"
+  },
+  "langVi": {
+    "message": "🇻🇳 Tiếng Việt"
+  },
+  "langTh": {
+    "message": "🇹🇭 ภาษาไทย"
+  },
+  "langMs": {
+    "message": "🇲🇾 Bahasa Melayu"
+  },
+  "langDe": {
+    "message": "🇩🇪 Deutsch"
+  },
+  "langFr": {
+    "message": "🇫🇷 Français"
+  },
+  "settingsTitle": {
+    "message": "Tetapan"
+  },
+  "addCurrentPage": {
+    "message": "Tambah Halaman Semasa"
+  },
+  "alertNoTab": {
+    "message": "Tidak dapat mendapatkan maklumat tab semasa"
+  },
+  "openBookmarkNav": {
+    "message": "Buka Navigasi Tanda Buku"
+  },
+  "popupTitle": {
+    "message": "Navigasi Tanda Buku - Tambah Halaman Semasa"
+  },
+  "labelSelectIcon": {
+    "message": "Pilih Ikon"
+  },
+  "iconPreviewLabel": {
+    "message": "Ikon Semasa"
+  },
+  "btnFetchFavicon": {
+    "message": "🌐 Dapatkan Ikon Laman Web"
+  },
+  "btnResetIcon": {
+    "message": "🔄 Tetapkan Semula ke Lalai"
+  },
+  "iconFavicon": {
+    "message": "Ikon Laman Web"
+  },
+  "alertEnterUrlFirst": {
+    "message": "Sila masukkan URL terlebih dahulu"
+  },
+  "hintUrlEnter": {
+    "message": "💡 Tekan Enter selepas memasuki URL untuk mendapatkan maklumat berkaitan secara automatik"
+  },
+  "btnAdded": {
+    "message": "Ditambah"
+  },
+  "btnUpdateCategory": {
+    "message": "Kemas Kini Kategori"
+  },
+  "alertCategoryUpdated": {
+    "message": "✓ Kategori dikemas kini kepada $1"
+  },
+  "settingOpenWithCurrentTab": {
+    "message": "Buka dalam tab semasa"
+  },
+  "settingDefaultSearchEngine": {
+    "message": "Enjin Carian Lalai"
+  },
+  "hintDragToCategory": {
+    "message": "💡 Seret tanda buku ke tag kategori untuk pindah"
+  },
+  "alertBookmarkMoved": {
+    "message": "✓ Dipindahkan ke $1"
+  },
+  "alertInvalidUrl": {
+    "message": "URL tidak sah"
+  }
 }

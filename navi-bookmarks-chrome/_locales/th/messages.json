@@ -1,117 +1,356 @@
 {
-  "appName": { "message": "ที่คั่นหน้าสำรวจ" },
-  "appDescription": { "message": "แท็บใหม่สำหรับนำทางที่คั่นหน้าส่วนตัว - เข้าถึงเว็บไซต์โปรดของคุณได้อย่างรวดเร็ว" },
-  "headerTitle": { "message": "📚 ที่คั่นหน้าสำรวจ" },
-  "headerSubtitle": { "message": "เข้าถึงเว็บไซต์โปรดของคุณได้อย่างรวดเร็ว" },
-  "searchPlaceholder": { "message": "ค้นหาที่คั่นหน้าหรือใช้เครื่องมือค้นหา..." },
-  "addBookmark": { "message": "+ เพิ่มที่คั่นหน้า" },
-  "editCategory": { "message": "📁 แก้ไขหมวดหมู่" },
-  "bookmarkSearch": { "message": "ค้นหาที่คั่นหน้า" },
-  "bookmarkSearchDesc": { "message": "ค้นหาที่คั่นหน้าของคุณ" },
-  "baidu": { "message": "ไป่ตู้" },
-  "bing": { "message": "Bing" },
-  "xiaohongshu": { "message": " Xiaohongshu" },
-  "modalAddBookmark": { "message": "เพิ่มที่คั่นหน้า" },
-  "modalEditBookmark": { "message": "แก้ไขที่คั่นหน้า" },
-  "labelWebsiteName": { "message": "ชื่อเว็บไซต์" },
-  "placeholderWebsiteName": { "message": "ป้อนชื่อเว็บไซต์" },
-  "labelWebsiteUrl": { "message": "URL" },
-  "placeholderWebsiteUrl": { "message": "ป้อน URL หรือที่อยู่ IP (สามารถละ http:// ได้)" },
-  "labelDescription": { "message": "คำอธิบาย (ไม่บังคับ)" },
-  "placeholderDescription": { "message": "ป้อนคำอธิบายหรือบันทึกย่อ" },
-  "labelCategory": { "message": "หมวดหมู่" },
-  "labelNewCategory": { "message": "ชื่อหมวดหมู่ใหม่" },
-  "placeholderNewCategory": { "message": "ป้อนชื่อหมวดหมู่ใหม่" },
-  "btnCancel": { "message": "ยกเลิก" },
-  "btnSave": { "message": "บันทึก" },
-  "btnClose": { "message": "ปิด" },
-  "btnOk": { "message": "ตกลง" },
-  "btnConfirm": { "message": "ยืนยัน" },
-  "btnEdit": { "message": "แก้ไข" },
-  "btnDelete": { "message": "ลบ" },
-  "btnRename": { "message": "เปลี่ยนชื่อ" },
-  "btnDefault": { "message": "ค่าเริ่มต้น" },
-  "btnAddCategory": { "message": "เพิ่มหมวดหมู่" },
-  "btnAddNewCategory": { "message": "+ เพิ่มหมวดหมู่ใหม่" },
-  "hintDragCategory": { "message": "💡 ลากหมวดหมู่เพื่อจัดเรียงลำดับ" },
-  "modalEditCategory": { "message": "📁 แก้ไขหมวดหมู่" },
-  "addNewCategory": { "message": "เพิ่มหมวดหมู่ใหม่" },
-  "placeholderEnterCategoryName": { "message": "ป้อนชื่อหมวดหมู่ใหม่" },
-  "exportBookmarks": { "message": "ส่งออกที่คั่นหน้า" },
-  "importBookmarks": { "message": "นำเข้าที่คั่นหน้า" },
-  "changeBackground": { "message": "เปลี่ยนพื้นหลัง" },
-  "chooseBackground": { "message": "🎨 เลือกพื้นหลัง" },
-  "uploadCustomBackground": { "message": "📁 อัปโหลดพื้นหลังที่กำหนดเอง" },
-  "emptyStateTitle": { "message": "ยังไม่มีที่คั่นหน้า" },
-  "emptyStateDesc": { "message": "คลิกปุ่มด้านบนเพื่อเพิ่มที่คั่นหน้าแรก" },
-  "addCardTitle": { "message": "เพิ่มที่คั่นหน้า" },
-  "addCardDesc": { "message": "คลิกเพื่อเพิ่มที่คั่นหน้าใหม่" },
-  "noResults": { "message": "ไม่พบที่คั่นหน้าที่ตรงกัน" },
-  "searchInEngines": { "message": "ค้นหาในเครื่องมือค้นหา" },
-  "searchSuggestions": { "message": "คำแนะนำการค้นหา" },
-  "baiduSearch": { "message": "ค้นหาผ่านไป่ตู้" },
-  "bingSearch": { "message": "ค้นหาผ่าน Bing" },
-  "confirmDeleteBookmark": { "message": "คุณแน่ใจหรือไม่ว่าจะลบที่คั่นหน้านี้?" },
-  "confirmUnsavedChanges": { "message": "คุณมีการเปลี่ยนแปลงที่ยังไม่ได้บันทึก คุณแน่ใจหรือไม่ว่าจะออก?" },
-  "confirmDeleteCategory": { "message": "คุณแน่ใจหรือไม่ว่าจะลบหมวดหมู่ \"$1\"? ที่คั่นหน้าทั้งหมดในหมวดหมู่นี้จะถูกย้ายไปยัง \"อื่นๆ\"" },
-  "alertFillComplete": { "message": "โปรดกรอกข้อมูลที่จำเป็นทั้งหมด" },
-  "alertEnterCategoryName": { "message": "โปรดป้อนชื่อหมวดหมู่" },
-  "alertCategoryExists": { "message": "หมวดหมู่นี้มีอยู่แล้ว" },
-  "alertEnterNewCategoryName": { "message": "โปรดป้อนชื่อหมวดหมู่ใหม่" },
-  "promptNewCategoryName": { "message": "โปรดป้อนชื่อหมวดหมู่ใหม่:" },
-  "alertInvalidFormat": { "message": "รูปแบบข้อมูลที่คั่นหน้าไม่ถูกต้อง" },
-  "alertImportEmpty": { "message": "ข้อมูลที่คั่นหน้าที่นำเข้าไม่มีการ" },
-  "promptImportMode": { "message": "ตรวจพบ $1 รายการที่คั่นหน้า เลือกวิธีการนำเข้า:\n1 - เพิ่มต่อท้ายที่คั่นหน้าที่มีอยู่\n2 - แทนที่ที่คั่นหน้าทั้งหมด" },
-  "alertImportCancelled": { "message": "ยกเลิกการนำเข้าแล้ว" },
-  "alertImportSuccess": { "message": "นำเข้าสำเร็จ $1 รายการที่คั่นหน้า!" },
-  "labelNewCategories": { "message": "หมวดหมู่ใหม่:" },
-  "alertImportFailed": { "message": "นำเข้าไม่สำเร็จ: ไฟล์ JSON ไม่ถูกต้อง" },
-  "bookmarksCount": { "message": "$1 รายการที่คั่นหน้า" },
-  "bgPresetPurpleBlue": { "message": "ม่วงน้ำเงิน" },
-  "bgPresetSunset": { "message": "ส้มยามพระอาทิตย์ตก" },
-  "bgPresetDeepSea": { "message": "น้ำเงินทะเลลึก" },
-  "bgPresetForest": { "message": "เขียวป่า" },
-  "bgPresetNightPurple": { "message": "ม่วงกลางคืน" },
-  "bgPresetAurora": { "message": "ออโรร่า" },
-  "bgPresetZoige": { "message": "Zoigê" },
-  "catFrequent": { "message": "ใช้บ่อย" },
-  "catDevTools": { "message": "เครื่องมือพัฒนา" },
-  "catSearchEngines": { "message": "เครื่องมือค้นหา" },
-  "catLearning": { "message": "การเรียนรู้" },
-  "catCommunity": { "message": "ชุมชน" },
-  "catOther": { "message": "อื่นๆ" },
-  "catAll": { "message": "ทั้งหมด" },
-  "myWeibo": { "message": "เวยปั๋วของฉัน" },
-  "myGithub": { "message": "GitHub ของฉัน" },
-  "juejin": { "message": "Juejin" },
-  "bookmarks": { "message": "ที่คั่นหน้า" },
-  "language": { "message": "ภาษา" },
-  "langSystem": { "message": "ระบบ" },
-  "langZhCN": { "message": "🇨🇳 中文" },
-  "langZhTW": { "message": "🇹🇼 繁體中文" },
-  "langEn": { "message": "🇺🇸 English" },
-  "langJa": { "message": "🇯🇵 日本語" },
-  "langKo": { "message": "🇰🇷 한국어" },
-  "langVi": { "message": "🇻🇳 Tiếng Việt" },
-  "langTh": { "message": "🇹🇭 ภาษาไทย" },
-  "langMs": { "message": "🇲🇾 Bahasa Melayu" },
-  "langDe": { "message": "🇩🇪 Deutsch" },
-  "langFr": { "message": "🇫🇷 Français" },
-  "settingsTitle": { "message": "การตั้งค่า" },
-  "addCurrentPage": { "message": "เพิ่มหน้าปัจจุบัน" },
-  "alertNoTab": { "message": "ไม่สามารถรับข้อมูลแท็บปัจจุบัน" },
-  "openBookmarkNav": { "message": "เปิดที่คั่นหน้าสำรวจ" },
-  "popupTitle": { "message": "ที่คั่นหน้าสำรวจ - เพิ่มหน้าปัจจุบัน" },
-  "labelSelectIcon": { "message": "เลือกไอคอน" },
-  "iconPreviewLabel": { "message": "ไอคอนปัจจุบัน" },
-  "btnFetchFavicon": { "message": "🌐 ดึงไอคอนเว็บไซต์" },
-  "btnResetIcon": { "message": "🔄 รีเซ็ตเป็นค่าเริ่มต้น" },
-  "iconFavicon": { "message": "ไอคอนเว็บไซต์" },
-  "alertEnterUrlFirst": { "message": "กรุณาป้อน URL ก่อน" },
-  "hintUrlEnter": { "message": "💡 กด Enter หลังป้อน URL เพื่อดึงข้อมูลที่เกี่ยวข้องอัตโนมัติ" },
-  "btnAdded": { "message": "เพิ่มแล้ว" },
-  "btnUpdateCategory": { "message": "อัปเดตหมวดหมู่" },
-  "alertCategoryUpdated": { "message": "✓ อัปเดตหมวดหมู่เป็น $1 แล้ว" },
-  "settingOpenWithCurrentTab": { "message": "เปิดในแท็บปัจจุบัน" },
-  "settingDefaultSearchEngine": { "message": "เครื่องมือค้นหาเริ่มต้น" }
+  "appName": {
+    "message": "ที่คั่นหน้าสำรวจ"
+  },
+  "appDescription": {
+    "message": "แท็บใหม่สำหรับนำทางที่คั่นหน้าส่วนตัว - เข้าถึงเว็บไซต์โปรดของคุณได้อย่างรวดเร็ว"
+  },
+  "headerTitle": {
+    "message": "📚 ที่คั่นหน้าสำรวจ"
+  },
+  "headerSubtitle": {
+    "message": "เข้าถึงเว็บไซต์โปรดของคุณได้อย่างรวดเร็ว"
+  },
+  "searchPlaceholder": {
+    "message": "ค้นหาที่คั่นหน้าหรือใช้เครื่องมือค้นหา..."
+  },
+  "addBookmark": {
+    "message": "+ เพิ่มที่คั่นหน้า"
+  },
+  "editCategory": {
+    "message": "📁 แก้ไขหมวดหมู่"
+  },
+  "bookmarkSearch": {
+    "message": "ค้นหาที่คั่นหน้า"
+  },
+  "bookmarkSearchDesc": {
+    "message": "ค้นหาที่คั่นหน้าของคุณ"
+  },
+  "baidu": {
+    "message": "ไป่ตู้"
+  },
+  "bing": {
+    "message": "Bing"
+  },
+  "xiaohongshu": {
+    "message": " Xiaohongshu"
+  },
+  "modalAddBookmark": {
+    "message": "เพิ่มที่คั่นหน้า"
+  },
+  "modalEditBookmark": {
+    "message": "แก้ไขที่คั่นหน้า"
+  },
+  "labelWebsiteName": {
+    "message": "ชื่อเว็บไซต์"
+  },
+  "placeholderWebsiteName": {
+    "message": "ป้อนชื่อเว็บไซต์"
+  },
+  "labelWebsiteUrl": {
+    "message": "URL"
+  },
+  "placeholderWebsiteUrl": {
+    "message": "ป้อน URL หรือที่อยู่ IP (สามารถละ http:// ได้)"
+  },
+  "labelDescription": {
+    "message": "คำอธิบาย (ไม่บังคับ)"
+  },
+  "placeholderDescription": {
+    "message": "ป้อนคำอธิบายหรือบันทึกย่อ"
+  },
+  "labelCategory": {
+    "message": "หมวดหมู่"
+  },
+  "labelNewCategory": {
+    "message": "ชื่อหมวดหมู่ใหม่"
+  },
+  "placeholderNewCategory": {
+    "message": "ป้อนชื่อหมวดหมู่ใหม่"
+  },
+  "btnCancel": {
+    "message": "ยกเลิก"
+  },
+  "btnSave": {
+    "message": "บันทึก"
+  },
+  "btnClose": {
+    "message": "ปิด"
+  },
+  "btnOk": {
+    "message": "ตกลง"
+  },
+  "btnConfirm": {
+    "message": "ยืนยัน"
+  },
+  "btnEdit": {
+    "message": "แก้ไข"
+  },
+  "btnDelete": {
+    "message": "ลบ"
+  },
+  "btnRename": {
+    "message": "เปลี่ยนชื่อ"
+  },
+  "btnDefault": {
+    "message": "ค่าเริ่มต้น"
+  },
+  "btnAddCategory": {
+    "message": "เพิ่มหมวดหมู่"
+  },
+  "btnAddNewCategory": {
+    "message": "+ เพิ่มหมวดหมู่ใหม่"
+  },
+  "hintDragCategory": {
+    "message": "💡 ลากหมวดหมู่เพื่อจัดเรียงลำดับ"
+  },
+  "modalEditCategory": {
+    "message": "📁 แก้ไขหมวดหมู่"
+  },
+  "addNewCategory": {
+    "message": "เพิ่มหมวดหมู่ใหม่"
+  },
+  "placeholderEnterCategoryName": {
+    "message": "ป้อนชื่อหมวดหมู่ใหม่"
+  },
+  "exportBookmarks": {
+    "message": "ส่งออกที่คั่นหน้า"
+  },
+  "importBookmarks": {
+    "message": "นำเข้าที่คั่นหน้า"
+  },
+  "changeBackground": {
+    "message": "เปลี่ยนพื้นหลัง"
+  },
+  "chooseBackground": {
+    "message": "🎨 เลือกพื้นหลัง"
+  },
+  "uploadCustomBackground": {
+    "message": "📁 อัปโหลดพื้นหลังที่กำหนดเอง"
+  },
+  "emptyStateTitle": {
+    "message": "ยังไม่มีที่คั่นหน้า"
+  },
+  "emptyStateDesc": {
+    "message": "คลิกปุ่มด้านบนเพื่อเพิ่มที่คั่นหน้าแรก"
+  },
+  "addCardTitle": {
+    "message": "เพิ่มที่คั่นหน้า"
+  },
+  "addCardDesc": {
+    "message": "คลิกเพื่อเพิ่มที่คั่นหน้าใหม่"
+  },
+  "noResults": {
+    "message": "ไม่พบที่คั่นหน้าที่ตรงกัน"
+  },
+  "searchInEngines": {
+    "message": "ค้นหาในเครื่องมือค้นหา"
+  },
+  "searchSuggestions": {
+    "message": "คำแนะนำการค้นหา"
+  },
+  "baiduSearch": {
+    "message": "ค้นหาผ่านไป่ตู้"
+  },
+  "bingSearch": {
+    "message": "ค้นหาผ่าน Bing"
+  },
+  "confirmDeleteBookmark": {
+    "message": "คุณแน่ใจหรือไม่ว่าจะลบที่คั่นหน้านี้?"
+  },
+  "confirmUnsavedChanges": {
+    "message": "คุณมีการเปลี่ยนแปลงที่ยังไม่ได้บันทึก คุณแน่ใจหรือไม่ว่าจะออก?"
+  },
+  "confirmDeleteCategory": {
+    "message": "คุณแน่ใจหรือไม่ว่าจะลบหมวดหมู่ \"$1\"? ที่คั่นหน้าทั้งหมดในหมวดหมู่นี้จะถูกย้ายไปยัง \"อื่นๆ\""
+  },
+  "alertFillComplete": {
+    "message": "โปรดกรอกข้อมูลที่จำเป็นทั้งหมด"
+  },
+  "alertEnterCategoryName": {
+    "message": "โปรดป้อนชื่อหมวดหมู่"
+  },
+  "alertCategoryExists": {
+    "message": "หมวดหมู่นี้มีอยู่แล้ว"
+  },
+  "alertEnterNewCategoryName": {
+    "message": "โปรดป้อนชื่อหมวดหมู่ใหม่"
+  },
+  "promptNewCategoryName": {
+    "message": "โปรดป้อนชื่อหมวดหมู่ใหม่:"
+  },
+  "alertInvalidFormat": {
+    "message": "รูปแบบข้อมูลที่คั่นหน้าไม่ถูกต้อง"
+  },
+  "alertImportEmpty": {
+    "message": "ข้อมูลที่คั่นหน้าที่นำเข้าไม่มีการ"
+  },
+  "promptImportMode": {
+    "message": "ตรวจพบ $1 รายการที่คั่นหน้า เลือกวิธีการนำเข้า:\n1 - เพิ่มต่อท้ายที่คั่นหน้าที่มีอยู่\n2 - แทนที่ที่คั่นหน้าทั้งหมด"
+  },
+  "alertImportCancelled": {
+    "message": "ยกเลิกการนำเข้าแล้ว"
+  },
+  "alertImportSuccess": {
+    "message": "นำเข้าสำเร็จ $1 รายการที่คั่นหน้า!"
+  },
+  "labelNewCategories": {
+    "message": "หมวดหมู่ใหม่:"
+  },
+  "alertImportFailed": {
+    "message": "นำเข้าไม่สำเร็จ: ไฟล์ JSON ไม่ถูกต้อง"
+  },
+  "bookmarksCount": {
+    "message": "$1 รายการที่คั่นหน้า"
+  },
+  "bgPresetPurpleBlue": {
+    "message": "ม่วงน้ำเงิน"
+  },
+  "bgPresetSunset": {
+    "message": "ส้มยามพระอาทิตย์ตก"
+  },
+  "bgPresetDeepSea": {
+    "message": "น้ำเงินทะเลลึก"
+  },
+  "bgPresetForest": {
+    "message": "เขียวป่า"
+  },
+  "bgPresetNightPurple": {
+    "message": "ม่วงกลางคืน"
+  },
+  "bgPresetAurora": {
+    "message": "ออโรร่า"
+  },
+  "bgPresetZoige": {
+    "message": "Zoigê"
+  },
+  "catFrequent": {
+    "message": "ใช้บ่อย"
+  },
+  "catDevTools": {
+    "message": "เครื่องมือพัฒนา"
+  },
+  "catSearchEngines": {
+    "message": "เครื่องมือค้นหา"
+  },
+  "catLearning": {
+    "message": "การเรียนรู้"
+  },
+  "catCommunity": {
+    "message": "ชุมชน"
+  },
+  "catOther": {
+    "message": "อื่นๆ"
+  },
+  "catAll": {
+    "message": "ทั้งหมด"
+  },
+  "myWeibo": {
+    "message": "เวยปั๋วของฉัน"
+  },
+  "myGithub": {
+    "message": "GitHub ของฉัน"
+  },
+  "juejin": {
+    "message": "Juejin"
+  },
+  "bookmarks": {
+    "message": "ที่คั่นหน้า"
+  },
+  "language": {
+    "message": "ภาษา"
+  },
+  "langSystem": {
+    "message": "ระบบ"
+  },
+  "langZhCN": {
+    "message": "🇨🇳 中文"
+  },
+  "langZhTW": {
+    "message": "🇹🇼 繁體中文"
+  },
+  "langEn": {
+    "message": "🇺🇸 English"
+  },
+  "langJa": {
+    "message": "🇯🇵 日本語"
+  },
+  "langKo": {
+    "message": "🇰🇷 한국어"
+  },
+  "langVi": {
+    "message": "🇻🇳 Tiếng Việt"
+  },
+  "langTh": {
+    "message": "🇹🇭 ภาษาไทย"
+  },
+  "langMs": {
+    "message": "🇲🇾 Bahasa Melayu"
+  },
+  "langDe": {
+    "message": "🇩🇪 Deutsch"
+  },
+  "langFr": {
+    "message": "🇫🇷 Français"
+  },
+  "settingsTitle": {
+    "message": "การตั้งค่า"
+  },
+  "addCurrentPage": {
+    "message": "เพิ่มหน้าปัจจุบัน"
+  },
+  "alertNoTab": {
+    "message": "ไม่สามารถรับข้อมูลแท็บปัจจุบัน"
+  },
+  "openBookmarkNav": {
+    "message": "เปิดที่คั่นหน้าสำรวจ"
+  },
+  "popupTitle": {
+    "message": "ที่คั่นหน้าสำรวจ - เพิ่มหน้าปัจจุบัน"
+  },
+  "labelSelectIcon": {
+    "message": "เลือกไอคอน"
+  },
+  "iconPreviewLabel": {
+    "message": "ไอคอนปัจจุบัน"
+  },
+  "btnFetchFavicon": {
+    "message": "🌐 ดึงไอคอนเว็บไซต์"
+  },
+  "btnResetIcon": {
+    "message": "🔄 รีเซ็ตเป็นค่าเริ่มต้น"
+  },
+  "iconFavicon": {
+    "message": "ไอคอนเว็บไซต์"
+  },
+  "alertEnterUrlFirst": {
+    "message": "กรุณาป้อน URL ก่อน"
+  },
+  "hintUrlEnter": {
+    "message": "💡 กด Enter หลังป้อน URL เพื่อดึงข้อมูลที่เกี่ยวข้องอัตโนมัติ"
+  },
+  "btnAdded": {
+    "message": "เพิ่มแล้ว"
+  },
+  "btnUpdateCategory": {
+    "message": "อัปเดตหมวดหมู่"
+  },
+  "alertCategoryUpdated": {
+    "message": "✓ อัปเดตหมวดหมู่เป็น $1 แล้ว"
+  },
+  "settingOpenWithCurrentTab": {
+    "message": "เปิดในแท็บปัจจุบัน"
+  },
+  "settingDefaultSearchEngine": {
+    "message": "เครื่องมือค้นหาเริ่มต้น"
+  },
+  "hintDragToCategory": {
+    "message": "💡 ลากที่คั่นหน้าไปยังป้ายชื่อหมวดเพื่อย้าย"
+  },
+  "alertBookmarkMoved": {
+    "message": "✓ ย้ายไปที่ $1 แล้ว"
+  },
+  "alertInvalidUrl": {
+    "message": "URL ไม่ถูกต้อง"
+  }
 }

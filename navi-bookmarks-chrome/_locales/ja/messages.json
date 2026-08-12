@@ -1,117 +1,356 @@
 {
-  "appName": { "message": "ブックマークナビ" },
-  "appDescription": { "message": "個人ブックマークナビゲーションの新しいタブ - お気に入りのウェブサイトにすぐアクセス" },
-  "headerTitle": { "message": "📚 ブックマークナビ" },
-  "headerSubtitle": { "message": "お気に入りのウェブサイトにすぐアクセス" },
-  "searchPlaceholder": { "message": "ブックマークを検索または検索エンジンを使用..." },
-  "addBookmark": { "message": "+ ブックマーク追加" },
-  "editCategory": { "message": "📁 カテゴリ編集" },
-  "bookmarkSearch": { "message": "ブックマーク検索" },
-  "bookmarkSearchDesc": { "message": "ブックマークを検索" },
-  "baidu": { "message": "百度" },
-  "bing": { "message": "Bing" },
-  "xiaohongshu": { "message": "小紅書" },
-  "modalAddBookmark": { "message": "ブックマーク追加" },
-  "modalEditBookmark": { "message": "ブックマーク編集" },
-  "labelWebsiteName": { "message": "サイト名" },
-  "placeholderWebsiteName": { "message": "サイト名を入力" },
-  "labelWebsiteUrl": { "message": "URL" },
-  "placeholderWebsiteUrl": { "message": "URLまたはIPアドレスを入力（http:// は省略可）" },
-  "labelDescription": { "message": "説明（任意）" },
-  "placeholderDescription": { "message": "説明やメモを入力" },
-  "labelCategory": { "message": "カテゴリ" },
-  "labelNewCategory": { "message": "新しいカテゴリ名" },
-  "placeholderNewCategory": { "message": "新しいカテゴリ名を入力" },
-  "btnCancel": { "message": "キャンセル" },
-  "btnSave": { "message": "保存" },
-  "btnClose": { "message": "閉じる" },
-  "btnOk": { "message": "OK" },
-  "btnConfirm": { "message": "確認" },
-  "btnEdit": { "message": "編集" },
-  "btnDelete": { "message": "削除" },
-  "btnRename": { "message": "名前変更" },
-  "btnDefault": { "message": "デフォルト" },
-  "btnAddCategory": { "message": "カテゴリ追加" },
-  "btnAddNewCategory": { "message": "+ 新しいカテゴリ" },
-  "hintDragCategory": { "message": "💡 カテゴリをドラッグして順序を変更" },
-  "modalEditCategory": { "message": "📁 カテゴリ編集" },
-  "addNewCategory": { "message": "新しいカテゴリ" },
-  "placeholderEnterCategoryName": { "message": "新しいカテゴリ名を入力" },
-  "exportBookmarks": { "message": "ブックマークをエクスポート" },
-  "importBookmarks": { "message": "ブックマークをインポート" },
-  "changeBackground": { "message": "背景を変更" },
-  "chooseBackground": { "message": "🎨 背景を選択" },
-  "uploadCustomBackground": { "message": "📁 カスタム背景をアップロード" },
-  "emptyStateTitle": { "message": "ブックマークがありません" },
-  "emptyStateDesc": { "message": "上のボタンをクリックして最初のブックマークを追加" },
-  "addCardTitle": { "message": "ブックマーク追加" },
-  "addCardDesc": { "message": "クリックして新しいブックマークを追加" },
-  "noResults": { "message": "一致するブックマークが見つかりません" },
-  "searchInEngines": { "message": "検索エンジンで検索" },
-  "searchSuggestions": { "message": "検索候補" },
-  "baiduSearch": { "message": "百度検索" },
-  "bingSearch": { "message": "Bing検索" },
-  "confirmDeleteBookmark": { "message": "このブックマークを削除してもよろしいですか？" },
-  "confirmUnsavedChanges": { "message": "保存されていない変更があります。終了してもよろしいですか？" },
-  "confirmDeleteCategory": { "message": "カテゴリ「$1」を削除してもよろしいですか？このカテゴリ内のすべてのブックマークは「その他」に移動されます。" },
-  "alertFillComplete": { "message": "必須項目をすべて入力してください" },
-  "alertEnterCategoryName": { "message": "カテゴリ名を入力してください" },
-  "alertCategoryExists": { "message": "このカテゴリは既に存在します" },
-  "alertEnterNewCategoryName": { "message": "新しいカテゴリ名を入力してください" },
-  "promptNewCategoryName": { "message": "新しいカテゴリ名を入力してください：" },
-  "alertInvalidFormat": { "message": "無効なブックマークデータ形式です" },
-  "alertImportEmpty": { "message": "インポートするブックマークデータが空です" },
-  "promptImportMode": { "message": "$1 件のブックマークを検出しました。インポート方法を選択してください：\n1 - 既存のブックマークに追加\n2 - すべてのブックマークを置き換え" },
-  "alertImportCancelled": { "message": "インポートがキャンセルされました" },
-  "alertImportSuccess": { "message": "$1 件のブックマークをインポートしました！" },
-  "labelNewCategories": { "message": "新しいカテゴリ：" },
-  "alertImportFailed": { "message": "インポート失敗：無効なJSONファイルです" },
-  "bookmarksCount": { "message": "$1 件のブックマーク" },
-  "bgPresetPurpleBlue": { "message": "パープルブルー" },
-  "bgPresetSunset": { "message": "サンセットオレンジ" },
-  "bgPresetDeepSea": { "message": "ディープシーブルー" },
-  "bgPresetForest": { "message": "フォレストグリーン" },
-  "bgPresetNightPurple": { "message": "ナイトパープル" },
-  "bgPresetAurora": { "message": "オーロラ" },
-  "bgPresetZoige": { "message": "ゾイゲ" },
-  "catFrequent": { "message": "よく使う" },
-  "catDevTools": { "message": "開発ツール" },
-  "catSearchEngines": { "message": "検索エンジン" },
-  "catLearning": { "message": "学習" },
-  "catCommunity": { "message": "コミュニティ" },
-  "catOther": { "message": "その他" },
-  "catAll": { "message": "すべて" },
-  "myWeibo": { "message": "マイ微博" },
-  "myGithub": { "message": "マイGitHub" },
-  "juejin": { "message": "掘金" },
-  "bookmarks": { "message": "ブックマーク" },
-  "language": { "message": "言語" },
-  "langSystem": { "message": "システム" },
-  "langZhCN": { "message": "🇨🇳 中文" },
-  "langZhTW": { "message": "🇹🇼 繁體中文" },
-  "langEn": { "message": "🇺🇸 English" },
-  "langJa": { "message": "🇯🇵 日本語" },
-  "langKo": { "message": "🇰🇷 한국어" },
-  "langVi": { "message": "🇻🇳 Tiếng Việt" },
-  "langTh": { "message": "🇹🇭 ภาษาไทย" },
-  "langMs": { "message": "🇲🇾 Bahasa Melayu" },
-  "langDe": { "message": "🇩🇪 Deutsch" },
-  "langFr": { "message": "🇫🇷 Français" },
-  "settingsTitle": { "message": "設定" },
-  "addCurrentPage": { "message": "現在のページを追加" },
-  "alertNoTab": { "message": "現在のタブ情報を取得できません" },
-  "openBookmarkNav": { "message": "ブックマークナビを開く" },
-  "popupTitle": { "message": "ブックマークナビ - 現在のページを追加" },
-  "labelSelectIcon": { "message": "アイコンを選択" },
-  "iconPreviewLabel": { "message": "現在のアイコン" },
-  "btnFetchFavicon": { "message": "🌐 ウェブサイトアイコンを取得" },
-  "btnResetIcon": { "message": "🔄 デフォルトにリセット" },
-  "iconFavicon": { "message": "ウェブサイトアイコン" },
-  "alertEnterUrlFirst": { "message": "まずURLを入力してください" },
-  "hintUrlEnter": { "message": "💡 URLを入力後にEnterを押すと、関連情報を自動取得します" },
-  "btnAdded": { "message": "追加済み" },
-  "btnUpdateCategory": { "message": "カテゴリを更新" },
-  "alertCategoryUpdated": { "message": "✓ カテゴリを $1 に更新しました" },
-  "settingOpenWithCurrentTab": { "message": "現在のタブで開く" },
-  "settingDefaultSearchEngine": { "message": "デフォルト検索エンジン" }
+  "appName": {
+    "message": "ブックマークナビ"
+  },
+  "appDescription": {
+    "message": "個人ブックマークナビゲーションの新しいタブ - お気に入りのウェブサイトにすぐアクセス"
+  },
+  "headerTitle": {
+    "message": "📚 ブックマークナビ"
+  },
+  "headerSubtitle": {
+    "message": "お気に入りのウェブサイトにすぐアクセス"
+  },
+  "searchPlaceholder": {
+    "message": "ブックマークを検索または検索エンジンを使用..."
+  },
+  "addBookmark": {
+    "message": "+ ブックマーク追加"
+  },
+  "editCategory": {
+    "message": "📁 カテゴリ編集"
+  },
+  "bookmarkSearch": {
+    "message": "ブックマーク検索"
+  },
+  "bookmarkSearchDesc": {
+    "message": "ブックマークを検索"
+  },
+  "baidu": {
+    "message": "百度"
+  },
+  "bing": {
+    "message": "Bing"
+  },
+  "xiaohongshu": {
+    "message": "小紅書"
+  },
+  "modalAddBookmark": {
+    "message": "ブックマーク追加"
+  },
+  "modalEditBookmark": {
+    "message": "ブックマーク編集"
+  },
+  "labelWebsiteName": {
+    "message": "サイト名"
+  },
+  "placeholderWebsiteName": {
+    "message": "サイト名を入力"
+  },
+  "labelWebsiteUrl": {
+    "message": "URL"
+  },
+  "placeholderWebsiteUrl": {
+    "message": "URLまたはIPアドレスを入力（http:// は省略可）"
+  },
+  "labelDescription": {
+    "message": "説明（任意）"
+  },
+  "placeholderDescription": {
+    "message": "説明やメモを入力"
+  },
+  "labelCategory": {
+    "message": "カテゴリ"
+  },
+  "labelNewCategory": {
+    "message": "新しいカテゴリ名"
+  },
+  "placeholderNewCategory": {
+    "message": "新しいカテゴリ名を入力"
+  },
+  "btnCancel": {
+    "message": "キャンセル"
+  },
+  "btnSave": {
+    "message": "保存"
+  },
+  "btnClose": {
+    "message": "閉じる"
+  },
+  "btnOk": {
+    "message": "OK"
+  },
+  "btnConfirm": {
+    "message": "確認"
+  },
+  "btnEdit": {
+    "message": "編集"
+  },
+  "btnDelete": {
+    "message": "削除"
+  },
+  "btnRename": {
+    "message": "名前変更"
+  },
+  "btnDefault": {
+    "message": "デフォルト"
+  },
+  "btnAddCategory": {
+    "message": "カテゴリ追加"
+  },
+  "btnAddNewCategory": {
+    "message": "+ 新しいカテゴリ"
+  },
+  "hintDragCategory": {
+    "message": "💡 カテゴリをドラッグして順序を変更"
+  },
+  "modalEditCategory": {
+    "message": "📁 カテゴリ編集"
+  },
+  "addNewCategory": {
+    "message": "新しいカテゴリ"
+  },
+  "placeholderEnterCategoryName": {
+    "message": "新しいカテゴリ名を入力"
+  },
+  "exportBookmarks": {
+    "message": "ブックマークをエクスポート"
+  },
+  "importBookmarks": {
+    "message": "ブックマークをインポート"
+  },
+  "changeBackground": {
+    "message": "背景を変更"
+  },
+  "chooseBackground": {
+    "message": "🎨 背景を選択"
+  },
+  "uploadCustomBackground": {
+    "message": "📁 カスタム背景をアップロード"
+  },
+  "emptyStateTitle": {
+    "message": "ブックマークがありません"
+  },
+  "emptyStateDesc": {
+    "message": "上のボタンをクリックして最初のブックマークを追加"
+  },
+  "addCardTitle": {
+    "message": "ブックマーク追加"
+  },
+  "addCardDesc": {
+    "message": "クリックして新しいブックマークを追加"
+  },
+  "noResults": {
+    "message": "一致するブックマークが見つかりません"
+  },
+  "searchInEngines": {
+    "message": "検索エンジンで検索"
+  },
+  "searchSuggestions": {
+    "message": "検索候補"
+  },
+  "baiduSearch": {
+    "message": "百度検索"
+  },
+  "bingSearch": {
+    "message": "Bing検索"
+  },
+  "confirmDeleteBookmark": {
+    "message": "このブックマークを削除してもよろしいですか？"
+  },
+  "confirmUnsavedChanges": {
+    "message": "保存されていない変更があります。終了してもよろしいですか？"
+  },
+  "confirmDeleteCategory": {
+    "message": "カテゴリ「$1」を削除してもよろしいですか？このカテゴリ内のすべてのブックマークは「その他」に移動されます。"
+  },
+  "alertFillComplete": {
+    "message": "必須項目をすべて入力してください"
+  },
+  "alertEnterCategoryName": {
+    "message": "カテゴリ名を入力してください"
+  },
+  "alertCategoryExists": {
+    "message": "このカテゴリは既に存在します"
+  },
+  "alertEnterNewCategoryName": {
+    "message": "新しいカテゴリ名を入力してください"
+  },
+  "promptNewCategoryName": {
+    "message": "新しいカテゴリ名を入力してください："
+  },
+  "alertInvalidFormat": {
+    "message": "無効なブックマークデータ形式です"
+  },
+  "alertImportEmpty": {
+    "message": "インポートするブックマークデータが空です"
+  },
+  "promptImportMode": {
+    "message": "$1 件のブックマークを検出しました。インポート方法を選択してください：\n1 - 既存のブックマークに追加\n2 - すべてのブックマークを置き換え"
+  },
+  "alertImportCancelled": {
+    "message": "インポートがキャンセルされました"
+  },
+  "alertImportSuccess": {
+    "message": "$1 件のブックマークをインポートしました！"
+  },
+  "labelNewCategories": {
+    "message": "新しいカテゴリ："
+  },
+  "alertImportFailed": {
+    "message": "インポート失敗：無効なJSONファイルです"
+  },
+  "bookmarksCount": {
+    "message": "$1 件のブックマーク"
+  },
+  "bgPresetPurpleBlue": {
+    "message": "パープルブルー"
+  },
+  "bgPresetSunset": {
+    "message": "サンセットオレンジ"
+  },
+  "bgPresetDeepSea": {
+    "message": "ディープシーブルー"
+  },
+  "bgPresetForest": {
+    "message": "フォレストグリーン"
+  },
+  "bgPresetNightPurple": {
+    "message": "ナイトパープル"
+  },
+  "bgPresetAurora": {
+    "message": "オーロラ"
+  },
+  "bgPresetZoige": {
+    "message": "ゾイゲ"
+  },
+  "catFrequent": {
+    "message": "よく使う"
+  },
+  "catDevTools": {
+    "message": "開発ツール"
+  },
+  "catSearchEngines": {
+    "message": "検索エンジン"
+  },
+  "catLearning": {
+    "message": "学習"
+  },
+  "catCommunity": {
+    "message": "コミュニティ"
+  },
+  "catOther": {
+    "message": "その他"
+  },
+  "catAll": {
+    "message": "すべて"
+  },
+  "myWeibo": {
+    "message": "マイ微博"
+  },
+  "myGithub": {
+    "message": "マイGitHub"
+  },
+  "juejin": {
+    "message": "掘金"
+  },
+  "bookmarks": {
+    "message": "ブックマーク"
+  },
+  "language": {
+    "message": "言語"
+  },
+  "langSystem": {
+    "message": "システム"
+  },
+  "langZhCN": {
+    "message": "🇨🇳 中文"
+  },
+  "langZhTW": {
+    "message": "🇹🇼 繁體中文"
+  },
+  "langEn": {
+    "message": "🇺🇸 English"
+  },
+  "langJa": {
+    "message": "🇯🇵 日本語"
+  },
+  "langKo": {
+    "message": "🇰🇷 한국어"
+  },
+  "langVi": {
+    "message": "🇻🇳 Tiếng Việt"
+  },
+  "langTh": {
+    "message": "🇹🇭 ภาษาไทย"
+  },
+  "langMs": {
+    "message": "🇲🇾 Bahasa Melayu"
+  },
+  "langDe": {
+    "message": "🇩🇪 Deutsch"
+  },
+  "langFr": {
+    "message": "🇫🇷 Français"
+  },
+  "settingsTitle": {
+    "message": "設定"
+  },
+  "addCurrentPage": {
+    "message": "現在のページを追加"
+  },
+  "alertNoTab": {
+    "message": "現在のタブ情報を取得できません"
+  },
+  "openBookmarkNav": {
+    "message": "ブックマークナビを開く"
+  },
+  "popupTitle": {
+    "message": "ブックマークナビ - 現在のページを追加"
+  },
+  "labelSelectIcon": {
+    "message": "アイコンを選択"
+  },
+  "iconPreviewLabel": {
+    "message": "現在のアイコン"
+  },
+  "btnFetchFavicon": {
+    "message": "🌐 ウェブサイトアイコンを取得"
+  },
+  "btnResetIcon": {
+    "message": "🔄 デフォルトにリセット"
+  },
+  "iconFavicon": {
+    "message": "ウェブサイトアイコン"
+  },
+  "alertEnterUrlFirst": {
+    "message": "まずURLを入力してください"
+  },
+  "hintUrlEnter": {
+    "message": "💡 URLを入力後にEnterを押すと、関連情報を自動取得します"
+  },
+  "btnAdded": {
+    "message": "追加済み"
+  },
+  "btnUpdateCategory": {
+    "message": "カテゴリを更新"
+  },
+  "alertCategoryUpdated": {
+    "message": "✓ カテゴリを $1 に更新しました"
+  },
+  "settingOpenWithCurrentTab": {
+    "message": "現在のタブで開く"
+  },
+  "settingDefaultSearchEngine": {
+    "message": "デフォルト検索エンジン"
+  },
+  "hintDragToCategory": {
+    "message": "💡 ブックマークをカテゴリタグにドラッグして移動"
+  },
+  "alertBookmarkMoved": {
+    "message": "✓ $1 に移動しました"
+  },
+  "alertInvalidUrl": {
+    "message": "無効なURL"
+  }
 }

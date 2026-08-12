@@ -109,6 +109,7 @@
   "iconFavicon": { "message": "Website Icon" },
   "alertEnterUrlFirst": { "message": "Please enter a URL first" },
   "hintUrlEnter": { "message": "💡 Press Enter after entering URL to auto-fetch related info" },
+  "alertInvalidUrl": { "message": "Invalid URL" },
   "btnAdded": { "message": "Added" },
   "btnUpdateCategory": { "message": "Update Category" },
   "alertCategoryUpdated": { "message": "✓ Category updated to $1" },

@@ -1,0 +1,23 @@
+{
+  "name": "navi-bookmarks-chrome",
+  "version": "1.3.1",
+  "description": "A modern Chrome new tab bookmark navigation extension",
+  "private": true,
+  "scripts": {
+    "lint:i18n": "node scripts/validate-i18n.js",
+    "build": "node scripts/build.js",
+    "build:crx": "node scripts/build.js --crx",
+    "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\""
+  },
+  "devDependencies": {
+    "adm-zip": "^0.5.18"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techysy/navi-bookmarks-chrome.git"
+  },
+  "license": "MIT"
+}

@@ -1,117 +1,356 @@
 {
-  "appName": { "message": "Navigation des Favoris" },
-  "appDescription": { "message": "Nouvel onglet de navigation de favoris personnels - Accédez rapidement à vos sites Web préférés" },
-  "headerTitle": { "message": "📚 Navigation des Favoris" },
-  "headerSubtitle": { "message": "Accédez rapidement à vos sites Web préférés" },
-  "searchPlaceholder": { "message": "Rechercher des favoris ou utiliser un moteur de recherche..." },
-  "addBookmark": { "message": "+ Ajouter un Favori" },
-  "editCategory": { "message": "📁 Modifier la Catégorie" },
-  "bookmarkSearch": { "message": "Recherche de Favoris" },
-  "bookmarkSearchDesc": { "message": "Rechercher dans vos favoris" },
-  "baidu": { "message": "Baidu" },
-  "bing": { "message": "Bing" },
-  "xiaohongshu": { "message": "Xiaohongshu" },
-  "modalAddBookmark": { "message": "Ajouter un Favori" },
-  "modalEditBookmark": { "message": "Modifier le Favori" },
-  "labelWebsiteName": { "message": "Nom du Site" },
-  "placeholderWebsiteName": { "message": "Entrez le nom du site" },
-  "labelWebsiteUrl": { "message": "URL du Site" },
-  "placeholderWebsiteUrl": { "message": "Entrez l'URL ou l'adresse IP (http:// peut être omis)" },
-  "labelDescription": { "message": "Description (facultative)" },
-  "placeholderDescription": { "message": "Entrez une description ou des notes" },
-  "labelCategory": { "message": "Catégorie" },
-  "labelNewCategory": { "message": "Nouveau Nom de Catégorie" },
-  "placeholderNewCategory": { "message": "Entrez le nom de la nouvelle catégorie" },
-  "btnCancel": { "message": "Annuler" },
-  "btnSave": { "message": "Enregistrer" },
-  "btnClose": { "message": "Fermer" },
-  "btnOk": { "message": "OK" },
-  "btnConfirm": { "message": "Confirmer" },
-  "btnEdit": { "message": "Modifier" },
-  "btnDelete": { "message": "Supprimer" },
-  "btnRename": { "message": "Renommer" },
-  "btnDefault": { "message": "Par défaut" },
-  "btnAddCategory": { "message": "Ajouter une Catégorie" },
-  "btnAddNewCategory": { "message": "+ Ajouter une Nouvelle Catégorie" },
-  "hintDragCategory": { "message": "💡 Faites glisser les catégories pour les réorganiser" },
-  "modalEditCategory": { "message": "📁 Modifier la Catégorie" },
-  "addNewCategory": { "message": "Ajouter une Nouvelle Catégorie" },
-  "placeholderEnterCategoryName": { "message": "Entrez le nom de la nouvelle catégorie" },
-  "exportBookmarks": { "message": "Exporter les Favoris" },
-  "importBookmarks": { "message": "Importer les Favoris" },
-  "changeBackground": { "message": "Changer l'Arrière-plan" },
-  "chooseBackground": { "message": "🎨 Choisir l'Arrière-plan" },
-  "uploadCustomBackground": { "message": "📁 Télécharger un Arrière-plan Personnalisé" },
-  "emptyStateTitle": { "message": "Aucun Favori" },
-  "emptyStateDesc": { "message": "Cliquez sur le bouton ci-dessus pour ajouter votre premier favori" },
-  "addCardTitle": { "message": "Ajouter un Favori" },
-  "addCardDesc": { "message": "Cliquez pour ajouter un nouveau favori" },
-  "noResults": { "message": "Aucun favori trouvé" },
-  "searchInEngines": { "message": "Rechercher dans les moteurs de recherche" },
-  "searchSuggestions": { "message": "Suggestions de recherche" },
-  "baiduSearch": { "message": "Recherche Baidu" },
-  "bingSearch": { "message": "Recherche Bing" },
-  "confirmDeleteBookmark": { "message": "Êtes-vous sûr de vouloir supprimer ce favori ?" },
-  "confirmUnsavedChanges": { "message": "Vous avez des modifications non enregistrées. Êtes-vous sûr de vouloir quitter ?" },
-  "confirmDeleteCategory": { "message": "Êtes-vous sûr de vouloir supprimer la catégorie \"$1\" ? Tous les favoris de cette catégorie seront déplacés vers \"Autre\"." },
-  "alertFillComplete": { "message": "Veuillez remplir toutes les informations requises" },
-  "alertEnterCategoryName": { "message": "Veuillez entrer un nom de catégorie" },
-  "alertCategoryExists": { "message": "Cette catégorie existe déjà" },
-  "alertEnterNewCategoryName": { "message": "Veuillez entrer un nouveau nom de catégorie" },
-  "promptNewCategoryName": { "message": "Veuillez entrer le nouveau nom de catégorie :" },
-  "alertInvalidFormat": { "message": "Format de données de favoris invalide" },
-  "alertImportEmpty": { "message": "Les données de favoris importées sont vides" },
-  "promptImportMode": { "message": "$1 favoris détectés. Choisissez la méthode d'importation :\n1 - Ajouter aux favoris existants\n2 - Remplacer tous les favoris" },
-  "alertImportCancelled": { "message": "Importation annulée" },
-  "alertImportSuccess": { "message": "$1 favoris importés avec succès !" },
-  "labelNewCategories": { "message": "Nouvelles catégories :" },
-  "alertImportFailed": { "message": "Échec de l'importation : Fichier JSON invalide" },
-  "bookmarksCount": { "message": "$1 favoris" },
-  "bgPresetPurpleBlue": { "message": "Bleu Violet" },
-  "bgPresetSunset": { "message": "Orange Coucher de Soleil" },
-  "bgPresetDeepSea": { "message": "Bleu Mer Profonde" },
-  "bgPresetForest": { "message": "Vert Forêt" },
-  "bgPresetNightPurple": { "message": "Violet Nuit" },
-  "bgPresetAurora": { "message": "Aurore" },
-  "bgPresetZoige": { "message": "Zoigê" },
-  "catFrequent": { "message": "Fréquents" },
-  "catDevTools": { "message": "Outils de Développement" },
-  "catSearchEngines": { "message": "Moteurs de Recherche" },
-  "catLearning": { "message": "Apprentissage" },
-  "catCommunity": { "message": "Communauté" },
-  "catOther": { "message": "Autre" },
-  "catAll": { "message": "Tous" },
-  "myWeibo": { "message": "Mon Weibo" },
-  "myGithub": { "message": "Mon GitHub" },
-  "juejin": { "message": "Juejin" },
-  "bookmarks": { "message": "Favoris" },
-  "language": { "message": "Langue" },
-  "langSystem": { "message": "Système" },
-  "langZhCN": { "message": "🇨🇳 中文" },
-  "langZhTW": { "message": "🇹🇼 繁體中文" },
-  "langEn": { "message": "🇺🇸 English" },
-  "langJa": { "message": "🇯🇵 日本語" },
-  "langKo": { "message": "🇰🇷 한국어" },
-  "langVi": { "message": "🇻🇳 Tiếng Việt" },
-  "langTh": { "message": "🇹🇭 ภาษาไทย" },
-  "langMs": { "message": "🇲🇾 Bahasa Melayu" },
-  "langDe": { "message": "🇩🇪 Deutsch" },
-  "langFr": { "message": "🇫🇷 Français" },
-  "settingsTitle": { "message": "Paramètres" },
-  "addCurrentPage": { "message": "Ajouter la Page Actuelle" },
-  "alertNoTab": { "message": "Impossible d'obtenir les informations de l'onglet actuel" },
-  "openBookmarkNav": { "message": "Ouvrir la Navigation des Favoris" },
-  "popupTitle": { "message": "Navigation des Favoris - Ajouter la Page Actuelle" },
-  "labelSelectIcon": { "message": "Sélectionner l'icône" },
-  "iconPreviewLabel": { "message": "Icône actuelle" },
-  "btnFetchFavicon": { "message": "🌐 Récupérer l'icône du site" },
-  "btnResetIcon": { "message": "🔄 Réinitialiser par défaut" },
-  "iconFavicon": { "message": "Icône du site" },
-  "alertEnterUrlFirst": { "message": "Veuillez d'abord entrer une URL" },
-  "hintUrlEnter": { "message": "💡 Appuyez sur Entrée après avoir saisi l'URL pour récupérer les informations" },
-  "btnAdded": { "message": "Ajouté" },
-  "btnUpdateCategory": { "message": "Mettre à jour la catégorie" },
-  "alertCategoryUpdated": { "message": "✓ Catégorie mise à jour en $1" },
-  "settingOpenWithCurrentTab": { "message": "Ouvrir dans l'onglet actuel" },
-  "settingDefaultSearchEngine": { "message": "Moteur de recherche par défaut" }
+  "appName": {
+    "message": "Navigation des Favoris"
+  },
+  "appDescription": {
+    "message": "Nouvel onglet de navigation de favoris personnels - Accédez rapidement à vos sites Web préférés"
+  },
+  "headerTitle": {
+    "message": "📚 Navigation des Favoris"
+  },
+  "headerSubtitle": {
+    "message": "Accédez rapidement à vos sites Web préférés"
+  },
+  "searchPlaceholder": {
+    "message": "Rechercher des favoris ou utiliser un moteur de recherche..."
+  },
+  "addBookmark": {
+    "message": "+ Ajouter un Favori"
+  },
+  "editCategory": {
+    "message": "📁 Modifier la Catégorie"
+  },
+  "bookmarkSearch": {
+    "message": "Recherche de Favoris"
+  },
+  "bookmarkSearchDesc": {
+    "message": "Rechercher dans vos favoris"
+  },
+  "baidu": {
+    "message": "Baidu"
+  },
+  "bing": {
+    "message": "Bing"
+  },
+  "xiaohongshu": {
+    "message": "Xiaohongshu"
+  },
+  "modalAddBookmark": {
+    "message": "Ajouter un Favori"
+  },
+  "modalEditBookmark": {
+    "message": "Modifier le Favori"
+  },
+  "labelWebsiteName": {
+    "message": "Nom du Site"
+  },
+  "placeholderWebsiteName": {
+    "message": "Entrez le nom du site"
+  },
+  "labelWebsiteUrl": {
+    "message": "URL du Site"
+  },
+  "placeholderWebsiteUrl": {
+    "message": "Entrez l'URL ou l'adresse IP (http:// peut être omis)"
+  },
+  "labelDescription": {
+    "message": "Description (facultative)"
+  },
+  "placeholderDescription": {
+    "message": "Entrez une description ou des notes"
+  },
+  "labelCategory": {
+    "message": "Catégorie"
+  },
+  "labelNewCategory": {
+    "message": "Nouveau Nom de Catégorie"
+  },
+  "placeholderNewCategory": {
+    "message": "Entrez le nom de la nouvelle catégorie"
+  },
+  "btnCancel": {
+    "message": "Annuler"
+  },
+  "btnSave": {
+    "message": "Enregistrer"
+  },
+  "btnClose": {
+    "message": "Fermer"
+  },
+  "btnOk": {
+    "message": "OK"
+  },
+  "btnConfirm": {
+    "message": "Confirmer"
+  },
+  "btnEdit": {
+    "message": "Modifier"
+  },
+  "btnDelete": {
+    "message": "Supprimer"
+  },
+  "btnRename": {
+    "message": "Renommer"
+  },
+  "btnDefault": {
+    "message": "Par défaut"
+  },
+  "btnAddCategory": {
+    "message": "Ajouter une Catégorie"
+  },
+  "btnAddNewCategory": {
+    "message": "+ Ajouter une Nouvelle Catégorie"
+  },
+  "hintDragCategory": {
+    "message": "💡 Faites glisser les catégories pour les réorganiser"
+  },
+  "modalEditCategory": {
+    "message": "📁 Modifier la Catégorie"
+  },
+  "addNewCategory": {
+    "message": "Ajouter une Nouvelle Catégorie"
+  },
+  "placeholderEnterCategoryName": {
+    "message": "Entrez le nom de la nouvelle catégorie"
+  },
+  "exportBookmarks": {
+    "message": "Exporter les Favoris"
+  },
+  "importBookmarks": {
+    "message": "Importer les Favoris"
+  },
+  "changeBackground": {
+    "message": "Changer l'Arrière-plan"
+  },
+  "chooseBackground": {
+    "message": "🎨 Choisir l'Arrière-plan"
+  },
+  "uploadCustomBackground": {
+    "message": "📁 Télécharger un Arrière-plan Personnalisé"
+  },
+  "emptyStateTitle": {
+    "message": "Aucun Favori"
+  },
+  "emptyStateDesc": {
+    "message": "Cliquez sur le bouton ci-dessus pour ajouter votre premier favori"
+  },
+  "addCardTitle": {
+    "message": "Ajouter un Favori"
+  },
+  "addCardDesc": {
+    "message": "Cliquez pour ajouter un nouveau favori"
+  },
+  "noResults": {
+    "message": "Aucun favori trouvé"
+  },
+  "searchInEngines": {
+    "message": "Rechercher dans les moteurs de recherche"
+  },
+  "searchSuggestions": {
+    "message": "Suggestions de recherche"
+  },
+  "baiduSearch": {
+    "message": "Recherche Baidu"
+  },
+  "bingSearch": {
+    "message": "Recherche Bing"
+  },
+  "confirmDeleteBookmark": {
+    "message": "Êtes-vous sûr de vouloir supprimer ce favori ?"
+  },
+  "confirmUnsavedChanges": {
+    "message": "Vous avez des modifications non enregistrées. Êtes-vous sûr de vouloir quitter ?"
+  },
+  "confirmDeleteCategory": {
+    "message": "Êtes-vous sûr de vouloir supprimer la catégorie \"$1\" ? Tous les favoris de cette catégorie seront déplacés vers \"Autre\"."
+  },
+  "alertFillComplete": {
+    "message": "Veuillez remplir toutes les informations requises"
+  },
+  "alertEnterCategoryName": {
+    "message": "Veuillez entrer un nom de catégorie"
+  },
+  "alertCategoryExists": {
+    "message": "Cette catégorie existe déjà"
+  },
+  "alertEnterNewCategoryName": {
+    "message": "Veuillez entrer un nouveau nom de catégorie"
+  },
+  "promptNewCategoryName": {
+    "message": "Veuillez entrer le nouveau nom de catégorie :"
+  },
+  "alertInvalidFormat": {
+    "message": "Format de données de favoris invalide"
+  },
+  "alertImportEmpty": {
+    "message": "Les données de favoris importées sont vides"
+  },
+  "promptImportMode": {
+    "message": "$1 favoris détectés. Choisissez la méthode d'importation :\n1 - Ajouter aux favoris existants\n2 - Remplacer tous les favoris"
+  },
+  "alertImportCancelled": {
+    "message": "Importation annulée"
+  },
+  "alertImportSuccess": {
+    "message": "$1 favoris importés avec succès !"
+  },
+  "labelNewCategories": {
+    "message": "Nouvelles catégories :"
+  },
+  "alertImportFailed": {
+    "message": "Échec de l'importation : Fichier JSON invalide"
+  },
+  "bookmarksCount": {
+    "message": "$1 favoris"
+  },
+  "bgPresetPurpleBlue": {
+    "message": "Bleu Violet"
+  },
+  "bgPresetSunset": {
+    "message": "Orange Coucher de Soleil"
+  },
+  "bgPresetDeepSea": {
+    "message": "Bleu Mer Profonde"
+  },
+  "bgPresetForest": {
+    "message": "Vert Forêt"
+  },
+  "bgPresetNightPurple": {
+    "message": "Violet Nuit"
+  },
+  "bgPresetAurora": {
+    "message": "Aurore"
+  },
+  "bgPresetZoige": {
+    "message": "Zoigê"
+  },
+  "catFrequent": {
+    "message": "Fréquents"
+  },
+  "catDevTools": {
+    "message": "Outils de Développement"
+  },
+  "catSearchEngines": {
+    "message": "Moteurs de Recherche"
+  },
+  "catLearning": {
+    "message": "Apprentissage"
+  },
+  "catCommunity": {
+    "message": "Communauté"
+  },
+  "catOther": {
+    "message": "Autre"
+  },
+  "catAll": {
+    "message": "Tous"
+  },
+  "myWeibo": {
+    "message": "Mon Weibo"
+  },
+  "myGithub": {
+    "message": "Mon GitHub"
+  },
+  "juejin": {
+    "message": "Juejin"
+  },
+  "bookmarks": {
+    "message": "Favoris"
+  },
+  "language": {
+    "message": "Langue"
+  },
+  "langSystem": {
+    "message": "Système"
+  },
+  "langZhCN": {
+    "message": "🇨🇳 中文"
+  },
+  "langZhTW": {
+    "message": "🇹🇼 繁體中文"
+  },
+  "langEn": {
+    "message": "🇺🇸 English"
+  },
+  "langJa": {
+    "message": "🇯🇵 日本語"
+  },
+  "langKo": {
+    "message": "🇰🇷 한국어"
+  },
+  "langVi": {
+    "message": "🇻🇳 Tiếng Việt"
+  },
+  "langTh": {
+    "message": "🇹🇭 ภาษาไทย"
+  },
+  "langMs": {
+    "message": "🇲🇾 Bahasa Melayu"
+  },
+  "langDe": {
+    "message": "🇩🇪 Deutsch"
+  },
+  "langFr": {
+    "message": "🇫🇷 Français"
+  },
+  "settingsTitle": {
+    "message": "Paramètres"
+  },
+  "addCurrentPage": {
+    "message": "Ajouter la Page Actuelle"
+  },
+  "alertNoTab": {
+    "message": "Impossible d'obtenir les informations de l'onglet actuel"
+  },
+  "openBookmarkNav": {
+    "message": "Ouvrir la Navigation des Favoris"
+  },
+  "popupTitle": {
+    "message": "Navigation des Favoris - Ajouter la Page Actuelle"
+  },
+  "labelSelectIcon": {
+    "message": "Sélectionner l'icône"
+  },
+  "iconPreviewLabel": {
+    "message": "Icône actuelle"
+  },
+  "btnFetchFavicon": {
+    "message": "🌐 Récupérer l'icône du site"
+  },
+  "btnResetIcon": {
+    "message": "🔄 Réinitialiser par défaut"
+  },
+  "iconFavicon": {
+    "message": "Icône du site"
+  },
+  "alertEnterUrlFirst": {
+    "message": "Veuillez d'abord entrer une URL"
+  },
+  "hintUrlEnter": {
+    "message": "💡 Appuyez sur Entrée après avoir saisi l'URL pour récupérer les informations"
+  },
+  "btnAdded": {
+    "message": "Ajouté"
+  },
+  "btnUpdateCategory": {
+    "message": "Mettre à jour la catégorie"
+  },
+  "alertCategoryUpdated": {
+    "message": "✓ Catégorie mise à jour en $1"
+  },
+  "settingOpenWithCurrentTab": {
+    "message": "Ouvrir dans l'onglet actuel"
+  },
+  "settingDefaultSearchEngine": {
+    "message": "Moteur de recherche par défaut"
+  },
+  "hintDragToCategory": {
+    "message": "💡 Faites glisser les favoris sur une catégorie pour les déplacer"
+  },
+  "alertBookmarkMoved": {
+    "message": "✓ Déplacé vers $1"
+  },
+  "alertInvalidUrl": {
+    "message": "URL invalide"
+  }
 }

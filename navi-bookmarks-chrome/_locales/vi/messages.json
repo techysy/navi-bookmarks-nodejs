@@ -1,117 +1,356 @@
 {
-  "appName": { "message": "Điều hướng Dấu trang" },
-  "appDescription": { "message": "Tab mới điều hướng dấu trang cá nhân - Truy cập nhanh các trang web yêu thích" },
-  "headerTitle": { "message": "📚 Điều hướng Dấu trang" },
-  "headerSubtitle": { "message": "Truy cập nhanh các trang web yêu thích" },
-  "searchPlaceholder": { "message": "Tìm kiếm dấu trang hoặc sử dụng công cụ tìm kiếm..." },
-  "addBookmark": { "message": "+ Thêm Dấu trang" },
-  "editCategory": { "message": "📁 Sửa Danh mục" },
-  "bookmarkSearch": { "message": "Tìm kiếm Dấu trang" },
-  "bookmarkSearchDesc": { "message": "Tìm kiếm dấu trang của bạn" },
-  "baidu": { "message": "Baidu" },
-  "bing": { "message": "Bing" },
-  "xiaohongshu": { "message": "Xiaohongshu" },
-  "modalAddBookmark": { "message": "Thêm Dấu trang" },
-  "modalEditBookmark": { "message": "Sửa Dấu trang" },
-  "labelWebsiteName": { "message": "Tên trang web" },
-  "placeholderWebsiteName": { "message": "Nhập tên trang web" },
-  "labelWebsiteUrl": { "message": "URL trang web" },
-  "placeholderWebsiteUrl": { "message": "Nhập URL hoặc địa chỉ IP (có thể bỏ qua http://)" },
-  "labelDescription": { "message": "Mô tả (không bắt buộc)" },
-  "placeholderDescription": { "message": "Nhập mô tả hoặc ghi chú" },
-  "labelCategory": { "message": "Danh mục" },
-  "labelNewCategory": { "message": "Tên Danh mục Mới" },
-  "placeholderNewCategory": { "message": "Nhập tên danh mục mới" },
-  "btnCancel": { "message": "Hủy" },
-  "btnSave": { "message": "Lưu" },
-  "btnClose": { "message": "Đóng" },
-  "btnOk": { "message": "OK" },
-  "btnConfirm": { "message": "Xác nhận" },
-  "btnEdit": { "message": "Sửa" },
-  "btnDelete": { "message": "Xóa" },
-  "btnRename": { "message": "Đổi tên" },
-  "btnDefault": { "message": "Mặc định" },
-  "btnAddCategory": { "message": "Thêm Danh mục" },
-  "btnAddNewCategory": { "message": "+ Thêm Danh mục Mới" },
-  "hintDragCategory": { "message": "💡 Kéo thả danh mục để sắp xếp" },
-  "modalEditCategory": { "message": "📁 Sửa Danh mục" },
-  "addNewCategory": { "message": "Thêm Danh mục Mới" },
-  "placeholderEnterCategoryName": { "message": "Nhập tên danh mục mới" },
-  "exportBookmarks": { "message": "Xuất Dấu trang" },
-  "importBookmarks": { "message": "Nhập Dấu trang" },
-  "changeBackground": { "message": "Đổi Nền" },
-  "chooseBackground": { "message": "🎨 Chọn Nền" },
-  "uploadCustomBackground": { "message": "📁 Tải lên Nền Tùy chỉnh" },
-  "emptyStateTitle": { "message": "Chưa có Dấu trang" },
-  "emptyStateDesc": { "message": "Nhấp vào nút trên để thêm dấu trang đầu tiên" },
-  "addCardTitle": { "message": "Thêm Dấu trang" },
-  "addCardDesc": { "message": "Nhấp để thêm dấu trang mới" },
-  "noResults": { "message": "Không tìm thấy dấu trang phù hợp" },
-  "searchInEngines": { "message": "Tìm kiếm trên công cụ tìm kiếm" },
-  "searchSuggestions": { "message": "Gợi ý tìm kiếm" },
-  "baiduSearch": { "message": "Tìm kiếm Baidu" },
-  "bingSearch": { "message": "Tìm kiếm Bing" },
-  "confirmDeleteBookmark": { "message": "Bạn có chắc muốn xóa dấu trang này?" },
-  "confirmUnsavedChanges": { "message": "Bạn có thay đổi chưa lưu. Bạn có chắc muốn thoát?" },
-  "confirmDeleteCategory": { "message": "Bạn có chắc muốn xóa danh mục \"$1\"? Tất cả dấu trang trong danh mục này sẽ được chuyển sang \"Khác\"." },
-  "alertFillComplete": { "message": "Vui lòng điền đầy đủ thông tin bắt buộc" },
-  "alertEnterCategoryName": { "message": "Vui lòng nhập tên danh mục" },
-  "alertCategoryExists": { "message": "Danh mục này đã tồn tại" },
-  "alertEnterNewCategoryName": { "message": "Vui lòng nhập tên danh mục mới" },
-  "promptNewCategoryName": { "message": "Vui lòng nhập tên danh mục mới:" },
-  "alertInvalidFormat": { "message": "Định dạng dữ liệu dấu trang không hợp lệ" },
-  "alertImportEmpty": { "message": "Dữ liệu dấu trang nhập vào trống" },
-  "promptImportMode": { "message": "Phát hiện $1 dấu trang. Chọn phương thức nhập:\n1 - Thêm vào dấu trang hiện có\n2 - Thay thế tất cả dấu trang" },
-  "alertImportCancelled": { "message": "Đã hủy nhập" },
-  "alertImportSuccess": { "message": "Đã nhập thành công $1 dấu trang!" },
-  "labelNewCategories": { "message": "Danh mục mới:" },
-  "alertImportFailed": { "message": "Nhập thất bại: Tệp JSON không hợp lệ" },
-  "bookmarksCount": { "message": "$1 dấu trang" },
-  "bgPresetPurpleBlue": { "message": "Tím Xanh" },
-  "bgPresetSunset": { "message": "Cam Hoàng hôn" },
-  "bgPresetDeepSea": { "message": "Xanh Biển Sâu" },
-  "bgPresetForest": { "message": "Xanh Rừng" },
-  "bgPresetNightPurple": { "message": "Tím Đêm" },
-  "bgPresetAurora": { "message": "Cực quang" },
-  "bgPresetZoige": { "message": "Zoigê" },
-  "catFrequent": { "message": "Thường dùng" },
-  "catDevTools": { "message": "Công cụ Phát triển" },
-  "catSearchEngines": { "message": "Công cụ Tìm kiếm" },
-  "catLearning": { "message": "Học tập" },
-  "catCommunity": { "message": "Cộng đồng" },
-  "catOther": { "message": "Khác" },
-  "catAll": { "message": "Tất cả" },
-  "myWeibo": { "message": "Weibo của tôi" },
-  "myGithub": { "message": "GitHub của tôi" },
-  "juejin": { "message": "Juejin" },
-  "bookmarks": { "message": "Dấu trang" },
-  "language": { "message": "Ngôn ngữ" },
-  "langSystem": { "message": "Hệ thống" },
-  "langZhCN": { "message": "🇨🇳 中文" },
-  "langZhTW": { "message": "🇹🇼 繁體中文" },
-  "langEn": { "message": "🇺🇸 English" },
-  "langJa": { "message": "🇯🇵 日本語" },
-  "langKo": { "message": "🇰🇷 한국어" },
-  "langVi": { "message": "🇻🇳 Tiếng Việt" },
-  "langTh": { "message": "🇹🇭 ภาษาไทย" },
-  "langMs": { "message": "🇲🇾 Bahasa Melayu" },
-  "langDe": { "message": "🇩🇪 Deutsch" },
-  "langFr": { "message": "🇫🇷 Français" },
-  "settingsTitle": { "message": "Cài đặt" },
-  "addCurrentPage": { "message": "Thêm Trang Hiện tại" },
-  "alertNoTab": { "message": "Không thể lấy thông tin tab hiện tại" },
-  "openBookmarkNav": { "message": "Mở Điều hướng Dấu trang" },
-  "popupTitle": { "message": "Điều hướng Dấu trang - Thêm Trang Hiện tại" },
-  "labelSelectIcon": { "message": "Chọn biểu tượng" },
-  "iconPreviewLabel": { "message": "Biểu tượng hiện tại" },
-  "btnFetchFavicon": { "message": "🌐 Lấy biểu tượng trang web" },
-  "btnResetIcon": { "message": "🔄 Đặt lại mặc định" },
-  "iconFavicon": { "message": "Biểu tượng trang web" },
-  "alertEnterUrlFirst": { "message": "Vui lòng nhập URL trước" },
-  "hintUrlEnter": { "message": "💡 Nhấn Enter sau khi nhập URL để tự động lấy thông tin liên quan" },
-  "btnAdded": { "message": "Đã thêm" },
-  "btnUpdateCategory": { "message": "Cập nhật danh mục" },
-  "alertCategoryUpdated": { "message": "✓ Đã cập nhật danh mục thành $1" },
-  "settingOpenWithCurrentTab": { "message": "Mở trong tab hiện tại" },
-  "settingDefaultSearchEngine": { "message": "Tr tìm mặc định" }
+  "appName": {
+    "message": "Điều hướng Dấu trang"
+  },
+  "appDescription": {
+    "message": "Tab mới điều hướng dấu trang cá nhân - Truy cập nhanh các trang web yêu thích"
+  },
+  "headerTitle": {
+    "message": "📚 Điều hướng Dấu trang"
+  },
+  "headerSubtitle": {
+    "message": "Truy cập nhanh các trang web yêu thích"
+  },
+  "searchPlaceholder": {
+    "message": "Tìm kiếm dấu trang hoặc sử dụng công cụ tìm kiếm..."
+  },
+  "addBookmark": {
+    "message": "+ Thêm Dấu trang"
+  },
+  "editCategory": {
+    "message": "📁 Sửa Danh mục"
+  },
+  "bookmarkSearch": {
+    "message": "Tìm kiếm Dấu trang"
+  },
+  "bookmarkSearchDesc": {
+    "message": "Tìm kiếm dấu trang của bạn"
+  },
+  "baidu": {
+    "message": "Baidu"
+  },
+  "bing": {
+    "message": "Bing"
+  },
+  "xiaohongshu": {
+    "message": "Xiaohongshu"
+  },
+  "modalAddBookmark": {
+    "message": "Thêm Dấu trang"
+  },
+  "modalEditBookmark": {
+    "message": "Sửa Dấu trang"
+  },
+  "labelWebsiteName": {
+    "message": "Tên trang web"
+  },
+  "placeholderWebsiteName": {
+    "message": "Nhập tên trang web"
+  },
+  "labelWebsiteUrl": {
+    "message": "URL trang web"
+  },
+  "placeholderWebsiteUrl": {
+    "message": "Nhập URL hoặc địa chỉ IP (có thể bỏ qua http://)"
+  },
+  "labelDescription": {
+    "message": "Mô tả (không bắt buộc)"
+  },
+  "placeholderDescription": {
+    "message": "Nhập mô tả hoặc ghi chú"
+  },
+  "labelCategory": {
+    "message": "Danh mục"
+  },
+  "labelNewCategory": {
+    "message": "Tên Danh mục Mới"
+  },
+  "placeholderNewCategory": {
+    "message": "Nhập tên danh mục mới"
+  },
+  "btnCancel": {
+    "message": "Hủy"
+  },
+  "btnSave": {
+    "message": "Lưu"
+  },
+  "btnClose": {
+    "message": "Đóng"
+  },
+  "btnOk": {
+    "message": "OK"
+  },
+  "btnConfirm": {
+    "message": "Xác nhận"
+  },
+  "btnEdit": {
+    "message": "Sửa"
+  },
+  "btnDelete": {
+    "message": "Xóa"
+  },
+  "btnRename": {
+    "message": "Đổi tên"
+  },
+  "btnDefault": {
+    "message": "Mặc định"
+  },
+  "btnAddCategory": {
+    "message": "Thêm Danh mục"
+  },
+  "btnAddNewCategory": {
+    "message": "+ Thêm Danh mục Mới"
+  },
+  "hintDragCategory": {
+    "message": "💡 Kéo thả danh mục để sắp xếp"
+  },
+  "modalEditCategory": {
+    "message": "📁 Sửa Danh mục"
+  },
+  "addNewCategory": {
+    "message": "Thêm Danh mục Mới"
+  },
+  "placeholderEnterCategoryName": {
+    "message": "Nhập tên danh mục mới"
+  },
+  "exportBookmarks": {
+    "message": "Xuất Dấu trang"
+  },
+  "importBookmarks": {
+    "message": "Nhập Dấu trang"
+  },
+  "changeBackground": {
+    "message": "Đổi Nền"
+  },
+  "chooseBackground": {
+    "message": "🎨 Chọn Nền"
+  },
+  "uploadCustomBackground": {
+    "message": "📁 Tải lên Nền Tùy chỉnh"
+  },
+  "emptyStateTitle": {
+    "message": "Chưa có Dấu trang"
+  },
+  "emptyStateDesc": {
+    "message": "Nhấp vào nút trên để thêm dấu trang đầu tiên"
+  },
+  "addCardTitle": {
+    "message": "Thêm Dấu trang"
+  },
+  "addCardDesc": {
+    "message": "Nhấp để thêm dấu trang mới"
+  },
+  "noResults": {
+    "message": "Không tìm thấy dấu trang phù hợp"
+  },
+  "searchInEngines": {
+    "message": "Tìm kiếm trên công cụ tìm kiếm"
+  },
+  "searchSuggestions": {
+    "message": "Gợi ý tìm kiếm"
+  },
+  "baiduSearch": {
+    "message": "Tìm kiếm Baidu"
+  },
+  "bingSearch": {
+    "message": "Tìm kiếm Bing"
+  },
+  "confirmDeleteBookmark": {
+    "message": "Bạn có chắc muốn xóa dấu trang này?"
+  },
+  "confirmUnsavedChanges": {
+    "message": "Bạn có thay đổi chưa lưu. Bạn có chắc muốn thoát?"
+  },
+  "confirmDeleteCategory": {
+    "message": "Bạn có chắc muốn xóa danh mục \"$1\"? Tất cả dấu trang trong danh mục này sẽ được chuyển sang \"Khác\"."
+  },
+  "alertFillComplete": {
+    "message": "Vui lòng điền đầy đủ thông tin bắt buộc"
+  },
+  "alertEnterCategoryName": {
+    "message": "Vui lòng nhập tên danh mục"
+  },
+  "alertCategoryExists": {
+    "message": "Danh mục này đã tồn tại"
+  },
+  "alertEnterNewCategoryName": {
+    "message": "Vui lòng nhập tên danh mục mới"
+  },
+  "promptNewCategoryName": {
+    "message": "Vui lòng nhập tên danh mục mới:"
+  },
+  "alertInvalidFormat": {
+    "message": "Định dạng dữ liệu dấu trang không hợp lệ"
+  },
+  "alertImportEmpty": {
+    "message": "Dữ liệu dấu trang nhập vào trống"
+  },
+  "promptImportMode": {
+    "message": "Phát hiện $1 dấu trang. Chọn phương thức nhập:\n1 - Thêm vào dấu trang hiện có\n2 - Thay thế tất cả dấu trang"
+  },
+  "alertImportCancelled": {
+    "message": "Đã hủy nhập"
+  },
+  "alertImportSuccess": {
+    "message": "Đã nhập thành công $1 dấu trang!"
+  },
+  "labelNewCategories": {
+    "message": "Danh mục mới:"
+  },
+  "alertImportFailed": {
+    "message": "Nhập thất bại: Tệp JSON không hợp lệ"
+  },
+  "bookmarksCount": {
+    "message": "$1 dấu trang"
+  },
+  "bgPresetPurpleBlue": {
+    "message": "Tím Xanh"
+  },
+  "bgPresetSunset": {
+    "message": "Cam Hoàng hôn"
+  },
+  "bgPresetDeepSea": {
+    "message": "Xanh Biển Sâu"
+  },
+  "bgPresetForest": {
+    "message": "Xanh Rừng"
+  },
+  "bgPresetNightPurple": {
+    "message": "Tím Đêm"
+  },
+  "bgPresetAurora": {
+    "message": "Cực quang"
+  },
+  "bgPresetZoige": {
+    "message": "Zoigê"
+  },
+  "catFrequent": {
+    "message": "Thường dùng"
+  },
+  "catDevTools": {
+    "message": "Công cụ Phát triển"
+  },
+  "catSearchEngines": {
+    "message": "Công cụ Tìm kiếm"
+  },
+  "catLearning": {
+    "message": "Học tập"
+  },
+  "catCommunity": {
+    "message": "Cộng đồng"
+  },
+  "catOther": {
+    "message": "Khác"
+  },
+  "catAll": {
+    "message": "Tất cả"
+  },
+  "myWeibo": {
+    "message": "Weibo của tôi"
+  },
+  "myGithub": {
+    "message": "GitHub của tôi"
+  },
+  "juejin": {
+    "message": "Juejin"
+  },
+  "bookmarks": {
+    "message": "Dấu trang"
+  },
+  "language": {
+    "message": "Ngôn ngữ"
+  },
+  "langSystem": {
+    "message": "Hệ thống"
+  },
+  "langZhCN": {
+    "message": "🇨🇳 中文"
+  },
+  "langZhTW": {
+    "message": "🇹🇼 繁體中文"
+  },
+  "langEn": {
+    "message": "🇺🇸 English"
+  },
+  "langJa": {
+    "message": "🇯🇵 日本語"
+  },
+  "langKo": {
+    "message": "🇰🇷 한국어"
+  },
+  "langVi": {
+    "message": "🇻🇳 Tiếng Việt"
+  },
+  "langTh": {
+    "message": "🇹🇭 ภาษาไทย"
+  },
+  "langMs": {
+    "message": "🇲🇾 Bahasa Melayu"
+  },
+  "langDe": {
+    "message": "🇩🇪 Deutsch"
+  },
+  "langFr": {
+    "message": "🇫🇷 Français"
+  },
+  "settingsTitle": {
+    "message": "Cài đặt"
+  },
+  "addCurrentPage": {
+    "message": "Thêm Trang Hiện tại"
+  },
+  "alertNoTab": {
+    "message": "Không thể lấy thông tin tab hiện tại"
+  },
+  "openBookmarkNav": {
+    "message": "Mở Điều hướng Dấu trang"
+  },
+  "popupTitle": {
+    "message": "Điều hướng Dấu trang - Thêm Trang Hiện tại"
+  },
+  "labelSelectIcon": {
+    "message": "Chọn biểu tượng"
+  },
+  "iconPreviewLabel": {
+    "message": "Biểu tượng hiện tại"
+  },
+  "btnFetchFavicon": {
+    "message": "🌐 Lấy biểu tượng trang web"
+  },
+  "btnResetIcon": {
+    "message": "🔄 Đặt lại mặc định"
+  },
+  "iconFavicon": {
+    "message": "Biểu tượng trang web"
+  },
+  "alertEnterUrlFirst": {
+    "message": "Vui lòng nhập URL trước"
+  },
+  "hintUrlEnter": {
+    "message": "💡 Nhấn Enter sau khi nhập URL để tự động lấy thông tin liên quan"
+  },
+  "btnAdded": {
+    "message": "Đã thêm"
+  },
+  "btnUpdateCategory": {
+    "message": "Cập nhật danh mục"
+  },
+  "alertCategoryUpdated": {
+    "message": "✓ Đã cập nhật danh mục thành $1"
+  },
+  "settingOpenWithCurrentTab": {
+    "message": "Mở trong tab hiện tại"
+  },
+  "settingDefaultSearchEngine": {
+    "message": "Tr tìm mặc định"
+  },
+  "hintDragToCategory": {
+    "message": "💡 Kéo dấu trang vào nhãn danh mục để di chuyển"
+  },
+  "alertBookmarkMoved": {
+    "message": "✓ Đã chuyển đến $1"
+  },
+  "alertInvalidUrl": {
+    "message": "URL không hợp lệ"
+  }
 }

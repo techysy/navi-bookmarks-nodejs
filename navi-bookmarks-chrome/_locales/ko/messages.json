@@ -1,117 +1,356 @@
 {
-  "appName": { "message": "북마크 내비" },
-  "appDescription": { "message": "개인 북마크 내비게이션 새 탭 - 즐겨찾는 웹사이트에 빠르게 접속" },
-  "headerTitle": { "message": "📚 북마크 내비" },
-  "headerSubtitle": { "message": "즐겨찾는 웹사이트에 빠르게 접속" },
-  "searchPlaceholder": { "message": "북마크 검색 또는 검색 엔진 사용..." },
-  "addBookmark": { "message": "+ 북마크 추가" },
-  "editCategory": { "message": "📁 카테고리 편집" },
-  "bookmarkSearch": { "message": "북마크 검색" },
-  "bookmarkSearchDesc": { "message": "북마크 검색" },
-  "baidu": { "message": "바이두" },
-  "bing": { "message": "Bing" },
-  "xiaohongshu": { "message": "샤오홍수" },
-  "modalAddBookmark": { "message": "북마크 추가" },
-  "modalEditBookmark": { "message": "북마크 편집" },
-  "labelWebsiteName": { "message": "사이트 이름" },
-  "placeholderWebsiteName": { "message": "사이트 이름 입력" },
-  "labelWebsiteUrl": { "message": "URL" },
-  "placeholderWebsiteUrl": { "message": "URL 또는 IP 주소 입력 (http:// 생략 가능)" },
-  "labelDescription": { "message": "설명 (선택)" },
-  "placeholderDescription": { "message": "설명 또는 메모 입력" },
-  "labelCategory": { "message": "카테고리" },
-  "labelNewCategory": { "message": "새 카테고리 이름" },
-  "placeholderNewCategory": { "message": "새 카테고리 이름 입력" },
-  "btnCancel": { "message": "취소" },
-  "btnSave": { "message": "저장" },
-  "btnClose": { "message": "닫기" },
-  "btnOk": { "message": "확인" },
-  "btnConfirm": { "message": "확인" },
-  "btnEdit": { "message": "편집" },
-  "btnDelete": { "message": "삭제" },
-  "btnRename": { "message": "이름 변경" },
-  "btnDefault": { "message": "기본" },
-  "btnAddCategory": { "message": "카테고리 추가" },
-  "btnAddNewCategory": { "message": "+ 새 카테고리" },
-  "hintDragCategory": { "message": "💡 카테고리를 드래그하여 순서 변경" },
-  "modalEditCategory": { "message": "📁 카테고리 편집" },
-  "addNewCategory": { "message": "새 카테고리" },
-  "placeholderEnterCategoryName": { "message": "새 카테고리 이름 입력" },
-  "exportBookmarks": { "message": "북마크 내보내기" },
-  "importBookmarks": { "message": "북마크 가져오기" },
-  "changeBackground": { "message": "배경 변경" },
-  "chooseBackground": { "message": "🎨 배경 선택" },
-  "uploadCustomBackground": { "message": "📁 사용자 정의 배경 업로드" },
-  "emptyStateTitle": { "message": "북마크가 없습니다" },
-  "emptyStateDesc": { "message": "위 버튼을 클릭하여 첫 번째 북마크를 추가하세요" },
-  "addCardTitle": { "message": "북마크 추가" },
-  "addCardDesc": { "message": "클릭하여 새 북마크 추가" },
-  "noResults": { "message": "일치하는 북마크가 없습니다" },
-  "searchInEngines": { "message": "검색 엔진에서 검색" },
-  "searchSuggestions": { "message": "검색 제안" },
-  "baiduSearch": { "message": "바이두 검색" },
-  "bingSearch": { "message": "Bing 검색" },
-  "confirmDeleteBookmark": { "message": "이 북마크를 삭제하시겠습니까?" },
-  "confirmUnsavedChanges": { "message": "저장되지 않은 변경 사항이 있습니다. 종료하시겠습니까?" },
-  "confirmDeleteCategory": { "message": "\"$1\" 카테고리를 삭제하시겠습니까? 이 카테고리의 모든 북마크는 \"기타\"로 이동됩니다." },
-  "alertFillComplete": { "message": "필수 항목을 모두 입력해주세요" },
-  "alertEnterCategoryName": { "message": "카테고리 이름을 입력해주세요" },
-  "alertCategoryExists": { "message": "이 카테고리는 이미 존재합니다" },
-  "alertEnterNewCategoryName": { "message": "새 카테고리 이름을 입력해주세요" },
-  "promptNewCategoryName": { "message": "새 카테고리 이름을 입력해주세요:" },
-  "alertInvalidFormat": { "message": "잘못된 북마크 데이터 형식입니다" },
-  "alertImportEmpty": { "message": "가져올 북마크 데이터가 비어 있습니다" },
-  "promptImportMode": { "message": "$1개의 북마크가 감지되었습니다. 가져오기 방법을 선택하세요:\n1 - 기존 북마크에 추가\n2 - 모든 북마크 교체" },
-  "alertImportCancelled": { "message": "가져오기가 취소되었습니다" },
-  "alertImportSuccess": { "message": "$1개의 북마크를 가져왔습니다!" },
-  "labelNewCategories": { "message": "새 카테고리:" },
-  "alertImportFailed": { "message": "가져오기 실패: 잘못된 JSON 파일입니다" },
-  "bookmarksCount": { "message": "북마크 $1개" },
-  "bgPresetPurpleBlue": { "message": "퍼플 블루" },
-  "bgPresetSunset": { "message": "선셋 오렌지" },
-  "bgPresetDeepSea": { "message": "딥씨 블루" },
-  "bgPresetForest": { "message": "포레스트 그린" },
-  "bgPresetNightPurple": { "message": "나이트 퍼플" },
-  "bgPresetAurora": { "message": "오로라" },
-  "bgPresetZoige": { "message": "조이거" },
-  "catFrequent": { "message": "자주 사용" },
-  "catDevTools": { "message": "개발 도구" },
-  "catSearchEngines": { "message": "검색 엔진" },
-  "catLearning": { "message": "학습" },
-  "catCommunity": { "message": "커뮤니티" },
-  "catOther": { "message": "기타" },
-  "catAll": { "message": "전체" },
-  "myWeibo": { "message": "내 웨이보" },
-  "myGithub": { "message": "내 GitHub" },
-  "juejin": { "message": "Juejin" },
-  "bookmarks": { "message": "북마크" },
-  "language": { "message": "언어" },
-  "langSystem": { "message": "시스템" },
-  "langZhCN": { "message": "🇨🇳 中文" },
-  "langZhTW": { "message": "🇹🇼 繁體中文" },
-  "langEn": { "message": "🇺🇸 English" },
-  "langJa": { "message": "🇯🇵 日本語" },
-  "langKo": { "message": "🇰🇷 한국어" },
-  "langVi": { "message": "🇻🇳 Tiếng Việt" },
-  "langTh": { "message": "🇹🇭 ภาษาไทย" },
-  "langMs": { "message": "🇲🇾 Bahasa Melayu" },
-  "langDe": { "message": "🇩🇪 Deutsch" },
-  "langFr": { "message": "🇫🇷 Français" },
-  "settingsTitle": { "message": "설정" },
-  "addCurrentPage": { "message": "현재 페이지 추가" },
-  "alertNoTab": { "message": "현재 탭 정보를 가져올 수 없습니다" },
-  "openBookmarkNav": { "message": "북마크 내비 열기" },
-  "popupTitle": { "message": "북마크 내비 - 현재 페이지 추가" },
-  "labelSelectIcon": { "message": "아이콘 선택" },
-  "iconPreviewLabel": { "message": "현재 아이콘" },
-  "btnFetchFavicon": { "message": "🌐 웹사이트 아이콘 가져오기" },
-  "btnResetIcon": { "message": "🔄 기본값으로 초기화" },
-  "iconFavicon": { "message": "웹사이트 아이콘" },
-  "alertEnterUrlFirst": { "message": "먼저 URL을 입력하세요" },
-  "hintUrlEnter": { "message": "💡 URL 입력 후 Enter를 누르면 관련 정보를 자동으로 가져옵니다" },
-  "btnAdded": { "message": "추가됨" },
-  "btnUpdateCategory": { "message": "카테고리 업데이트" },
-  "alertCategoryUpdated": { "message": "✓ 카테고리가 $1(으)로 업데이트되었습니다" },
-  "settingOpenWithCurrentTab": { "message": "현재 탭에서 열기" },
-  "settingDefaultSearchEngine": { "message": "기본 검색 엔진" }
+  "appName": {
+    "message": "북마크 내비"
+  },
+  "appDescription": {
+    "message": "개인 북마크 내비게이션 새 탭 - 즐겨찾는 웹사이트에 빠르게 접속"
+  },
+  "headerTitle": {
+    "message": "📚 북마크 내비"
+  },
+  "headerSubtitle": {
+    "message": "즐겨찾는 웹사이트에 빠르게 접속"
+  },
+  "searchPlaceholder": {
+    "message": "북마크 검색 또는 검색 엔진 사용..."
+  },
+  "addBookmark": {
+    "message": "+ 북마크 추가"
+  },
+  "editCategory": {
+    "message": "📁 카테고리 편집"
+  },
+  "bookmarkSearch": {
+    "message": "북마크 검색"
+  },
+  "bookmarkSearchDesc": {
+    "message": "북마크 검색"
+  },
+  "baidu": {
+    "message": "바이두"
+  },
+  "bing": {
+    "message": "Bing"
+  },
+  "xiaohongshu": {
+    "message": "샤오홍수"
+  },
+  "modalAddBookmark": {
+    "message": "북마크 추가"
+  },
+  "modalEditBookmark": {
+    "message": "북마크 편집"
+  },
+  "labelWebsiteName": {
+    "message": "사이트 이름"
+  },
+  "placeholderWebsiteName": {
+    "message": "사이트 이름 입력"
+  },
+  "labelWebsiteUrl": {
+    "message": "URL"
+  },
+  "placeholderWebsiteUrl": {
+    "message": "URL 또는 IP 주소 입력 (http:// 생략 가능)"
+  },
+  "labelDescription": {
+    "message": "설명 (선택)"
+  },
+  "placeholderDescription": {
+    "message": "설명 또는 메모 입력"
+  },
+  "labelCategory": {
+    "message": "카테고리"
+  },
+  "labelNewCategory": {
+    "message": "새 카테고리 이름"
+  },
+  "placeholderNewCategory": {
+    "message": "새 카테고리 이름 입력"
+  },
+  "btnCancel": {
+    "message": "취소"
+  },
+  "btnSave": {
+    "message": "저장"
+  },
+  "btnClose": {
+    "message": "닫기"
+  },
+  "btnOk": {
+    "message": "확인"
+  },
+  "btnConfirm": {
+    "message": "확인"
+  },
+  "btnEdit": {
+    "message": "편집"
+  },
+  "btnDelete": {
+    "message": "삭제"
+  },
+  "btnRename": {
+    "message": "이름 변경"
+  },
+  "btnDefault": {
+    "message": "기본"
+  },
+  "btnAddCategory": {
+    "message": "카테고리 추가"
+  },
+  "btnAddNewCategory": {
+    "message": "+ 새 카테고리"
+  },
+  "hintDragCategory": {
+    "message": "💡 카테고리를 드래그하여 순서 변경"
+  },
+  "modalEditCategory": {
+    "message": "📁 카테고리 편집"
+  },
+  "addNewCategory": {
+    "message": "새 카테고리"
+  },
+  "placeholderEnterCategoryName": {
+    "message": "새 카테고리 이름 입력"
+  },
+  "exportBookmarks": {
+    "message": "북마크 내보내기"
+  },
+  "importBookmarks": {
+    "message": "북마크 가져오기"
+  },
+  "changeBackground": {
+    "message": "배경 변경"
+  },
+  "chooseBackground": {
+    "message": "🎨 배경 선택"
+  },
+  "uploadCustomBackground": {
+    "message": "📁 사용자 정의 배경 업로드"
+  },
+  "emptyStateTitle": {
+    "message": "북마크가 없습니다"
+  },
+  "emptyStateDesc": {
+    "message": "위 버튼을 클릭하여 첫 번째 북마크를 추가하세요"
+  },
+  "addCardTitle": {
+    "message": "북마크 추가"
+  },
+  "addCardDesc": {
+    "message": "클릭하여 새 북마크 추가"
+  },
+  "noResults": {
+    "message": "일치하는 북마크가 없습니다"
+  },
+  "searchInEngines": {
+    "message": "검색 엔진에서 검색"
+  },
+  "searchSuggestions": {
+    "message": "검색 제안"
+  },
+  "baiduSearch": {
+    "message": "바이두 검색"
+  },
+  "bingSearch": {
+    "message": "Bing 검색"
+  },
+  "confirmDeleteBookmark": {
+    "message": "이 북마크를 삭제하시겠습니까?"
+  },
+  "confirmUnsavedChanges": {
+    "message": "저장되지 않은 변경 사항이 있습니다. 종료하시겠습니까?"
+  },
+  "confirmDeleteCategory": {
+    "message": "\"$1\" 카테고리를 삭제하시겠습니까? 이 카테고리의 모든 북마크는 \"기타\"로 이동됩니다."
+  },
+  "alertFillComplete": {
+    "message": "필수 항목을 모두 입력해주세요"
+  },
+  "alertEnterCategoryName": {
+    "message": "카테고리 이름을 입력해주세요"
+  },
+  "alertCategoryExists": {
+    "message": "이 카테고리는 이미 존재합니다"
+  },
+  "alertEnterNewCategoryName": {
+    "message": "새 카테고리 이름을 입력해주세요"
+  },
+  "promptNewCategoryName": {
+    "message": "새 카테고리 이름을 입력해주세요:"
+  },
+  "alertInvalidFormat": {
+    "message": "잘못된 북마크 데이터 형식입니다"
+  },
+  "alertImportEmpty": {
+    "message": "가져올 북마크 데이터가 비어 있습니다"
+  },
+  "promptImportMode": {
+    "message": "$1개의 북마크가 감지되었습니다. 가져오기 방법을 선택하세요:\n1 - 기존 북마크에 추가\n2 - 모든 북마크 교체"
+  },
+  "alertImportCancelled": {
+    "message": "가져오기가 취소되었습니다"
+  },
+  "alertImportSuccess": {
+    "message": "$1개의 북마크를 가져왔습니다!"
+  },
+  "labelNewCategories": {
+    "message": "새 카테고리:"
+  },
+  "alertImportFailed": {
+    "message": "가져오기 실패: 잘못된 JSON 파일입니다"
+  },
+  "bookmarksCount": {
+    "message": "북마크 $1개"
+  },
+  "bgPresetPurpleBlue": {
+    "message": "퍼플 블루"
+  },
+  "bgPresetSunset": {
+    "message": "선셋 오렌지"
+  },
+  "bgPresetDeepSea": {
+    "message": "딥씨 블루"
+  },
+  "bgPresetForest": {
+    "message": "포레스트 그린"
+  },
+  "bgPresetNightPurple": {
+    "message": "나이트 퍼플"
+  },
+  "bgPresetAurora": {
+    "message": "오로라"
+  },
+  "bgPresetZoige": {
+    "message": "조이거"
+  },
+  "catFrequent": {
+    "message": "자주 사용"
+  },
+  "catDevTools": {
+    "message": "개발 도구"
+  },
+  "catSearchEngines": {
+    "message": "검색 엔진"
+  },
+  "catLearning": {
+    "message": "학습"
+  },
+  "catCommunity": {
+    "message": "커뮤니티"
+  },
+  "catOther": {
+    "message": "기타"
+  },
+  "catAll": {
+    "message": "전체"
+  },
+  "myWeibo": {
+    "message": "내 웨이보"
+  },
+  "myGithub": {
+    "message": "내 GitHub"
+  },
+  "juejin": {
+    "message": "Juejin"
+  },
+  "bookmarks": {
+    "message": "북마크"
+  },
+  "language": {
+    "message": "언어"
+  },
+  "langSystem": {
+    "message": "시스템"
+  },
+  "langZhCN": {
+    "message": "🇨🇳 中文"
+  },
+  "langZhTW": {
+    "message": "🇹🇼 繁體中文"
+  },
+  "langEn": {
+    "message": "🇺🇸 English"
+  },
+  "langJa": {
+    "message": "🇯🇵 日本語"
+  },
+  "langKo": {
+    "message": "🇰🇷 한국어"
+  },
+  "langVi": {
+    "message": "🇻🇳 Tiếng Việt"
+  },
+  "langTh": {
+    "message": "🇹🇭 ภาษาไทย"
+  },
+  "langMs": {
+    "message": "🇲🇾 Bahasa Melayu"
+  },
+  "langDe": {
+    "message": "🇩🇪 Deutsch"
+  },
+  "langFr": {
+    "message": "🇫🇷 Français"
+  },
+  "settingsTitle": {
+    "message": "설정"
+  },
+  "addCurrentPage": {
+    "message": "현재 페이지 추가"
+  },
+  "alertNoTab": {
+    "message": "현재 탭 정보를 가져올 수 없습니다"
+  },
+  "openBookmarkNav": {
+    "message": "북마크 내비 열기"
+  },
+  "popupTitle": {
+    "message": "북마크 내비 - 현재 페이지 추가"
+  },
+  "labelSelectIcon": {
+    "message": "아이콘 선택"
+  },
+  "iconPreviewLabel": {
+    "message": "현재 아이콘"
+  },
+  "btnFetchFavicon": {
+    "message": "🌐 웹사이트 아이콘 가져오기"
+  },
+  "btnResetIcon": {
+    "message": "🔄 기본값으로 초기화"
+  },
+  "iconFavicon": {
+    "message": "웹사이트 아이콘"
+  },
+  "alertEnterUrlFirst": {
+    "message": "먼저 URL을 입력하세요"
+  },
+  "hintUrlEnter": {
+    "message": "💡 URL 입력 후 Enter를 누르면 관련 정보를 자동으로 가져옵니다"
+  },
+  "btnAdded": {
+    "message": "추가됨"
+  },
+  "btnUpdateCategory": {
+    "message": "카테고리 업데이트"
+  },
+  "alertCategoryUpdated": {
+    "message": "✓ 카테고리가 $1(으)로 업데이트되었습니다"
+  },
+  "settingOpenWithCurrentTab": {
+    "message": "현재 탭에서 열기"
+  },
+  "settingDefaultSearchEngine": {
+    "message": "기본 검색 엔진"
+  },
+  "hintDragToCategory": {
+    "message": "💡 북마크를 범주로 끌어서 이동"
+  },
+  "alertBookmarkMoved": {
+    "message": "✓ $1(으)로 이동되었습니다"
+  },
+  "alertInvalidUrl": {
+    "message": "잘못된 URL"
+  }
 }
