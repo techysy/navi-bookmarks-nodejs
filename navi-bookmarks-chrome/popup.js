@@ -26,6 +26,14 @@ function i18n(key, substitutions) {
 }
 
 function applyI18n() {
+    // Locale to BCP-47 subtag mapping (fallback to locale itself with _ → -)
+    var localeToLang = {
+        'zh_CN': 'zh-CN', 'zh_TW': 'zh-TW', 'en': 'en', 'ja': 'ja', 'ko': 'ko',
+        'de': 'de', 'fr': 'fr', 'vi': 'vi', 'th': 'th', 'ms': 'ms'
+    };
+    var bcp = localeToLang[activeLocale] || activeLocale.replace('_', '-');
+    document.documentElement.lang = bcp;
+
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
         var msg = i18n(el.dataset.i18n);
         if (msg) el.textContent = msg;

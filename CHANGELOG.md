@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 - ✅ `CONTRIBUTING.md`, `PRIVACY_POLICY.md`, and `STORE_LISTING.md`.
 - ✅ Shared utility module `common.js`.
 
+### Fixed / 修复
+
+- 补加 MIT `LICENSE` 文件。
+- `applyI18n()` 同步更新 `document.documentElement.lang`，让浏览器把页面正确识别为当前语言（实现无障碍/翻译）。
+- 重新打包并替换 v1.3.1 发布资产：修旧 zip 含反斜杠路径分隔符 + 产物仍是 1.3.0 源码的 bug。
+
 ### Changed / 改进
 
 - 🔧 Standardized `CHANGELOG.md` to Keep a Changelog format.
